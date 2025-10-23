@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>es.ull.expositotop</groupId>
+    <artifactId>ExpositoTOP</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>ExpositoTOP</name>
+    <description>Proyecto migrado de Ant a Maven para la asignatura de Ingeniería Informática</description>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- Plugin 1: Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin 2: Maven Surefire Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin 3: Maven JAR Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>es.ull.expositotop.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin 4: Maven Site Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>4.0.0-M9</version>
+            </plugin>
+
+            <!-- Plugin 5: Maven Checkstyle Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Plugin 6: SonarQube Scanner for Maven -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.11.0.3922</version>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <properties>
+              <sonar.host.url>http://localhost:9000</sonar.host.url>
+              <sonar.login>sqp_caf0519078d41d42fff406a181c3263d1c1b3905</sonar.login>
+              <sonar.projectKey>expositotop</sonar.projectKey>
+              <sonar.projectName>expositotop</sonar.projectName>
+              <sonar.projectVersion>1.0</sonar.projectVersion>
+              <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
+              <sonar.language>java</sonar.language>
+                            <sonar.sources>src</sonar.sources>
+                            <sonar.java.binaries>${project.basedir}/build/classes</sonar.java.binaries>
+            </properties>
+        </profile>
+    </profiles>
+    <distributionManagement>
+        <repository>
+            <id>local-repo</id>
+            <name>Local Release Repository</name>
+            <url>file://${project.build.directory}/repo</url>
+        </repository>
+        <snapshotRepository>
+            <id>local-snapshots</id>
+            <name>Local Snapshot Repository</name>
+            <url>file://${project.build.directory}/repo</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

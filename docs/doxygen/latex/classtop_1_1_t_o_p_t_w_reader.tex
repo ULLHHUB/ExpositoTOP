@@ -1,0 +1,125 @@
+\doxysection{Referencia de la clase top.\+TOPTWReader}
+\hypertarget{classtop_1_1_t_o_p_t_w_reader}{}\label{classtop_1_1_t_o_p_t_w_reader}\index{top.TOPTWReader@{top.TOPTWReader}}
+
+
+Proporciona funcionalidad para leer una instancia del problema \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW} desde un archivo de texto.  
+
+
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classtop_1_1_t_o_p_t_w}{TOPTW}} \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_reader_abad17029fc8928818483c5053dde0fa2}{read\+Problem}} (String file\+Path)
+\begin{DoxyCompactList}\small\item\em Lee una instancia del problema \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW} desde un archivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Proporciona funcionalidad para leer una instancia del problema \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW} desde un archivo de texto. 
+
+El método estático {\ttfamily read\+Problem} se encarga de parsear el archivo y construir un objeto \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW}. 
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_reader_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{_t_o_p_t_w_reader_8java_source}{TOPTWReader.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classtop_1_1_t_o_p_t_w_reader_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classtop_1_1_t_o_p_t_w_reader_abad17029fc8928818483c5053dde0fa2}\index{top.TOPTWReader@{top.TOPTWReader}!readProblem@{readProblem}}
+\index{readProblem@{readProblem}!top.TOPTWReader@{top.TOPTWReader}}
+\doxysubsubsection{\texorpdfstring{readProblem()}{readProblem()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_reader_abad17029fc8928818483c5053dde0fa2} 
+\mbox{\hyperlink{classtop_1_1_t_o_p_t_w}{TOPTW}} top.\+TOPTWReader.\+read\+Problem (\begin{DoxyParamCaption}\item[{String}]{file\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Lee una instancia del problema \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW} desde un archivo. 
+
+Parsea un archivo de texto con un formato específico para inicializar un objeto \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW}. El formato esperado es el de las instancias de Solomon, adaptado para \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW}. La primera línea define el número de vehículos y clientes. Las siguientes líneas definen los datos de cada cliente (coordenadas, tiempo de servicio, puntuación, ventanas de tiempo). 
+\begin{DoxyParams}{Parámetros}
+{\em file\+Path} & La ruta al archivo de la instancia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Un objeto \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW} con los datos del problema cargados. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em IOException} & Si ocurre un error al leer el archivo. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_reader_8java_source_l00031}{31}} del archivo \mbox{\hyperlink{_t_o_p_t_w_reader_8java_source}{TOPTWReader.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ TOPTW\ problem\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ BufferedReader\ reader\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ File\ instaceFile\ =\ \textcolor{keyword}{new}\ File(filePath);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ reader\ =\ \textcolor{keyword}{new}\ BufferedReader(\textcolor{keyword}{new}\ FileReader(instaceFile));}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ String\ line\ =\ reader.readLine();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ ExpositoUtilities.simplifyString(line);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ String[]\ parts\ =line.split(\textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ problem\ =\ \textcolor{keyword}{new}\ TOPTW(Integer.parseInt(parts[2]),\ Integer.parseInt(parts[1]));}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ reader.readLine();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ \textcolor{keyword}{null};\ parts\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ problem.getPOIs()+1;\ i++)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ reader.readLine();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ ExpositoUtilities.simplifyString(line);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parts\ =\ line.split(\textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.setX(i,\ Double.parseDouble(parts[1]));}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.setY(i,\ Double.parseDouble(parts[2]));}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.setServiceTime(i,\ Double.parseDouble(parts[3]));}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.setScore(i,\ Double.parseDouble(parts[4]));}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i==0)\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.setReadyTime(i,\ Double.parseDouble(parts[7]));}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.setDueTime(i,\ Double.parseDouble(parts[8]));}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.setReadyTime(i,\ Double.parseDouble(parts[8]));}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.setDueTime(i,\ Double.parseDouble(parts[9]));\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ \textcolor{keyword}{null};\ parts\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ problem.calculateDistanceMatrix();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ e)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(e);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ System.exit(0);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{finally}\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reader.close();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ ex)\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(ex);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.exit(0);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ problem.setMaxTimePerRoute(problem.getDueTime(0));}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ problem;}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_reader_abad17029fc8928818483c5053dde0fa2_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_reader_abad17029fc8928818483c5053dde0fa2_icgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Kefle/\+Desktop/\+Exposito\+TOP/src/top/\mbox{\hyperlink{_t_o_p_t_w_reader_8java}{TOPTWReader.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,74 @@
+<map id="top.TOPTWGRASP.computeGreedySolution" name="top.TOPTWGRASP.computeGreedySolution">
+<area shape="rect" id="Node000001" title="Construye una solución greedy aleatorizada." alt="" coords="5,523,238,565"/>
+<area shape="rect" id="Node000002" href="$classtop_1_1_t_o_p_t_w_solution.html#a74df6b4b5c27f611de4a25e34d0bd907" title="Añade una nueva ruta a la solución." alt="" coords="301,56,499,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,521,185,379,230,285,283,193,327,137,371,92,374,96,331,141,288,196,234,288,189,381,133,523"/>
+<area shape="rect" id="Node000005" href="$classtop_1_1_t_o_p_t_w_g_r_a_s_p.html#a2c07bc597fa781b81a53ad1017e24a4f" title="Selecciona un elemento aleatorio de la Lista Restringida de Candidatos (RCL)." alt="" coords="562,1024,829,1051"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="136,564,158,604,192,655,235,706,260,729,287,748,319,763,348,769,405,767,433,765,460,768,488,778,516,799,535,826,543,853,544,880,540,907,537,934,538,960,545,985,564,1010,567,1013,563,1017,560,1014,541,988,532,961,532,934,535,907,538,880,538,854,530,828,512,803,485,783,459,773,433,770,405,772,348,774,317,768,284,753,257,733,231,710,187,658,153,607,131,567"/>
+<area shape="rect" id="Node000006" href="$classtop_1_1_t_o_p_t_w_g_r_a_s_p.html#ae706fe2d8478acf0a026bb40e8fc9df7" title="Evalúa de forma exhaustiva todos los posibles movimientos de inserción para los clientes disponibles." alt="" coords="286,552,514,595"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="238,554,271,557,270,562,238,559"/>
+<area shape="rect" id="Node000007" href="$classtop_1_1_t_o_p_t_w_solution.html#a42484d84c9770ebbb8778fc149abbb58" title="Obtiene el número de rutas que han sido creadas en la solución." alt="" coords="592,333,799,376"/>
+<area shape="poly" id="edge26_Node000001_Node000007" title=" " alt="" coords="178,520,349,456,561,385,587,378,589,383,563,391,350,461,180,525"/>
+<area shape="rect" id="Node000008" href="$classtop_1_1_t_o_p_t_w.html#abfba541876921de9ec5a63373c056446" title="Obtiene el número de vehículos disponibles." alt="" coords="879,257,1040,284"/>
+<area shape="poly" id="edge28_Node000001_Node000008" title=" " alt="" coords="146,520,206,471,284,420,358,383,418,358,481,339,561,319,640,302,720,290,863,274,863,279,721,295,641,308,563,324,482,344,420,363,361,387,287,425,210,475,149,524"/>
+<area shape="rect" id="Node000015" href="$classtop_1_1_t_o_p_t_w_solution.html#a4ed9a239d683e7770681aba78e8121a3" title="Obtiene la instancia del problema asociada a esta solución." alt="" coords="592,501,800,528"/>
+<area shape="poly" id="edge27_Node000001_Node000015" title=" " alt="" coords="238,535,576,518,576,523,238,541"/>
+<area shape="rect" id="Node000020" href="$classtop_1_1_t_o_p_t_w_g_r_a_s_p.html#a717d4390dfb843bed804afb598e27a87" title="Selecciona un candidato de la RCL utilizando un corte alfa sobre la función de pertenencia difusa." alt="" coords="287,813,513,856"/>
+<area shape="poly" id="edge23_Node000001_Node000020" title=" " alt="" coords="134,565,155,612,188,673,232,737,258,767,287,793,304,804,301,808,284,797,255,770,228,740,183,676,150,614,129,567"/>
+<area shape="rect" id="Node000021" href="$classtop_1_1_t_o_p_t_w_g_r_a_s_p.html#aa921b046fab55b437ea10e5cc286c014" title="Selecciona un candidato de la RCL utilizando una función de pertenencia difusa." alt="" coords="287,880,513,923"/>
+<area shape="poly" id="edge25_Node000001_Node000021" title=" " alt="" coords="130,565,146,625,177,706,198,750,223,792,253,832,287,866,291,869,288,873,284,870,249,835,218,795,193,752,172,709,141,627,125,567"/>
+<area shape="rect" id="Node000022" href="$classtop_1_1_t_o_p_t_w_solution.html#ae2cebb1c58169b05b0dcccd65eabc654" title="Inicializa o resetea la solución a un estado básico." alt="" coords="297,207,503,233"/>
+<area shape="poly" id="edge29_Node000001_Node000022" title=" " alt="" coords="129,521,150,472,184,408,228,338,255,305,284,275,313,254,344,237,346,242,316,258,287,279,259,309,233,341,188,410,155,475,134,523"/>
+<area shape="rect" id="Node000024" href="$classtop_1_1_t_o_p_t_w_g_r_a_s_p.html#adaccdd26e4ad89ffb3e86c780dcd90d7" title="Actualiza la solución insertando un candidato seleccionado." alt="" coords="287,712,513,739"/>
+<area shape="poly" id="edge36_Node000001_Node000024" title=" " alt="" coords="158,564,366,701,363,705,155,568"/>
+<area shape="rect" id="Node000003" href="$classtop_1_1_t_o_p_t_w.html#abc8ba9eecbd30ef1941a21418259045f" title="Incrementa el contador de depósitos." alt="" coords="605,5,786,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="482,53,599,33,599,38,483,58"/>
+<area shape="rect" id="Node000004" href="$classtop_1_1_t_o_p_t_w.html#a98907c6bbeba9aba86727ecad5058261" title="Obtiene el número de Puntos de Interés (POIs), sin contar el depósito." alt="" coords="888,107,1031,133"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="500,72,655,83,830,99,873,104,873,109,829,104,655,88,499,77"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="415,550,487,460,527,415,560,386,577,377,579,382,564,390,531,419,491,463,419,553"/>
+<area shape="rect" id="Node000009" href="$classtop_1_1_t_o_p_t_w_solution.html#a822040f322ba94a35ed101f6c53f0b33" title="Obtiene la distancia entre dos nodos consultando el problema asociado." alt="" coords="590,821,802,848"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="426,593,471,639,516,699,530,730,536,758,543,783,564,807,577,816,574,820,560,811,539,786,531,760,525,732,512,701,467,643,422,597"/>
+<area shape="rect" id="Node000011" href="$classtop_1_1_t_o_p_t_w.html#a0d14aca2e33a8fb1eb08013c3d55abfa" title="Obtiene el tiempo de fin de la ventana de tiempo (due time) de un nodo." alt="" coords="613,400,778,427"/>
+<area shape="poly" id="edge11_Node000006_Node000011" title=" " alt="" coords="418,550,478,492,517,462,561,436,597,423,599,428,563,441,520,466,481,496,422,554"/>
+<area shape="rect" id="Node000013" href="$classtop_1_1_t_o_p_t_w_solution.html#a0c4692927923549f0e137ea74850a8b6" title="Obtiene el índice del nodo que actúa como depósito para una ruta específica." alt="" coords="600,704,792,747"/>
+<area shape="poly" id="edge13_Node000006_Node000013" title=" " alt="" coords="426,593,486,642,523,668,563,690,586,699,584,704,561,694,520,672,482,646,423,597"/>
+<area shape="rect" id="Node000014" href="$classtop_1_1_t_o_p_t_w.html#a9363c6b94f247ce746510fe1036d143a" title="Obtiene el tiempo máximo permitido por ruta." alt="" coords="585,552,806,579"/>
+<area shape="poly" id="edge14_Node000006_Node000014" title=" " alt="" coords="514,568,569,566,570,571,515,573"/>
+<area shape="poly" id="edge15_Node000006_Node000015" title=" " alt="" coords="505,549,561,537,605,529,606,534,563,543,506,554"/>
+<area shape="rect" id="Node000016" href="$classtop_1_1_t_o_p_t_w.html#a4e74b10708b232a801a4ad147892b70a" title="Obtiene el tiempo de inicio de la ventana de tiempo (ready time) de un nodo." alt="" coords="606,603,785,629"/>
+<area shape="poly" id="edge16_Node000006_Node000016" title=" " alt="" coords="515,587,591,598,590,604,514,592"/>
+<area shape="rect" id="Node000017" href="$classtop_1_1_t_o_p_t_w.html#ad028d42f72214373efca074483462837" title="Obtiene la puntuación (score) de un nodo." alt="" coords="622,451,769,477"/>
+<area shape="poly" id="edge18_Node000006_Node000017" title=" " alt="" coords="434,549,492,517,561,487,606,474,608,480,563,492,495,522,437,554"/>
+<area shape="rect" id="Node000018" href="$classtop_1_1_t_o_p_t_w.html#a06b2b40d137f16bdda21c734d3ea8ac7" title="Obtiene el tiempo de servicio requerido en un nodo." alt="" coords="603,771,788,797"/>
+<area shape="poly" id="edge20_Node000006_Node000018" title=" " alt="" coords="423,593,516,698,538,731,547,744,563,756,589,768,587,773,561,761,543,748,533,734,512,702,419,597"/>
+<area shape="rect" id="Node000019" href="$classtop_1_1_t_o_p_t_w_solution.html#a559f4d8cc4b93d998243d7479fd6da8d" title="Obtiene el sucesor de un cliente en su ruta." alt="" coords="584,653,807,680"/>
+<area shape="poly" id="edge22_Node000006_Node000019" title=" " alt="" coords="447,593,502,617,563,639,593,647,592,652,561,644,500,622,445,598"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="771,330,829,312,904,287,905,292,830,317,772,335"/>
+<area shape="rect" id="Node000010" href="$classtop_1_1_t_o_p_t_w.html#a137f100c5711b4b93cb5ae1711ddaf9a" title="Calcula la distancia total de una ruta representada por un array de enteros." alt="" coords="877,821,1042,848"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="802,832,862,832,862,837,802,837"/>
+<area shape="poly" id="edge10_Node000010_Node000010" title=" " alt="" coords="916,823,907,813,913,803,931,797,960,795,991,797,1008,804,1006,809,990,803,959,800,932,802,916,807,913,812,920,819"/>
+<area shape="rect" id="Node000012" href="$classtop_1_1_t_o_p_t_w.html#a642e958056dc77c10d72831d633e2f49" title="Comprueba si un índice de nodo corresponde a un depósito." alt="" coords="890,527,1029,553"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="779,420,830,436,861,453,890,473,937,514,933,518,887,478,858,458,828,441,778,425"/>
+<area shape="poly" id="edge17_Node000016_Node000012" title=" " alt="" coords="782,599,829,588,913,557,914,562,830,593,783,605"/>
+<area shape="poly" id="edge19_Node000017_Node000012" title=" " alt="" coords="770,473,830,487,914,518,913,523,829,492,769,478"/>
+<area shape="poly" id="edge21_Node000018_Node000012" title=" " alt="" coords="788,774,809,767,828,756,851,737,872,714,907,662,932,610,948,567,953,569,937,612,912,665,877,717,855,741,831,761,811,772,790,780"/>
+<area shape="poly" id="edge24_Node000020_Node000005" title=" " alt="" coords="501,854,516,866,530,885,537,903,540,941,543,977,550,994,564,1010,568,1013,564,1017,560,1014,545,996,537,978,534,941,532,905,526,887,512,870,497,859"/>
+<area shape="poly" id="edge30_Node000022_Node000004" title=" " alt="" coords="422,204,483,172,522,155,561,143,643,127,726,118,873,114,873,119,726,123,644,132,563,148,524,160,486,177,425,209"/>
+<area shape="poly" id="edge31_Node000022_Node000008" title=" " alt="" coords="504,227,864,259,863,265,503,232"/>
+<area shape="rect" id="Node000023" href="$classtop_1_1_t_o_p_t_w_solution.html#a45192e5d12a12ec58030397041b4a369" title="Constructor de la clase TOPTWSolution." alt="" coords="577,181,814,208"/>
+<area shape="poly" id="edge32_Node000022_Node000023" title=" " alt="" coords="503,209,561,203,562,209,504,214"/>
+<area shape="poly" id="edge33_Node000023_Node000004" title=" " alt="" coords="745,178,894,135,896,141,746,183"/>
+<area shape="poly" id="edge34_Node000023_Node000008" title=" " alt="" coords="761,206,830,224,908,249,906,254,829,229,759,211"/>
+<area shape="poly" id="edge35_Node000023_Node000023" title=" " alt="" coords="652,183,644,173,649,163,667,157,696,155,727,157,744,164,742,169,726,163,696,160,668,162,652,167,649,172,656,179"/>
+<area shape="poly" id="edge37_Node000024_Node000009" title=" " alt="" coords="474,737,515,755,531,769,540,782,549,795,563,807,576,813,573,818,561,812,545,799,536,785,527,772,513,760,472,742"/>
+<area shape="poly" id="edge38_Node000024_Node000013" title=" " alt="" coords="513,723,584,723,584,728,513,728"/>
+<area shape="poly" id="edge39_Node000024_Node000015" title=" " alt="" coords="413,710,459,664,512,605,525,586,533,569,543,553,560,538,576,530,578,534,564,542,547,556,538,571,529,588,516,608,462,668,417,714"/>
+<area shape="poly" id="edge40_Node000024_Node000016" title=" " alt="" coords="421,709,483,674,561,639,590,630,591,635,563,644,485,679,424,714"/>
+<area shape="poly" id="edge41_Node000024_Node000018" title=" " alt="" coords="468,737,563,756,606,765,605,770,561,761,467,742"/>
+<area shape="poly" id="edge42_Node000024_Node000019" title=" " alt="" coords="467,709,561,689,605,681,606,686,563,695,468,714"/>
+<area shape="rect" id="Node000025" href="$classtop_1_1_t_o_p_t_w_solution.html#a56640aeccb436bb9dbb33381c274443f" title="Comprueba si un nodo es un depósito." alt="" coords="602,872,789,899"/>
+<area shape="poly" id="edge43_Node000024_Node000025" title=" " alt="" coords="484,737,516,755,528,768,535,782,540,809,546,835,552,846,564,858,588,872,586,877,560,862,548,850,541,836,535,810,530,784,523,771,512,759,481,741"/>
+<area shape="rect" id="Node000026" href="$classtop_1_1_t_o_p_t_w_solution.html#a77bd60e16c5a4672e71d5f525cbe5e25" title="Establece el predecesor de un nodo." alt="" coords="579,923,812,949"/>
+<area shape="poly" id="edge44_Node000024_Node000026" title=" " alt="" coords="487,737,516,755,531,775,538,795,540,835,542,873,549,891,564,909,568,912,564,916,560,913,544,894,537,874,535,835,533,796,526,778,512,759,484,741"/>
+<area shape="rect" id="Node000027" href="$classtop_1_1_t_o_p_t_w_solution.html#a2b1fb005fd139112ce576687b1dd7c34" title="Establece el sucesor de un nodo." alt="" coords="584,973,807,1000"/>
+<area shape="poly" id="edge45_Node000024_Node000027" title=" " alt="" coords="490,737,516,755,534,782,542,808,542,835,540,861,537,886,538,911,546,936,564,959,572,966,569,971,560,963,541,938,533,912,532,886,534,860,537,834,537,809,529,784,512,759,486,742"/>
+</map>

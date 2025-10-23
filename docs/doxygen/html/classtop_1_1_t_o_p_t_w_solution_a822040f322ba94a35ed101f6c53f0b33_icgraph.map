@@ -1,0 +1,17 @@
+<map id="top.TOPTWSolution.getDistance" name="top.TOPTWSolution.getDistance">
+<area shape="rect" id="Node000001" title="Obtiene la distancia entre dos nodos consultando el problema asociado." alt="" coords="996,72,1208,99"/>
+<area shape="rect" id="Node000002" href="$classtop_1_1_t_o_p_t_w_g_r_a_s_p.html#ae706fe2d8478acf0a026bb40e8fc9df7" title="Evalúa de forma exhaustiva todos los posibles movimientos de inserción para los clientes disponibles." alt="" coords="719,5,948,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1022,71,933,51,935,46,1023,65"/>
+<area shape="rect" id="Node000006" href="$classtop_1_1_t_o_p_t_w_solution.html#a82688039e6f671f6d2f57a1888fe3c21" title="Genera una cadena con información detallada de la solución." alt="" coords="464,115,646,157"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1011,104,948,113,789,127,647,135,647,130,788,122,947,108,1010,99"/>
+<area shape="rect" id="Node000007" href="$classtop_1_1_t_o_p_t_w_g_r_a_s_p.html#adaccdd26e4ad89ffb3e86c780dcd90d7" title="Actualiza la solución insertando un candidato seleccionado." alt="" coords="720,72,947,99"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="980,88,947,88,947,83,980,83"/>
+<area shape="rect" id="Node000003" href="$classtop_1_1_t_o_p_t_w_g_r_a_s_p.html#ade97c51a7d20660d7d306b756b4a6302" title="Construye una solución greedy aleatorizada." alt="" coords="439,48,671,91"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="704,49,672,54,671,49,703,44"/>
+<area shape="rect" id="Node000004" href="$classtop_1_1_t_o_p_t_w_g_r_a_s_p.html#a11242fc809f6a16ff81136c4785fdc3e" title="Ejecuta el algoritmo GRASP durante un número determinado de iteraciones." alt="" coords="204,89,391,116"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="424,89,392,93,391,88,423,84"/>
+<area shape="rect" id="Node000005" href="$classtop_1_1main_t_o_p_t_w.html#a6b155cf80c78f50335adf5a91762e0eb" title="Método principal que ejecuta el solver TOPTW GRASP." alt="" coords="5,89,156,116"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="188,105,156,105,156,100,188,100"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="448,125,391,117,392,112,449,120"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="705,81,672,79,672,73,705,75"/>
+</map>

@@ -1,0 +1,277 @@
+\doxysection{TOPTWSolution.\+java}
+\hypertarget{_t_o_p_t_w_solution_8java_source}{}\label{_t_o_p_t_w_solution_8java_source}\index{C:/Users/Kefle/Desktop/ExpositoTOP/src/top/TOPTWSolution.java@{C:/Users/Kefle/Desktop/ExpositoTOP/src/top/TOPTWSolution.java}}
+\mbox{\hyperlink{_t_o_p_t_w_solution_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00005}00005\ \textcolor{keyword}{package\ }top;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.util.Arrays;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00009}00009\ \textcolor{keyword}{import}\ es.ull.esit.utilities.ExpositoUtilities;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00017}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution}{00017}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{TOPTWSolution}}\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00021}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a92d1f9d7c627851f410839eef407b0e1}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a92d1f9d7c627851f410839eef407b0e1}{NO\_INITIALIZED}}\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00022}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ab7441ec47fea144ca8bb9414ea3bd081}{00022}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w}{TOPTW}}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ab7441ec47fea144ca8bb9414ea3bd081}{problem}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00023}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_af688cdb396222ad36447d3328e9df921}{00023}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_af688cdb396222ad36447d3328e9df921}{predecessors}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00024}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_acc8a988855a325919c3eea603db90c8a}{00024}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_acc8a988855a325919c3eea603db90c8a}{successors}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00025}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a3eb9e9e27c8ac5f3dba821e070e5f54c}{00025}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{double}[]\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a3eb9e9e27c8ac5f3dba821e070e5f54c}{waitingTime}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00026}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_abc553a22455499a68b43a3f47c4c9d78}{00026}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_abc553a22455499a68b43a3f47c4c9d78}{positionInRoute}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00027}00027\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00028}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ebd4e5a4eb92d139830af2a0125586b}{00028}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ebd4e5a4eb92d139830af2a0125586b}{routes}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00029}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ad9b08cc64f9216a58c52e46792a6439e}{00029}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ad9b08cc64f9216a58c52e46792a6439e}{availableVehicles}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00030}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a79326564ee08ed155ceb0353545dbc10}{00030}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a79326564ee08ed155ceb0353545dbc10}{objectiveFunctionValue}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00031}00031\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00036}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{TOPTWSolution}}(\mbox{\hyperlink{classtop_1_1_t_o_p_t_w}{TOPTW}}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ab7441ec47fea144ca8bb9414ea3bd081}{problem}})\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ this.problem\ =\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ab7441ec47fea144ca8bb9414ea3bd081}{problem}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ this.availableVehicles\ =\ this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446}{getVehicles}}();}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ this.predecessors\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261}{getPOIs}}()+this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446}{getVehicles}}()];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ this.successors\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261}{getPOIs}}()+this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446}{getVehicles}}()];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ this.waitingTime\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261}{getPOIs}}()];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ this.positionInRoute\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261}{getPOIs}}()];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ Arrays.fill(this.predecessors,\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{TOPTWSolution}}.NO\_INITIALIZED);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ Arrays.fill(this.successors,\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{TOPTWSolution}}.NO\_INITIALIZED);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ Arrays.fill(this.waitingTime,\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{TOPTWSolution}}.NO\_INITIALIZED);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ Arrays.fill(this.positionInRoute,\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{TOPTWSolution}}.NO\_INITIALIZED);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ this.routes\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446}{getVehicles}}()];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ this.objectiveFunctionValue\ =\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_evaluator}{TOPTWEvaluator}}.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_evaluator_aa87e11d07ed8529d44fb83c50ac71615}{NO\_EVALUATED}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00050}00050\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00055}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ae2cebb1c58169b05b0dcccd65eabc654}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ae2cebb1c58169b05b0dcccd65eabc654}{initSolution}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ this.predecessors\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261}{getPOIs}}()+this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446}{getVehicles}}()];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ this.successors\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261}{getPOIs}}()+this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446}{getVehicles}}()];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ Arrays.fill(this.predecessors,\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{TOPTWSolution}}.NO\_INITIALIZED);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ Arrays.fill(this.successors,\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{TOPTWSolution}}.NO\_INITIALIZED);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ this.routes\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446}{getVehicles}}()];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ Arrays.fill(this.routes,\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{TOPTWSolution}}.NO\_INITIALIZED);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ this.routes[0]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ this.predecessors[0]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ this.successors[0]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ this.availableVehicles\ =\ this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446}{getVehicles}}()\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00067}00067\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00073}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a56640aeccb436bb9dbb33381c274443f}{00073}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a56640aeccb436bb9dbb33381c274443f}{isDepot}}(\textcolor{keywordtype}{int}\ c)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.routes.length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(c==this.routes[i])\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00081}00081\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00087}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a05b3fa5facafa4a4defb17ef0c280e52}{00087}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a05b3fa5facafa4a4defb17ef0c280e52}{equals}}(\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{TOPTWSolution}}\ otherSolution)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.predecessors.length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.predecessors[i]\ !=\ otherSolution.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_af688cdb396222ad36447d3328e9df921}{predecessors}}[i])\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00095}00095\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00101}00101\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00102}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a07a1d5a4428fa39c60fc25b993d571c0}{00102}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a07a1d5a4428fa39c60fc25b993d571c0}{equals}}(Object\ o)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ ==\ o)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (o\ ==\ \textcolor{keyword}{null}\ ||\ getClass()\ !=\ o.getClass())\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{TOPTWSolution}}\ that\ =\ (\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a45192e5d12a12ec58030397041b4a369}{TOPTWSolution}})\ o;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Arrays.equals(\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_af688cdb396222ad36447d3328e9df921}{predecessors}},\ that.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_af688cdb396222ad36447d3328e9df921}{predecessors}});}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00113}00113\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00114}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_accb2f5c4f9a5e0f97d24c25f7d8b84ba}{00114}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_accb2f5c4f9a5e0f97d24c25f7d8b84ba}{hashCode}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Arrays.hashCode(\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_af688cdb396222ad36447d3328e9df921}{predecessors}});}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00122}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a38cf34301737c1b75a264414a8bc60d1}{00122}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a38cf34301737c1b75a264414a8bc60d1}{getAvailableVehicles}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.availableVehicles;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00124}00124\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00125}00125\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00130}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a42484d84c9770ebbb8778fc149abbb58}{00130}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a42484d84c9770ebbb8778fc149abbb58}{getCreatedRoutes}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446}{getVehicles}}()\ -\/\ this.availableVehicles;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00132}00132\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00133}00133\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00140}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a822040f322ba94a35ed101f6c53f0b33}{00140}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a822040f322ba94a35ed101f6c53f0b33}{getDistance}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a137f100c5711b4b93cb5ae1711ddaf9a}{getDistance}}(x,\ y);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00142}00142\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00148}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ac8cd7cc46e73f9e1419f5b3e4c9902ef}{00148}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ac8cd7cc46e73f9e1419f5b3e4c9902ef}{setAvailableVehicles}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ad9b08cc64f9216a58c52e46792a6439e}{availableVehicles}})\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ this.availableVehicles\ =\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ad9b08cc64f9216a58c52e46792a6439e}{availableVehicles}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00150}00150\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00151}00151\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00157}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a7f54a84cf209db722ecd59ab2f2452f1}{00157}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a7f54a84cf209db722ecd59ab2f2452f1}{getPredecessor}}(\textcolor{keywordtype}{int}\ customer)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00158}00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.predecessors[customer];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00159}00159\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00160}00160\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00165}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a1f60b3fc07b4c358ed5df797d0813862}{00165}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a1f60b3fc07b4c358ed5df797d0813862}{getPredecessors}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.predecessors;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00167}00167\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00173}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{00173}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w}{TOPTW}}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00174}00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.problem;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00175}00175\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00181}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ae21c91d29a531bbdc0e8102d56d8a40a}{00181}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_ae21c91d29a531bbdc0e8102d56d8a40a}{getObjectiveFunctionValue}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00182}00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.objectiveFunctionValue;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00183}00183\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00190}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_aa65b95c4e6ac88aca9ce638de8c7997c}{00190}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_aa65b95c4e6ac88aca9ce638de8c7997c}{getPositionInRoute}}(\textcolor{keywordtype}{int}\ customer)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00191}00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.positionInRoute[customer];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00192}00192\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00199}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a559f4d8cc4b93d998243d7479fd6da8d}{00199}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a559f4d8cc4b93d998243d7479fd6da8d}{getSuccessor}}(\textcolor{keywordtype}{int}\ customer)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00200}00200\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.successors[customer];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00201}00201\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00202}00202\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00207}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a69ab8c19838d40f240fc7545d0f2961f}{00207}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a69ab8c19838d40f240fc7545d0f2961f}{getSuccessors}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00208}00208\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.successors;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00209}00209\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00216}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a0c4692927923549f0e137ea74850a8b6}{00216}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a0c4692927923549f0e137ea74850a8b6}{getIndexRoute}}(\textcolor{keywordtype}{int}\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00217}00217\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.routes[index];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00218}00218\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00219}00219\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00225}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a0b4edd4fdee2ebef25c412a0c2dba0c3}{00225}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a0b4edd4fdee2ebef25c412a0c2dba0c3}{getWaitingTime}}(\textcolor{keywordtype}{int}\ customer)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00226}00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.waitingTime[customer];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00227}00227\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00233}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a7d9b5e1b44fd3febe537d911eb2d9fa0}{00233}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a7d9b5e1b44fd3febe537d911eb2d9fa0}{setObjectiveFunctionValue}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a79326564ee08ed155ceb0353545dbc10}{objectiveFunctionValue}})\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00234}00234\ \ \ \ \ \ \ \ \ this.objectiveFunctionValue\ =\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a79326564ee08ed155ceb0353545dbc10}{objectiveFunctionValue}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00235}00235\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00242}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_abf3511e900c029944306d2e4ede400df}{00242}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_abf3511e900c029944306d2e4ede400df}{setPositionInRoute}}(\textcolor{keywordtype}{int}\ customer,\ \textcolor{keywordtype}{int}\ position)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00243}00243\ \ \ \ \ \ \ \ \ this.positionInRoute[customer]\ =\ position;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00244}00244\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00245}00245\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00251}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a77bd60e16c5a4672e71d5f525cbe5e25}{00251}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a77bd60e16c5a4672e71d5f525cbe5e25}{setPredecessor}}(\textcolor{keywordtype}{int}\ customer,\ \textcolor{keywordtype}{int}\ predecessor)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00252}00252\ \ \ \ \ \ \ \ \ this.predecessors[customer]\ =\ predecessor;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00253}00253\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00260}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a2b1fb005fd139112ce576687b1dd7c34}{00260}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a2b1fb005fd139112ce576687b1dd7c34}{setSuccessor}}(\textcolor{keywordtype}{int}\ customer,\ \textcolor{keywordtype}{int}\ succesor)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00261}00261\ \ \ \ \ \ \ \ \ this.successors[customer]\ =\ succesor;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00262}00262\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00263}00263\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00269}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_af7588e114fce6bec7b8961a9e1dca206}{00269}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_af7588e114fce6bec7b8961a9e1dca206}{setWaitingTime}}(\textcolor{keywordtype}{int}\ customer,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a3eb9e9e27c8ac5f3dba821e070e5f54c}{waitingTime}})\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00270}00270\ \ \ \ \ \ \ \ \ this.waitingTime[customer]\ =\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a3eb9e9e27c8ac5f3dba821e070e5f54c}{waitingTime}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00271}00271\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00272}00272\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00279}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a82688039e6f671f6d2f57a1888fe3c21}{00279}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a82688039e6f671f6d2f57a1888fe3c21}{getInfoSolution}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00280}00280\ \ \ \ \ \ \ \ \ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ COLUMN\_WIDTH\ =\ 15;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00281}00281\ \ \ \ \ \ \ \ \ String\ text\ =\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}+\textcolor{stringliteral}{"{}NODES:\ "{}}\ +\ this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261}{getPOIs}}()\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ \textcolor{stringliteral}{"{}MAX\ TIME\ PER\ ROUTE:\ "{}}\ +\ this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a9363c6b94f247ce746510fe1036d143a}{getMaxTimePerRoute}}()\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ \textcolor{stringliteral}{"{}MAX\ NUMBER\ OF\ ROUTES:\ "{}}\ +\ this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a2880cd94f79a8eeb732e99af69cdbbde}{getMaxRoutes}}()\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00282}00282\ \ \ \ \ \ \ \ \ String\ textSolution\ =\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}+\textcolor{stringliteral}{"{}SOLUTION:\ "{}}+\textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00283}00283\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ costTimeSolution\ =\ 0.0,\ fitnessScore\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00284}00284\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ validSolution\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00285}00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a42484d84c9770ebbb8778fc149abbb58}{getCreatedRoutes}}();\ k++)\ \{\ \textcolor{comment}{//\ rutas\ creadas}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ String[]\ strings\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ \textcolor{stringliteral}{"{}ROUTE\ "{}}\ +\ k\ \};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ width\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[strings.length];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ Arrays.fill(width,\ COLUMN\_WIDTH);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ text\ +=\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(strings,\ width)\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ strings\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{stringliteral}{"{}CUST\ NO."{}},\ \textcolor{stringliteral}{"{}X\ COORD."{}},\ \textcolor{stringliteral}{"{}Y.\ COORD."{}},\ \textcolor{stringliteral}{"{}READY\ TIME"{}},\ \textcolor{stringliteral}{"{}DUE\ DATE"{}},\ \textcolor{stringliteral}{"{}ARRIVE\ TIME"{}},\ \textcolor{stringliteral}{"{}\ LEAVE\ TIME"{}},\ \textcolor{stringliteral}{"{}SERVICE\ TIME"{}}\};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ width\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[strings.length];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ Arrays.fill(width,\ COLUMN\_WIDTH);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ text\ +=\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(strings,\ width)\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ strings\ =\ \textcolor{keyword}{new}\ String[strings.length];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ depot\ =\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a0c4692927923549f0e137ea74850a8b6}{getIndexRoute}}(k);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pre=-\/1,\ suc=-\/1;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ costTimeRoute\ =\ 0.0,\ fitnessScoreRoute\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ pre\ =\ depot;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ pre;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_ab17563354a34944d14e4ac57f6613da6}{getX}}(pre);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a3a39395dfc3d6360273580f177bede7a}{getY}}(pre);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a4e74b10708b232a801a4ad147892b70a}{getReadyTime}}(pre);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a0d14aca2e33a8fb1eb08013c3d55abfa}{getDueTime}}(pre);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ 0;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ 0;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a06b2b40d137f16bdda21c734d3ea8ac7}{getServiceTime}}(pre);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ text\ +=\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(strings,\ width);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ text\ +=\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ recorremos\ la\ ruta}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ index\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ suc\ =\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a559f4d8cc4b93d998243d7479fd6da8d}{getSuccessor}}(pre);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textSolution\ +=\ pre+\textcolor{stringliteral}{"{}\ -\/\ "{}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ suc;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_ab17563354a34944d14e4ac57f6613da6}{getX}}(suc);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a3a39395dfc3d6360273580f177bede7a}{getY}}(suc);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a4e74b10708b232a801a4ad147892b70a}{getReadyTime}}(suc);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a0d14aca2e33a8fb1eb08013c3d55abfa}{getDueTime}}(suc);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ costTimeRoute\ +=\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a822040f322ba94a35ed101f6c53f0b33}{getDistance}}(pre,\ suc);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(costTimeRoute\ <\ (this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().getDueTime(suc)))\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(costTimeRoute\ <\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().getReadyTime(suc))\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ costTimeRoute\ =\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a4e74b10708b232a801a4ad147892b70a}{getReadyTime}}(suc);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ costTimeRoute;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ costTimeRoute\ +=\ \ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a06b2b40d137f16bdda21c734d3ea8ac7}{getServiceTime}}(suc);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ costTimeRoute;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a06b2b40d137f16bdda21c734d3ea8ac7}{getServiceTime}}(pre);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(costTimeRoute\ >\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a4ed9a239d683e7770681aba78e8121a3}{getProblem}}().getMaxTimePerRoute())\ \{\ validSolution\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fitnessScoreRoute\ +=\ this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_ad028d42f72214373efca074483462837}{getScore}}(suc);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ validSolution\ =\ \textcolor{keyword}{false};\ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pre\ =\ suc;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ text\ +=\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(strings,\ width);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ text\ +=\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}(suc\ !=\ depot);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ textSolution\ +=\ suc+\textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ costTimeSolution\ +=\ costTimeRoute;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ fitnessScore\ +=\ fitnessScoreRoute;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00338}00338\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00339}00339\ \ \ \ \ \ \ \ \ textSolution\ +=\ \textcolor{stringliteral}{"{}FEASIBLE\ SOLUTION:\ "{}}+validSolution+\textcolor{stringliteral}{"{}\(\backslash\)n"{}}+\textcolor{stringliteral}{"{}SCORE:\ "{}}+fitnessScore+\textcolor{stringliteral}{"{}\(\backslash\)n"{}}+\textcolor{stringliteral}{"{}TIME\ COST:\ "{}}+costTimeSolution+\textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00340}00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ textSolution+text;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00341}00341\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00342}00342\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00348}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a07ec0a724167095ad061040e11136a19}{00348}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a07ec0a724167095ad061040e11136a19}{evaluateFitness}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00349}00349\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ objectiveFunction\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00350}00350\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ objectiveFunctionPerRoute\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00351}00351\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a42484d84c9770ebbb8778fc149abbb58}{getCreatedRoutes}}();\ k++)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ depot\ =\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a0c4692927923549f0e137ea74850a8b6}{getIndexRoute}}(k);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pre=depot,\ suc\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00355}00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ suc\ =\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a559f4d8cc4b93d998243d7479fd6da8d}{getSuccessor}}(pre);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00356}00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ objectiveFunctionPerRoute\ =\ objectiveFunctionPerRoute\ +\ this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_ad028d42f72214373efca074483462837}{getScore}}(suc);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00357}00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pre\ =\ suc;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00358}00358\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}((suc\ !=\ depot));}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00359}00359\ \ \ \ \ \ \ \ \ \ \ \ \ objectiveFunction\ =\ objectiveFunction\ +\ objectiveFunctionPerRoute;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00360}00360\ \ \ \ \ \ \ \ \ \ \ \ \ objectiveFunctionPerRoute\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00361}00361\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00362}00362\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ objectiveFunction;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00363}00363\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00364}00364\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00371}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a74df6b4b5c27f611de4a25e34d0bd907}{00371}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a74df6b4b5c27f611de4a25e34d0bd907}{addRoute}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00372}00372\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ depot\ =\ this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261}{getPOIs}}();}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00373}00373\ \ \ \ \ \ \ \ \ depot++;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00374}00374\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ routePos\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00375}00375\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.routes.length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00376}00376\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.routes[i]\ !=\ -\/1\ \&\&\ this.routes[i]\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ depot\ =\ this.routes[i];}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00378}00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ depot++;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ routePos\ =\ i+1;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00380}00380\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00381}00381\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00382}00382\ \ \ \ \ \ \ \ \ this.routes[routePos]\ =\ depot;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00383}00383\ \ \ \ \ \ \ \ \ this.availableVehicles-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00384}00384\ \ \ \ \ \ \ \ \ this.predecessors[depot]\ =\ depot;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00385}00385\ \ \ \ \ \ \ \ \ this.successors[depot]\ =\ depot;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00386}00386\ \ \ \ \ \ \ \ \ this.problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_abc8ba9eecbd30ef1941a21418259045f}{addNodeDepot}}();}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00387}00387\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ depot;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00388}00388\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00389}00389\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00395}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a5df1eb3b6f4bc1265f12ffc201d86b0d}{00395}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a5df1eb3b6f4bc1265f12ffc201d86b0d}{printSolution}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00396}00396\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a42484d84c9770ebbb8778fc149abbb58}{getCreatedRoutes}}();\ k++)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ depot\ =\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a0c4692927923549f0e137ea74850a8b6}{getIndexRoute}}(k);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pre=depot,\ suc\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ suc\ =\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a559f4d8cc4b93d998243d7479fd6da8d}{getSuccessor}}(pre);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00401}00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(pre+\textcolor{stringliteral}{"{}\ -\/\ "{}});}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00402}00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pre\ =\ suc;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}((suc\ !=\ depot));}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00404}00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(suc+\textcolor{stringliteral}{"{}\ \ "{}});}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00405}00405\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00406}00406\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ fitness\ =\ this.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution_a07ec0a724167095ad061040e11136a19}{evaluateFitness}}();}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00407}00407\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}SC="{}}+fitness);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00408}00408\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ fitness;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00409}00409\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00410}00410\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_solution_8java_source_l00411}00411\ \}}
+
+\end{DoxyCode}

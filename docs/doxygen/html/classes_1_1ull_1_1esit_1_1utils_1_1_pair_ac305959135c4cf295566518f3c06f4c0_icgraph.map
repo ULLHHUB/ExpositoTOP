@@ -1,0 +1,7 @@
+<map id="es.ull.esit.utils.Pair.Pair" name="es.ull.esit.utils.Pair.Pair">
+<area shape="rect" id="Node000001" title="Constructor para crear un par." alt="" coords="228,31,387,57"/>
+<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1esit_1_1utils_1_1_pair.html#afce45be862690691fb040d1ad3d87b5a" title="Método de fábrica estático para crear una instancia de Pair." alt="" coords="6,5,179,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,35,179,31,179,26,213,30"/>
+<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1esit_1_1utils_1_1_pair.html#adb64035681885ff17048d77a16207c35" title="Compara este par con otro objeto para ver si son iguales." alt="" coords="5,56,180,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,58,180,62,180,56,212,53"/>
+</map>

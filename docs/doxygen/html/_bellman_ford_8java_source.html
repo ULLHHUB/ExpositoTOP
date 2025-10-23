@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ExpositoTOP: Archivo de código fuente C:/Users/Kefle/Desktop/ExpositoTOP/src/es/ull/esit/utilities/BellmanFord.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ExpositoTOP<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_bellman_ford_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BellmanFord.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_bellman_ford_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="namespacees_1_1ull_1_1esit_1_1utilities.html">    5</a></span><span class="keyword">package </span>es.ull.esit.utilities;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html">   15</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a3d5fd98d4098ebe439fd5ad9f79602ea">BellmanFord</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a73d9608d894f7492e6de6bdb126badef">   20</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a73d9608d894f7492e6de6bdb126badef">INFINITY</a> = 999999;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a4eaf966cc12c1c16dcdf691280478567">   24</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keywordtype">int</span>[][] <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a4eaf966cc12c1c16dcdf691280478567">distanceMatrix</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a04d0eef7e9fb4d077334529944cf6d9e">   28</a></span>    <span class="keyword">private</span> ArrayList&lt;Integer&gt; <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a04d0eef7e9fb4d077334529944cf6d9e">edges1</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a73a3486a2c45ce2caed86b54da594dec">   32</a></span>    <span class="keyword">private</span> ArrayList&lt;Integer&gt; <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a73a3486a2c45ce2caed86b54da594dec">edges2</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a7be2cec2c770bde817180d5778652437">   36</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a7be2cec2c770bde817180d5778652437">nodes</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#af0b7be2386c60a310fbcdbb818631169">   40</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> ArrayList&lt;Integer&gt; <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#af0b7be2386c60a310fbcdbb818631169">path</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#ab96fe181bcec95782e242a9280ef50f4">   44</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span>[] <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#ab96fe181bcec95782e242a9280ef50f4">distances</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a51f98a942ea045962b2296a1d4ea4b53">   48</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a51f98a942ea045962b2296a1d4ea4b53">value</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a3d5fd98d4098ebe439fd5ad9f79602ea">   56</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a3d5fd98d4098ebe439fd5ad9f79602ea">BellmanFord</a>(<span class="keywordtype">int</span>[][] <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a4eaf966cc12c1c16dcdf691280478567">distanceMatrix</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a7be2cec2c770bde817180d5778652437">nodes</a>, ArrayList&lt;Integer&gt; <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#af0b7be2386c60a310fbcdbb818631169">path</a>) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        this.distanceMatrix = <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a4eaf966cc12c1c16dcdf691280478567">distanceMatrix</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        this.nodes = <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a7be2cec2c770bde817180d5778652437">nodes</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        this.path = <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#af0b7be2386c60a310fbcdbb818631169">path</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        this.<a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#aaaf03effb2c4624d80992a72d0d43229">calculateEdges</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        this.value = <a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a3d5fd98d4098ebe439fd5ad9f79602ea">BellmanFord</a>.INFINITY;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#aaaf03effb2c4624d80992a72d0d43229">   69</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#aaaf03effb2c4624d80992a72d0d43229">calculateEdges</a>() {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        this.edges1 = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        this.edges2 = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.nodes; i++) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; this.nodes; j++) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <span class="keywordflow">if</span> (this.distanceMatrix[i][j] != Integer.MAX_VALUE) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    this.edges1.add(i);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    this.edges2.add(j);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#afdc1a955ba8f201e6ed6860965e19bf2">   86</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span>[] <a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#afdc1a955ba8f201e6ed6860965e19bf2">getDistances</a>() {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> this.distances;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a4bad6103ccc407601545e7b8efa924ab">   94</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a4bad6103ccc407601545e7b8efa924ab">getValue</a>() {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> this.value;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a250f4ed361209a7bed3bdc12010b3d3c">  104</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a250f4ed361209a7bed3bdc12010b3d3c">solve</a>() {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordtype">int</span> numEdges = this.edges1.size();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordtype">int</span>[] predecessor = <span class="keyword">new</span> <span class="keywordtype">int</span>[this.nodes];</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        this.distances = <span class="keyword">new</span> <span class="keywordtype">int</span>[this.nodes];</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.nodes; i++) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            this.distances[i] = <a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a3d5fd98d4098ebe439fd5ad9f79602ea">BellmanFord</a>.INFINITY;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            predecessor[i] = -1;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        this.distances[0] = 0;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; (this.nodes - 1); i++) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; numEdges; j++) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                <span class="keywordtype">int</span> u = this.edges1.get(j);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                <span class="keywordtype">int</span> v = this.edges2.get(j);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <span class="keywordflow">if</span> (this.distances[v] &gt; this.distances[u] + this.distanceMatrix[u][v]) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                    this.distances[v] = this.distances[u] + this.distanceMatrix[u][v];</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    predecessor[v] = u;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        this.path.add(this.nodes - 1);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordtype">int</span> pred = predecessor[this.nodes - 1];</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">while</span> (pred != -1) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            this.path.add(pred);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            pred = predecessor[pred];</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        this.value = -this.distances[this.nodes - 1];</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
+</div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_a04d0eef7e9fb4d077334529944cf6d9e"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a04d0eef7e9fb4d077334529944cf6d9e">es.ull.esit.utilities.BellmanFord.edges1</a></div><div class="ttdeci">ArrayList&lt; Integer &gt; edges1</div><div class="ttdoc">Lista de nodos de origen para cada arista del grafo.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">BellmanFord.java:28</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_a250f4ed361209a7bed3bdc12010b3d3c"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a250f4ed361209a7bed3bdc12010b3d3c">es.ull.esit.utilities.BellmanFord.solve</a></div><div class="ttdeci">void solve()</div><div class="ttdoc">Ejecuta el algoritmo de Bellman-Ford.</div><div class="ttdef"><b>Definition</b> <a href="#l00104">BellmanFord.java:104</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_a3d5fd98d4098ebe439fd5ad9f79602ea"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a3d5fd98d4098ebe439fd5ad9f79602ea">es.ull.esit.utilities.BellmanFord.BellmanFord</a></div><div class="ttdeci">BellmanFord(int[][] distanceMatrix, int nodes, ArrayList&lt; Integer &gt; path)</div><div class="ttdoc">Constructor de la clase BellmanFord.</div><div class="ttdef"><b>Definition</b> <a href="#l00056">BellmanFord.java:56</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_a4bad6103ccc407601545e7b8efa924ab"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a4bad6103ccc407601545e7b8efa924ab">es.ull.esit.utilities.BellmanFord.getValue</a></div><div class="ttdeci">int getValue()</div><div class="ttdoc">Obtiene el valor (coste) del camino más corto calculado.</div><div class="ttdef"><b>Definition</b> <a href="#l00094">BellmanFord.java:94</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_a4eaf966cc12c1c16dcdf691280478567"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a4eaf966cc12c1c16dcdf691280478567">es.ull.esit.utilities.BellmanFord.distanceMatrix</a></div><div class="ttdeci">final int[][] distanceMatrix</div><div class="ttdoc">Matriz de adyacencia que representa las distancias (pesos) entre nodos.</div><div class="ttdef"><b>Definition</b> <a href="#l00024">BellmanFord.java:24</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_a51f98a942ea045962b2296a1d4ea4b53"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a51f98a942ea045962b2296a1d4ea4b53">es.ull.esit.utilities.BellmanFord.value</a></div><div class="ttdeci">int value</div><div class="ttdoc">El valor (coste) del camino más corto encontrado.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">BellmanFord.java:48</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_a73a3486a2c45ce2caed86b54da594dec"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a73a3486a2c45ce2caed86b54da594dec">es.ull.esit.utilities.BellmanFord.edges2</a></div><div class="ttdeci">ArrayList&lt; Integer &gt; edges2</div><div class="ttdoc">Lista de nodos de destino para cada arista del grafo.</div><div class="ttdef"><b>Definition</b> <a href="#l00032">BellmanFord.java:32</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_a73d9608d894f7492e6de6bdb126badef"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a73d9608d894f7492e6de6bdb126badef">es.ull.esit.utilities.BellmanFord.INFINITY</a></div><div class="ttdeci">static final int INFINITY</div><div class="ttdoc">Valor que representa el infinito, usado para inicializar distancias.</div><div class="ttdef"><b>Definition</b> <a href="#l00020">BellmanFord.java:20</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_a7be2cec2c770bde817180d5778652437"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#a7be2cec2c770bde817180d5778652437">es.ull.esit.utilities.BellmanFord.nodes</a></div><div class="ttdeci">final int nodes</div><div class="ttdoc">Número total de nodos en el grafo.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">BellmanFord.java:36</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_aaaf03effb2c4624d80992a72d0d43229"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#aaaf03effb2c4624d80992a72d0d43229">es.ull.esit.utilities.BellmanFord.calculateEdges</a></div><div class="ttdeci">void calculateEdges()</div><div class="ttdoc">Construye las listas de aristas a partir de la matriz de adyacencia.</div><div class="ttdef"><b>Definition</b> <a href="#l00069">BellmanFord.java:69</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_ab96fe181bcec95782e242a9280ef50f4"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#ab96fe181bcec95782e242a9280ef50f4">es.ull.esit.utilities.BellmanFord.distances</a></div><div class="ttdeci">int[] distances</div><div class="ttdoc">Array para almacenar las distancias más cortas desde el origen a cada nodo.</div><div class="ttdef"><b>Definition</b> <a href="#l00044">BellmanFord.java:44</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_af0b7be2386c60a310fbcdbb818631169"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#af0b7be2386c60a310fbcdbb818631169">es.ull.esit.utilities.BellmanFord.path</a></div><div class="ttdeci">final ArrayList&lt; Integer &gt; path</div><div class="ttdoc">Lista para almacenar el camino más corto encontrado.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">BellmanFord.java:40</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_html_afdc1a955ba8f201e6ed6860965e19bf2"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford.html#afdc1a955ba8f201e6ed6860965e19bf2">es.ull.esit.utilities.BellmanFord.getDistances</a></div><div class="ttdeci">int[] getDistances()</div><div class="ttdoc">Obtiene el array de distancias calculadas desde el nodo origen.</div><div class="ttdef"><b>Definition</b> <a href="#l00086">BellmanFord.java:86</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a href="dir_e03c2b0d9b02df29811e15e34ccb3b94.html">Kefle</a></li><li class="navelem"><a href="dir_150518a6fcf97c0bd56a37f53e58eb73.html">Desktop</a></li><li class="navelem"><a href="dir_f99b0822b4241d0b719b611599aef1b2.html">ExpositoTOP</a></li><li class="navelem"><a href="dir_9fc0b26832b645d43f8d355a18a798aa.html">src</a></li><li class="navelem"><a href="dir_706925e949022de7344447ad86857558.html">es</a></li><li class="navelem"><a href="dir_2e670d6bc46c71a7a5c727c3bd1ecb4e.html">ull</a></li><li class="navelem"><a href="dir_c31b1c07c57d6ec68cfe21d5f5f039ce.html">esit</a></li><li class="navelem"><a href="dir_54bdec9d7336cc58424fd493e14d066b.html">utilities</a></li><li class="navelem"><a href="_bellman_ford_8java.html">BellmanFord.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

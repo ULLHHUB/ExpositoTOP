@@ -1,0 +1,27 @@
+<map id="top.TOPTWGRASP.updateSolution" name="top.TOPTWGRASP.updateSolution">
+<area shape="rect" id="Node000001" title="Actualiza la solución insertando un candidato seleccionado." alt="" coords="5,248,232,275"/>
+<area shape="rect" id="Node000002" href="$classtop_1_1_t_o_p_t_w_solution.html#a822040f322ba94a35ed101f6c53f0b33" title="Obtiene la distancia entre dos nodos consultando el problema asociado." alt="" coords="290,29,502,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,246,146,209,180,160,224,109,250,86,278,66,289,60,291,65,281,70,254,90,228,113,184,163,150,212,129,249"/>
+<area shape="rect" id="Node000004" href="$classtop_1_1_t_o_p_t_w_solution.html#a0c4692927923549f0e137ea74850a8b6" title="Obtiene el índice del nodo que actúa como depósito para una ruta específica." alt="" coords="300,80,492,123"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="132,245,192,191,233,160,278,132,291,126,293,131,281,137,236,164,195,195,135,249"/>
+<area shape="rect" id="Node000005" href="$classtop_1_1_t_o_p_t_w_solution.html#a4ed9a239d683e7770681aba78e8121a3" title="Obtiene la instancia del problema asociada a esta solución." alt="" coords="292,147,500,173"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="143,245,204,214,279,183,304,175,306,180,281,188,206,219,146,250"/>
+<area shape="rect" id="Node000006" href="$classtop_1_1_t_o_p_t_w.html#a4e74b10708b232a801a4ad147892b70a" title="Obtiene el tiempo de inicio de la ventana de tiempo (ready time) de un nodo." alt="" coords="307,197,486,224"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="195,245,304,225,305,230,196,250"/>
+<area shape="rect" id="Node000008" href="$classtop_1_1_t_o_p_t_w.html#a06b2b40d137f16bdda21c734d3ea8ac7" title="Obtiene el tiempo de servicio requerido en un nodo." alt="" coords="304,248,489,275"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="232,259,288,259,288,264,232,264"/>
+<area shape="rect" id="Node000009" href="$classtop_1_1_t_o_p_t_w_solution.html#a559f4d8cc4b93d998243d7479fd6da8d" title="Obtiene el sucesor de un cliente en su ruta." alt="" coords="285,299,508,325"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="196,273,305,293,304,298,195,278"/>
+<area shape="rect" id="Node000010" href="$classtop_1_1_t_o_p_t_w_solution.html#a56640aeccb436bb9dbb33381c274443f" title="Comprueba si un nodo es un depósito." alt="" coords="303,349,490,376"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="146,273,206,304,281,335,306,342,304,348,279,340,204,309,143,278"/>
+<area shape="rect" id="Node000011" href="$classtop_1_1_t_o_p_t_w_solution.html#a77bd60e16c5a4672e71d5f525cbe5e25" title="Establece el predecesor de un nodo." alt="" coords="280,400,513,427"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="135,273,194,328,236,359,281,386,297,392,295,397,278,390,233,364,191,333,131,277"/>
+<area shape="rect" id="Node000012" href="$classtop_1_1_t_o_p_t_w_solution.html#a2b1fb005fd139112ce576687b1dd7c34" title="Establece el sucesor de un nodo." alt="" coords="285,451,508,477"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="130,274,152,307,186,352,230,398,281,436,293,442,290,447,278,441,226,402,182,355,148,310,126,277"/>
+<area shape="rect" id="Node000003" href="$classtop_1_1_t_o_p_t_w.html#a137f100c5711b4b93cb5ae1711ddaf9a" title="Calcula la distancia total de una ruta representada por un array de enteros." alt="" coords="561,29,725,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="503,40,545,40,545,45,503,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="602,31,594,21,599,11,616,5,643,3,673,5,688,12,686,17,672,10,643,8,617,10,603,15,600,20,606,27"/>
+<area shape="rect" id="Node000007" href="$classtop_1_1_t_o_p_t_w.html#a642e958056dc77c10d72831d633e2f49" title="Comprueba si un índice de nodo corresponde a un depósito." alt="" coords="574,223,713,249"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="487,217,558,225,558,230,486,223"/>
+<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="489,249,558,242,558,247,490,254"/>
+</map>

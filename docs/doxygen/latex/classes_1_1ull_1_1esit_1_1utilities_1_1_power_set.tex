@@ -1,0 +1,154 @@
+\doxysection{Referencia de la plantilla de la clase es.\+ull.\+esit.\+utilities.\+Power\+Set\texorpdfstring{$<$}{<} E \texorpdfstring{$>$}{>}}
+\hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}{}\label{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}\index{es.ull.esit.utilities.PowerSet$<$ E $>$@{es.ull.esit.utilities.PowerSet$<$ E $>$}}
+
+
+Implementa un iterador para generar todos los subconjuntos (conjunto potencia) de un conjunto dado.  
+
+
+
+
+Diagrama de herencia de es.\+ull.\+esit.\+utilities.\+Power\+Set\texorpdfstring{$<$}{<} E \texorpdfstring{$>$}{>}
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de es.\+ull.\+esit.\+utilities.\+Power\+Set\texorpdfstring{$<$}{<} E \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator}{Power\+Set\+Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a6b7dcc9f679ec5fd47c9267e00b35750}{Power\+Set}} (Set$<$ E $>$ set)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}{Power\+Set}. \end{DoxyCompactList}\item 
+Iterator$<$ Set$<$ E $>$ $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a3f26282fcfa1c64e6a3c8caf19f53d3b}{iterator}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve un iterador sobre los subconjuntos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+E\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_ac75df0554fc4c68c6539c0d36db9df5e}{arr}} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementa un iterador para generar todos los subconjuntos (conjunto potencia) de un conjunto dado. 
+
+Utiliza un {\ttfamily Bit\+Set} para generar de forma eficiente todas las combinaciones de elementos del conjunto original. 
+\begin{DoxyParams}{Parámetros}
+{\em $<$\+E$>$} & El tipo de los elementos en el conjunto. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_power_set_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{_power_set_8java_source}{Power\+Set.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a6b7dcc9f679ec5fd47c9267e00b35750}\index{es.ull.esit.utilities.PowerSet$<$ E $>$@{es.ull.esit.utilities.PowerSet$<$ E $>$}!PowerSet@{PowerSet}}
+\index{PowerSet@{PowerSet}!es.ull.esit.utilities.PowerSet$<$ E $>$@{es.ull.esit.utilities.PowerSet$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{PowerSet()}{PowerSet()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a6b7dcc9f679ec5fd47c9267e00b35750} 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}{es.\+ull.\+esit.\+utilities.\+Power\+Set}}$<$ E $>$.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}{Power\+Set}} (\begin{DoxyParamCaption}\item[{Set$<$ E $>$}]{set}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}{Power\+Set}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em set} & El conjunto original del cual se generará el conjunto potencia. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_power_set_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{_power_set_8java_source}{Power\+Set.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ this.arr\ =\ (E[])\ \textcolor{keyword}{set}.toArray();}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a6b7dcc9f679ec5fd47c9267e00b35750_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a6b7dcc9f679ec5fd47c9267e00b35750_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a3f26282fcfa1c64e6a3c8caf19f53d3b}\index{es.ull.esit.utilities.PowerSet$<$ E $>$@{es.ull.esit.utilities.PowerSet$<$ E $>$}!iterator@{iterator}}
+\index{iterator@{iterator}!es.ull.esit.utilities.PowerSet$<$ E $>$@{es.ull.esit.utilities.PowerSet$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{iterator()}{iterator()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a3f26282fcfa1c64e6a3c8caf19f53d3b} 
+Iterator$<$ Set$<$ E $>$ $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}{es.\+ull.\+esit.\+utilities.\+Power\+Set}}$<$ E $>$.iterator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Devuelve un iterador sobre los subconjuntos. 
+
+\begin{DoxyReturn}{Devuelve}
+una nueva instancia del iterador del conjunto potencia. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_power_set_8java_source_l00038}{38}} del archivo \mbox{\hyperlink{_power_set_8java_source}{Power\+Set.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ PowerSetIterator();}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_ac75df0554fc4c68c6539c0d36db9df5e}\index{es.ull.esit.utilities.PowerSet$<$ E $>$@{es.ull.esit.utilities.PowerSet$<$ E $>$}!arr@{arr}}
+\index{arr@{arr}!es.ull.esit.utilities.PowerSet$<$ E $>$@{es.ull.esit.utilities.PowerSet$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{arr}{arr}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_ac75df0554fc4c68c6539c0d36db9df5e} 
+E \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}{es.\+ull.\+esit.\+utilities.\+Power\+Set}}$<$ E $>$.arr = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_power_set_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{_power_set_8java_source}{Power\+Set.\+java}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Kefle/\+Desktop/\+Exposito\+TOP/src/es/ull/esit/utilities/\mbox{\hyperlink{_power_set_8java}{Power\+Set.\+java}}\end{DoxyCompactItemize}

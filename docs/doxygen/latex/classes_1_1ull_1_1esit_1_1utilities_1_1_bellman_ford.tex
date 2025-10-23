@@ -1,0 +1,375 @@
+\doxysection{Referencia de la clase es.\+ull.\+esit.\+utilities.\+Bellman\+Ford}
+\hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford}{}\label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+
+
+Implementa el algoritmo de Bellman-\/\+Ford.  
+
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a3d5fd98d4098ebe439fd5ad9f79602ea}{Bellman\+Ford}} (int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4eaf966cc12c1c16dcdf691280478567}{distance\+Matrix}}, int \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a7be2cec2c770bde817180d5778652437}{nodes}}, Array\+List$<$ Integer $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_af0b7be2386c60a310fbcdbb818631169}{path}})
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford}{Bellman\+Ford}. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_afdc1a955ba8f201e6ed6860965e19bf2}{get\+Distances}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el array de distancias calculadas desde el nodo origen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4bad6103ccc407601545e7b8efa924ab}{get\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el valor (coste) del camino más corto calculado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a250f4ed361209a7bed3bdc12010b3d3c}{solve}} ()
+\begin{DoxyCompactList}\small\item\em Ejecuta el algoritmo de Bellman-\/\+Ford. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_aaaf03effb2c4624d80992a72d0d43229}{calculate\+Edges}} ()
+\begin{DoxyCompactList}\small\item\em Construye las listas de aristas a partir de la matriz de adyacencia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+final int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4eaf966cc12c1c16dcdf691280478567}{distance\+Matrix}}
+\begin{DoxyCompactList}\small\item\em Matriz de adyacencia que representa las distancias (pesos) entre nodos. \end{DoxyCompactList}\item 
+Array\+List$<$ Integer $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a04d0eef7e9fb4d077334529944cf6d9e}{edges1}} = null
+\begin{DoxyCompactList}\small\item\em Lista de nodos de origen para cada arista del grafo. \end{DoxyCompactList}\item 
+Array\+List$<$ Integer $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a73a3486a2c45ce2caed86b54da594dec}{edges2}} = null
+\begin{DoxyCompactList}\small\item\em Lista de nodos de destino para cada arista del grafo. \end{DoxyCompactList}\item 
+final int \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a7be2cec2c770bde817180d5778652437}{nodes}}
+\begin{DoxyCompactList}\small\item\em Número total de nodos en el grafo. \end{DoxyCompactList}\item 
+final Array\+List$<$ Integer $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_af0b7be2386c60a310fbcdbb818631169}{path}}
+\begin{DoxyCompactList}\small\item\em Lista para almacenar el camino más corto encontrado. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_ab96fe181bcec95782e242a9280ef50f4}{distances}} = null
+\begin{DoxyCompactList}\small\item\em Array para almacenar las distancias más cortas desde el origen a cada nodo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a51f98a942ea045962b2296a1d4ea4b53}{value}}
+\begin{DoxyCompactList}\small\item\em El valor (coste) del camino más corto encontrado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos estáticos privados}
+\begin{DoxyCompactItemize}
+\item 
+static final int \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a73d9608d894f7492e6de6bdb126badef}{INFINITY}} = 999999
+\begin{DoxyCompactList}\small\item\em Valor que representa el infinito, usado para inicializar distancias. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementa el algoritmo de Bellman-\/\+Ford. 
+
+Se utiliza para encontrar los caminos más cortos desde un único nodo origen a todos los demás nodos en un grafo dirigido y ponderado. Es capaz de manejar aristas con pesos negativos. 
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00015}{15}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a3d5fd98d4098ebe439fd5ad9f79602ea}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!BellmanFord@{BellmanFord}}
+\index{BellmanFord@{BellmanFord}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{BellmanFord()}{BellmanFord()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a3d5fd98d4098ebe439fd5ad9f79602ea} 
+es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+Bellman\+Ford (\begin{DoxyParamCaption}\item[{int}]{distance\+Matrix}{\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }\item[{int}]{nodes}{, }\item[{Array\+List$<$ Integer $>$}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford}{Bellman\+Ford}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em distance\+Matrix} & La matriz de adyacencia del grafo. \\
+\hline
+{\em nodes} & El número de nodos en el grafo. \\
+\hline
+{\em path} & Una lista (generalmente vacía) que se llenará con el camino encontrado. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00056}{56}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ this.distanceMatrix\ =\ distanceMatrix;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ this.nodes\ =\ nodes;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ this.path\ =\ path;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ this.calculateEdges();}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ this.value\ =\ BellmanFord.INFINITY;}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a3d5fd98d4098ebe439fd5ad9f79602ea_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a3d5fd98d4098ebe439fd5ad9f79602ea_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_aaaf03effb2c4624d80992a72d0d43229}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!calculateEdges@{calculateEdges}}
+\index{calculateEdges@{calculateEdges}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{calculateEdges()}{calculateEdges()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_aaaf03effb2c4624d80992a72d0d43229} 
+void es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+calculate\+Edges (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Construye las listas de aristas a partir de la matriz de adyacencia. 
+
+Recorre la matriz de distancias y, si existe una arista (distancia no es infinita), la añade a las listas {\ttfamily edges1} (origen) y {\ttfamily edges2} (destino). 
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00069}{69}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ this.edges1\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ this.edges2\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.nodes;\ i++)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ this.nodes;\ j++)\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.distanceMatrix[i][j]\ !=\ Integer.MAX\_VALUE)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.edges1.add(i);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.edges2.add(j);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_aaaf03effb2c4624d80992a72d0d43229_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_afdc1a955ba8f201e6ed6860965e19bf2}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!getDistances@{getDistances}}
+\index{getDistances@{getDistances}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{getDistances()}{getDistances()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_afdc1a955ba8f201e6ed6860965e19bf2} 
+int\mbox{[}$\,$\mbox{]} es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+get\+Distances (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el array de distancias calculadas desde el nodo origen. 
+
+\begin{DoxyReturn}{Devuelve}
+Un array de enteros con las distancias. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00086}{86}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.distances;}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4bad6103ccc407601545e7b8efa924ab}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!getValue@{getValue}}
+\index{getValue@{getValue}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4bad6103ccc407601545e7b8efa924ab} 
+int es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+get\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el valor (coste) del camino más corto calculado. 
+
+\begin{DoxyReturn}{Devuelve}
+El coste del camino. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00094}{94}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.value;}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a250f4ed361209a7bed3bdc12010b3d3c}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!solve@{solve}}
+\index{solve@{solve}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a250f4ed361209a7bed3bdc12010b3d3c} 
+void es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+solve (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ejecuta el algoritmo de Bellman-\/\+Ford. 
+
+Inicializa las distancias y predecesores, y luego relaja las aristas repetidamente para encontrar los caminos más cortos. Finalmente, reconstruye el camino desde el destino hasta el origen utilizando el array de predecesores. 
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00104}{104}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numEdges\ =\ this.edges1.size();}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ predecessor\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[this.nodes];}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ this.distances\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[this.nodes];}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.nodes;\ i++)\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ this.distances[i]\ =\ BellmanFord.INFINITY;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ predecessor[i]\ =\ -\/1;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ this.distances[0]\ =\ 0;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ (this.nodes\ -\/\ 1);\ i++)\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ numEdges;\ j++)\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ u\ =\ this.edges1.get(j);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ v\ =\ this.edges2.get(j);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.distances[v]\ >\ this.distances[u]\ +\ this.distanceMatrix[u][v])\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.distances[v]\ =\ this.distances[u]\ +\ this.distanceMatrix[u][v];}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ predecessor[v]\ =\ u;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ this.path.add(this.nodes\ -\/\ 1);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pred\ =\ predecessor[this.nodes\ -\/\ 1];}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (pred\ !=\ -\/1)\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ this.path.add(pred);}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ pred\ =\ predecessor[pred];}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ this.value\ =\ -\/this.distances[this.nodes\ -\/\ 1];}
+\DoxyCodeLine{00130\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a250f4ed361209a7bed3bdc12010b3d3c_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4eaf966cc12c1c16dcdf691280478567}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!distanceMatrix@{distanceMatrix}}
+\index{distanceMatrix@{distanceMatrix}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{distanceMatrix}{distanceMatrix}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4eaf966cc12c1c16dcdf691280478567} 
+final int \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+distance\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Matriz de adyacencia que representa las distancias (pesos) entre nodos. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_ab96fe181bcec95782e242a9280ef50f4}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!distances@{distances}}
+\index{distances@{distances}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{distances}{distances}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_ab96fe181bcec95782e242a9280ef50f4} 
+int \mbox{[}$\,$\mbox{]} es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+distances = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array para almacenar las distancias más cortas desde el origen a cada nodo. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00044}{44}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a04d0eef7e9fb4d077334529944cf6d9e}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!edges1@{edges1}}
+\index{edges1@{edges1}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{edges1}{edges1}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a04d0eef7e9fb4d077334529944cf6d9e} 
+Array\+List$<$Integer$>$ es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+edges1 = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de nodos de origen para cada arista del grafo. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00028}{28}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a73a3486a2c45ce2caed86b54da594dec}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!edges2@{edges2}}
+\index{edges2@{edges2}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{edges2}{edges2}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a73a3486a2c45ce2caed86b54da594dec} 
+Array\+List$<$Integer$>$ es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+edges2 = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de nodos de destino para cada arista del grafo. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a73d9608d894f7492e6de6bdb126badef}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!INFINITY@{INFINITY}}
+\index{INFINITY@{INFINITY}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{INFINITY}{INFINITY}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a73d9608d894f7492e6de6bdb126badef} 
+final int es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+INFINITY = 999999\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Valor que representa el infinito, usado para inicializar distancias. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a7be2cec2c770bde817180d5778652437}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!nodes@{nodes}}
+\index{nodes@{nodes}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a7be2cec2c770bde817180d5778652437} 
+final int es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número total de nodos en el grafo. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00036}{36}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_af0b7be2386c60a310fbcdbb818631169}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!path@{path}}
+\index{path@{path}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_af0b7be2386c60a310fbcdbb818631169} 
+final Array\+List$<$Integer$>$ es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista para almacenar el camino más corto encontrado. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a51f98a942ea045962b2296a1d4ea4b53}\index{es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}!value@{value}}
+\index{value@{value}!es.ull.esit.utilities.BellmanFord@{es.ull.esit.utilities.BellmanFord}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a51f98a942ea045962b2296a1d4ea4b53} 
+int es.\+ull.\+esit.\+utilities.\+Bellman\+Ford.\+value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+El valor (coste) del camino más corto encontrado. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_bellman_ford_8java_source_l00048}{48}} del archivo \mbox{\hyperlink{_bellman_ford_8java_source}{Bellman\+Ford.\+java}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Kefle/\+Desktop/\+Exposito\+TOP/src/es/ull/esit/utilities/\mbox{\hyperlink{_bellman_ford_8java}{Bellman\+Ford.\+java}}\end{DoxyCompactItemize}

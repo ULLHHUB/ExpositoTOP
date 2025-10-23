@@ -1,0 +1,7 @@
+<map id="top.TOPTW.setServiceTime" name="top.TOPTW.setServiceTime">
+<area shape="rect" id="Node000001" title="Establece el tiempo de servicio de un nodo." alt="" coords="462,5,647,32"/>
+<area shape="rect" id="Node000002" href="$classtop_1_1_t_o_p_t_w_reader.html#abad17029fc8928818483c5053dde0fa2" title="Lee una instancia del problema TOPTW desde un archivo." alt="" coords="204,5,414,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="446,21,414,21,414,16,446,16"/>
+<area shape="rect" id="Node000003" href="$classtop_1_1main_t_o_p_t_w.html#a6b155cf80c78f50335adf5a91762e0eb" title="Método principal que ejecuta el solver TOPTW GRASP." alt="" coords="5,5,156,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="188,21,156,21,156,16,188,16"/>
+</map>

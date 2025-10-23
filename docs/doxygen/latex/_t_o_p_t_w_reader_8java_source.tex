@@ -1,0 +1,67 @@
+\doxysection{TOPTWReader.\+java}
+\hypertarget{_t_o_p_t_w_reader_8java_source}{}\label{_t_o_p_t_w_reader_8java_source}\index{C:/Users/Kefle/Desktop/ExpositoTOP/src/top/TOPTWReader.java@{C:/Users/Kefle/Desktop/ExpositoTOP/src/top/TOPTWReader.java}}
+\mbox{\hyperlink{_t_o_p_t_w_reader_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00005}00005\ \textcolor{keyword}{package\ }top;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.io.BufferedReader;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.io.File;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.io.FileReader;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.io.IOException;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00012}00012\ \textcolor{keyword}{import}\ es.ull.esit.utilities.ExpositoUtilities;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00019}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_reader}{00019}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_reader}{TOPTWReader}}\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00020}00020\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00031}\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_reader_abad17029fc8928818483c5053dde0fa2}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w}{TOPTW}}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_reader_abad17029fc8928818483c5053dde0fa2}{readProblem}}(String\ filePath)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w}{TOPTW}}\ problem\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ BufferedReader\ reader\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ File\ instaceFile\ =\ \textcolor{keyword}{new}\ File(filePath);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ reader\ =\ \textcolor{keyword}{new}\ BufferedReader(\textcolor{keyword}{new}\ FileReader(instaceFile));}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ String\ line\ =\ reader.readLine();}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a7ae7bdc68d2eac0de896cbe56878fd64}{simplifyString}}(line);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ String[]\ parts\ =line.split(\textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ problem\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w}{TOPTW}}(Integer.parseInt(parts[2]),\ Integer.parseInt(parts[1]));}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ reader.readLine();}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ \textcolor{keyword}{null};\ parts\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261}{getPOIs}}()+1;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ reader.readLine();}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a7ae7bdc68d2eac0de896cbe56878fd64}{simplifyString}}(line);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parts\ =\ line.split(\textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a14a7fc055b07f3fb564666ad4ff12084}{setX}}(i,\ Double.parseDouble(parts[1]));}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a8318436161579a8b9050a657ca63c5e0}{setY}}(i,\ Double.parseDouble(parts[2]));}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_adce95dbc2b525cbbde383e0b950f874e}{setServiceTime}}(i,\ Double.parseDouble(parts[3]));}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_af9ea3e6941f3ebf4c4415a563d824d89}{setScore}}(i,\ Double.parseDouble(parts[4]));}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i==0)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a97c54405c2ffff1b04371ee42acb1dff}{setReadyTime}}(i,\ Double.parseDouble(parts[7]));}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a0576cf2e4c066aae858a2487ada18785}{setDueTime}}(i,\ Double.parseDouble(parts[8]));}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a97c54405c2ffff1b04371ee42acb1dff}{setReadyTime}}(i,\ Double.parseDouble(parts[8]));}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a0576cf2e4c066aae858a2487ada18785}{setDueTime}}(i,\ Double.parseDouble(parts[9]));\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ \textcolor{keyword}{null};\ parts\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_ad541e0a7d1aafc2b061e024c066dd662}{calculateDistanceMatrix}}();}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(e);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ System.exit(0);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{finally}\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reader.close();}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ ex)\ \{}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(ex);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.exit(0);}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_afbe8fd7e4e3b3d702768e01643558ddf}{setMaxTimePerRoute}}(problem.\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a0d14aca2e33a8fb1eb08013c3d55abfa}{getDueTime}}(0));}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ problem;}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00078}00078\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_t_o_p_t_w_reader_8java_source_l00079}00079\ \}}
+
+\end{DoxyCode}

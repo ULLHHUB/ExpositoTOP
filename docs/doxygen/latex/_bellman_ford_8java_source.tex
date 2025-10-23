@@ -1,0 +1,79 @@
+\doxysection{Bellman\+Ford.\+java}
+\hypertarget{_bellman_ford_8java_source}{}\label{_bellman_ford_8java_source}\index{C:/Users/Kefle/Desktop/ExpositoTOP/src/es/ull/esit/utilities/BellmanFord.java@{C:/Users/Kefle/Desktop/ExpositoTOP/src/es/ull/esit/utilities/BellmanFord.java}}
+\mbox{\hyperlink{_bellman_ford_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00005}\mbox{\hyperlink{namespacees_1_1ull_1_1esit_1_1utilities}{00005}}\ \textcolor{keyword}{package\ }es.ull.esit.utilities;}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00015}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford}{00015}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a3d5fd98d4098ebe439fd5ad9f79602ea}{BellmanFord}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00020}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a73d9608d894f7492e6de6bdb126badef}{00020}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a73d9608d894f7492e6de6bdb126badef}{INFINITY}}\ =\ 999999;}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00024}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4eaf966cc12c1c16dcdf691280478567}{00024}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}[][]\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4eaf966cc12c1c16dcdf691280478567}{distanceMatrix}};}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00028}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a04d0eef7e9fb4d077334529944cf6d9e}{00028}}\ \ \ \ \ \textcolor{keyword}{private}\ ArrayList<Integer>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a04d0eef7e9fb4d077334529944cf6d9e}{edges1}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00032}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a73a3486a2c45ce2caed86b54da594dec}{00032}}\ \ \ \ \ \textcolor{keyword}{private}\ ArrayList<Integer>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a73a3486a2c45ce2caed86b54da594dec}{edges2}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00036}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a7be2cec2c770bde817180d5778652437}{00036}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a7be2cec2c770bde817180d5778652437}{nodes}};}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00040}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_af0b7be2386c60a310fbcdbb818631169}{00040}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ ArrayList<Integer>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_af0b7be2386c60a310fbcdbb818631169}{path}};}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00044}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_ab96fe181bcec95782e242a9280ef50f4}{00044}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_ab96fe181bcec95782e242a9280ef50f4}{distances}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00048}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a51f98a942ea045962b2296a1d4ea4b53}{00048}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a51f98a942ea045962b2296a1d4ea4b53}{value}};}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00056}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a3d5fd98d4098ebe439fd5ad9f79602ea}{00056}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a3d5fd98d4098ebe439fd5ad9f79602ea}{BellmanFord}}(\textcolor{keywordtype}{int}[][]\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4eaf966cc12c1c16dcdf691280478567}{distanceMatrix}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a7be2cec2c770bde817180d5778652437}{nodes}},\ ArrayList<Integer>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_af0b7be2386c60a310fbcdbb818631169}{path}})\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ this.distanceMatrix\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4eaf966cc12c1c16dcdf691280478567}{distanceMatrix}};}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ this.nodes\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a7be2cec2c770bde817180d5778652437}{nodes}};}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ this.path\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_af0b7be2386c60a310fbcdbb818631169}{path}};}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ this.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_aaaf03effb2c4624d80992a72d0d43229}{calculateEdges}}();}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ this.value\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a3d5fd98d4098ebe439fd5ad9f79602ea}{BellmanFord}}.INFINITY;}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00069}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_aaaf03effb2c4624d80992a72d0d43229}{00069}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_aaaf03effb2c4624d80992a72d0d43229}{calculateEdges}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ this.edges1\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ this.edges2\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.nodes;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ this.nodes;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.distanceMatrix[i][j]\ !=\ Integer.MAX\_VALUE)\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.edges1.add(i);}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.edges2.add(j);}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00086}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_afdc1a955ba8f201e6ed6860965e19bf2}{00086}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_afdc1a955ba8f201e6ed6860965e19bf2}{getDistances}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.distances;}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00094}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4bad6103ccc407601545e7b8efa924ab}{00094}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a4bad6103ccc407601545e7b8efa924ab}{getValue}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.value;}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00104}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a250f4ed361209a7bed3bdc12010b3d3c}{00104}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a250f4ed361209a7bed3bdc12010b3d3c}{solve}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numEdges\ =\ this.edges1.size();}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ predecessor\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[this.nodes];}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ this.distances\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[this.nodes];}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.nodes;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ this.distances[i]\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_bellman_ford_a3d5fd98d4098ebe439fd5ad9f79602ea}{BellmanFord}}.INFINITY;}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ predecessor[i]\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ this.distances[0]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ (this.nodes\ -\/\ 1);\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ numEdges;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ u\ =\ this.edges1.get(j);}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ v\ =\ this.edges2.get(j);}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.distances[v]\ >\ this.distances[u]\ +\ this.distanceMatrix[u][v])\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.distances[v]\ =\ this.distances[u]\ +\ this.distanceMatrix[u][v];}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ predecessor[v]\ =\ u;}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ this.path.add(this.nodes\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pred\ =\ predecessor[this.nodes\ -\/\ 1];}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (pred\ !=\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ this.path.add(pred);}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ pred\ =\ predecessor[pred];}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00128}00128\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ this.value\ =\ -\/this.distances[this.nodes\ -\/\ 1];}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00130}00130\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bellman_ford_8java_source_l00131}00131\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,270 @@
+\doxysection{Exposito\+Utilities.\+java}
+\hypertarget{_exposito_utilities_8java_source}{}\label{_exposito_utilities_8java_source}\index{C:/Users/Kefle/Desktop/ExpositoTOP/src/es/ull/esit/utilities/ExpositoUtilities.java@{C:/Users/Kefle/Desktop/ExpositoTOP/src/es/ull/esit/utilities/ExpositoUtilities.java}}
+\mbox{\hyperlink{_exposito_utilities_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00005}00005\ \textcolor{keyword}{package\ }es.ull.esit.utilities;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.io.BufferedReader;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.io.BufferedWriter;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.io.FileReader;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.io.FileWriter;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00011}00011\ \textcolor{keyword}{import}\ java.io.IOException;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00012}00012\ \textcolor{keyword}{import}\ java.text.DecimalFormat;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00013}00013\ \textcolor{keyword}{import}\ java.text.DecimalFormatSymbols;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00014}00014\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00015}00015\ \textcolor{keyword}{import}\ java.util.Arrays;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00016}00016\ \textcolor{keyword}{import}\ java.util.HashSet;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00017}00017\ \textcolor{keyword}{import}\ java.util.Iterator;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00018}00018\ \textcolor{keyword}{import}\ java.util.logging.Level;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00019}00019\ \textcolor{keyword}{import}\ java.util.logging.Logger;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00027}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{00027}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00032}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_ab16e491dc8ee2075b993ebb2e638129d}{00032}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_ab16e491dc8ee2075b993ebb2e638129d}{DEFAULT\_COLUMN\_WIDTH}}\ =\ 10;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00036}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_aec9f22bde414b43d04607fed896125c3}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_aec9f22bde414b43d04607fed896125c3}{ALIGNMENT\_LEFT}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00040}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a09bfe058e6e119adf0997c166073db69}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a09bfe058e6e119adf0997c166073db69}{ALIGNMENT\_RIGHT}}\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00048}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a5f27d29dcfbc930b8fc57bf639b31ae4}{00048}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a5f27d29dcfbc930b8fc57bf639b31ae4}{getFirstAppearance}}(\textcolor{keywordtype}{int}[]\ vector,\ \textcolor{keywordtype}{int}\ element)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ vector.length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (vector[i]\ ==\ element)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ i;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00061}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a76e13d48f3056064b761feaa50a37656}{00061}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a76e13d48f3056064b761feaa50a37656}{printFile}}(String\ file)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ (BufferedReader\ reader\ =\ \textcolor{keyword}{new}\ BufferedReader(\textcolor{keyword}{new}\ FileReader(file)))\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ String\ line\ =\ reader.readLine();}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (line\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(line);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ line\ =\ reader.readLine();}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ ex)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ Logger.getLogger(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.class.getName()).log(Level.SEVERE,\ \textcolor{keyword}{null},\ ex);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00079}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a7ae7bdc68d2eac0de896cbe56878fd64}{00079}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a7ae7bdc68d2eac0de896cbe56878fd64}{simplifyString}}(String\ \textcolor{keywordtype}{string})\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ =\ \textcolor{keywordtype}{string}.replaceAll(\textcolor{stringliteral}{"{}\(\backslash\)t"{}},\ \textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 50;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ =\ \textcolor{keywordtype}{string}.replaceAll(\textcolor{stringliteral}{"{}\ \ "{}},\ \textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ =\ \textcolor{keywordtype}{string}.trim();}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ string;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00094}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_ac6fad0c76457c120161c3a92cf85763e}{00094}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}[][]\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_ac6fad0c76457c120161c3a92cf85763e}{multiplyMatrices}}(\textcolor{keywordtype}{double}\ a[][],\ \textcolor{keywordtype}{double}\ b[][])\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (a.length\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[0][0];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (a[0].length\ !=\ b.length)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ a[0].length;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\ =\ a.length;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ p\ =\ b[0].length;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ ans[][]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[m][p];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ m;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ p;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ n;\ k++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ans[i][j]\ +=\ a[i][k]\ *\ b[k][j];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ans;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00121}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a71709ecd8a80b777e754e918700f8bb8}{00121}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a71709ecd8a80b777e754e918700f8bb8}{writeTextToFile}}(String\ file,\ String\ text)\ \textcolor{keywordflow}{throws}\ IOException\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ (BufferedWriter\ writer\ =\ \textcolor{keyword}{new}\ BufferedWriter(\textcolor{keyword}{new}\ FileWriter(file)))\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ writer.write(text);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00125}00125\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00133}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{00133}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(String\ \textcolor{keywordtype}{string})\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a3aa6195e3bb8c5393a84ab3ff7b3f18a}{isInteger}}(\textcolor{keywordtype}{string}))\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_aea4db414c92e2fc046f76ef43fcf1214}{isDouble}}(\textcolor{keywordtype}{string}))\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ value\ =\ Double.parseDouble(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ =\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(value);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ string;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00141}00141\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00148}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1668b663acb808d1a3a8d69a9638da90}{00148}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1668b663acb808d1a3a8d69a9638da90}{getFormat}}(\textcolor{keywordtype}{double}\ value)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ DecimalFormat\ decimalFormatter\ =\ \textcolor{keyword}{new}\ DecimalFormat(\textcolor{stringliteral}{"{}0.000"{}});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ DecimalFormatSymbols\ symbols\ =\ \textcolor{keyword}{new}\ DecimalFormatSymbols();}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ symbols.setDecimalSeparator(\textcolor{charliteral}{'.'});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ decimalFormatter.setDecimalFormatSymbols(symbols);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ decimalFormatter.format(value);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00154}00154\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00162}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a9a507e59f1cbe8f859d54d560d273811}{00162}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a9a507e59f1cbe8f859d54d560d273811}{getFormat}}(\textcolor{keywordtype}{double}\ value,\ \textcolor{keywordtype}{int}\ zeros)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ String\ format\ =\ \textcolor{stringliteral}{"{}0."{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ zeros;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ format\ +=\ \textcolor{stringliteral}{"{}0"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ DecimalFormat\ decimalFormatter\ =\ \textcolor{keyword}{new}\ DecimalFormat(format);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00168}00168\ \ \ \ \ \ \ \ \ DecimalFormatSymbols\ symbols\ =\ \textcolor{keyword}{new}\ DecimalFormatSymbols();}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00169}00169\ \ \ \ \ \ \ \ \ symbols.setDecimalSeparator(\textcolor{charliteral}{'.'});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00170}00170\ \ \ \ \ \ \ \ \ decimalFormatter.setDecimalFormatSymbols(symbols);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00171}00171\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ decimalFormatter.format(value);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00172}00172\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00180}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a4c018a651b6159a3e2561b49455a134b}{00180}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a4c018a651b6159a3e2561b49455a134b}{getFormat}}(String\ \textcolor{keywordtype}{string},\ \textcolor{keywordtype}{int}\ width)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00181}00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(\textcolor{keywordtype}{string},\ width,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a09bfe058e6e119adf0997c166073db69}{ALIGNMENT\_RIGHT}});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00182}00182\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00191}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a30a8e32b37c35c82d73f4b062f4a05db}{00191}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a30a8e32b37c35c82d73f4b062f4a05db}{getFormat}}(String\ \textcolor{keywordtype}{string},\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ alignment)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00192}00192\ \ \ \ \ \ \ \ \ String\ format\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00193}00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (alignment\ ==\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_aec9f22bde414b43d04607fed896125c3}{ALIGNMENT\_LEFT}})\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ format\ =\ \textcolor{stringliteral}{"{}\%-\/"{}}\ +\ width\ +\ \textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00195}00195\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ format\ =\ \textcolor{stringliteral}{"{}\%"{}}\ +\ 1\ +\ \textcolor{stringliteral}{"{}\$"{}}\ +\ width\ +\ \textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00197}00197\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00198}00198\ \ \ \ \ \ \ \ \ DecimalFormatSymbols\ symbols\ =\ \textcolor{keyword}{new}\ DecimalFormatSymbols();}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00199}00199\ \ \ \ \ \ \ \ \ symbols.setDecimalSeparator(\textcolor{charliteral}{'.'});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00200}00200\ \ \ \ \ \ \ \ \ String[]\ data\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{keywordtype}{string}\};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00201}00201\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.format(format,\ (Object[])\ data);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00202}00202\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00210}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_aead770697be0d448bd91cd8427a90216}{00210}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_aead770697be0d448bd91cd8427a90216}{getFormat}}(ArrayList<String>\ strings,\ \textcolor{keywordtype}{int}\ width)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00211}00211\ \ \ \ \ \ \ \ \ String\ format\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00212}00212\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ strings.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ format\ +=\ \textcolor{stringliteral}{"{}\%"{}}\ +\ (i\ +\ 1)\ +\ \textcolor{stringliteral}{"{}\$"{}}\ +\ width\ +\ \textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00214}00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00215}00215\ \ \ \ \ \ \ \ \ String[]\ data\ =\ \textcolor{keyword}{new}\ String[strings.size()];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00216}00216\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ t\ =\ 0;\ t\ <\ strings.size();\ t++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ data[t]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(strings.get(t));}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00218}00218\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00219}00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.format(format,\ (Object[])\ data);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00220}00220\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00227}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a0ee668a54be16c38afc28664b583fe7a}{00227}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a0ee668a54be16c38afc28664b583fe7a}{getFormat}}(ArrayList<Integer>\ strings)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00228}00228\ \ \ \ \ \ \ \ \ String\ format\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00229}00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ strings.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ format\ +=\ \textcolor{stringliteral}{"{}\%"{}}\ +\ (i\ +\ 1)\ +\ \textcolor{stringliteral}{"{}\$"{}}\ +\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_ab16e491dc8ee2075b993ebb2e638129d}{DEFAULT\_COLUMN\_WIDTH}}\ +\ \textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00231}00231\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00232}00232\ \ \ \ \ \ \ \ \ Integer[]\ data\ =\ \textcolor{keyword}{new}\ Integer[strings.size()];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00233}00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ t\ =\ 0;\ t\ <\ strings.size();\ t++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ data[t]\ =\ strings.get(t);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00235}00235\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00236}00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.format(format,\ (Object[])\ data);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00237}00237\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00245}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1d9fa26973acad259f8b3b605aa8713c}{00245}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1d9fa26973acad259f8b3b605aa8713c}{getFormat}}(String[]\ strings,\ \textcolor{keywordtype}{int}\ width)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00246}00246\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ alignment\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[strings.length];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00247}00247\ \ \ \ \ \ \ \ \ Arrays.fill(alignment,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a09bfe058e6e119adf0997c166073db69}{ALIGNMENT\_RIGHT}});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00248}00248\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ widths\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[strings.length];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00249}00249\ \ \ \ \ \ \ \ \ Arrays.fill(widths,\ width);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00250}00250\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(strings,\ widths,\ alignment);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00251}00251\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00252}00252\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00259}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a8804995e2e567d18859062fa9d29345b}{00259}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a8804995e2e567d18859062fa9d29345b}{getFormat}}(String[][]\ matrixStrings,\ \textcolor{keywordtype}{int}\ width)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00260}00260\ \ \ \ \ \ \ \ \ String\ result\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00261}00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ matrixStrings.length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ String[]\ strings\ =\ matrixStrings[i];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ alignment\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[strings.length];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ Arrays.fill(alignment,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a09bfe058e6e119adf0997c166073db69}{ALIGNMENT\_RIGHT}});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ widths\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[strings.length];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ Arrays.fill(widths,\ width);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ result\ +=\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(strings,\ widths,\ alignment);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ (matrixStrings.length\ -\/\ 1))\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ +=\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00271}00271\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00272}00272\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00273}00273\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00280}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_af00a27e34df90c5cc645e1a669063b5c}{00280}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_af00a27e34df90c5cc645e1a669063b5c}{getFormat}}(String[]\ strings)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00281}00281\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ alignment\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[strings.length];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00282}00282\ \ \ \ \ \ \ \ \ Arrays.fill(alignment,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a09bfe058e6e119adf0997c166073db69}{ALIGNMENT\_RIGHT}});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00283}00283\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ widths\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[strings.length];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00284}00284\ \ \ \ \ \ \ \ \ Arrays.fill(widths,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_ab16e491dc8ee2075b993ebb2e638129d}{DEFAULT\_COLUMN\_WIDTH}});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00285}00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(strings,\ widths,\ alignment);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00286}00286\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00294}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_ac0e30df31555f720f6f3cc93d8d2c066}{00294}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_ac0e30df31555f720f6f3cc93d8d2c066}{getFormat}}(String[]\ strings,\ \textcolor{keywordtype}{int}[]\ width)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00295}00295\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ alignment\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[strings.length];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00296}00296\ \ \ \ \ \ \ \ \ Arrays.fill(alignment,\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a09bfe058e6e119adf0997c166073db69}{ALIGNMENT\_RIGHT}});}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00297}00297\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(strings,\ width,\ alignment);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00298}00298\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00307}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a08684483087c8a7fcb91e158588391dc}{00307}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a08684483087c8a7fcb91e158588391dc}{getFormat}}(String[]\ strings,\ \textcolor{keywordtype}{int}[]\ width,\ \textcolor{keywordtype}{int}[]\ alignment)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00308}00308\ \ \ \ \ \ \ \ \ String\ format\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00309}00309\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ strings.length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (alignment[i]\ ==\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_aec9f22bde414b43d04607fed896125c3}{ALIGNMENT\_LEFT}})\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ format\ +=\ \textcolor{stringliteral}{"{}\%"{}}\ +\ (i\ +\ 1)\ +\ \textcolor{stringliteral}{"{}\$-\/"{}}\ +\ width[i]\ +\ \textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ format\ +=\ \textcolor{stringliteral}{"{}\%"{}}\ +\ (i\ +\ 1)\ +\ \textcolor{stringliteral}{"{}\$"{}}\ +\ width[i]\ +\ \textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00315}00315\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00316}00316\ \ \ \ \ \ \ \ \ String[]\ data\ =\ \textcolor{keyword}{new}\ String[strings.length];}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00317}00317\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ t\ =\ 0;\ t\ <\ strings.length;\ t++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ data[t]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a1dc633979b918d55db1eb7308f864d6c}{getFormat}}(strings[t]);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00319}00319\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00320}00320\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ String.format(format,\ (Object[])\ data);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00321}00321\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00322}00322\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00328}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a3aa6195e3bb8c5393a84ab3ff7b3f18a}{00328}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a3aa6195e3bb8c5393a84ab3ff7b3f18a}{isInteger}}(String\ str)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00329}00329\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ Integer.parseInt(str);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00332}00332\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00333}00333\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00334}00334\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00335}00335\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00336}00336\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00342}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_aea4db414c92e2fc046f76ef43fcf1214}{00342}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_aea4db414c92e2fc046f76ef43fcf1214}{isDouble}}(String\ str)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00343}00343\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ Double.parseDouble(str);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00346}00346\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00347}00347\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00348}00348\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00349}00349\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00350}00350\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00356}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a5048eaa059161a2cfa8e5c6bc9c04cfb}{00356}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a5048eaa059161a2cfa8e5c6bc9c04cfb}{isAcyclic}}(\textcolor{keywordtype}{int}[][]\ distanceMatrix)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00357}00357\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numRealTasks\ =\ distanceMatrix.length\ -\/\ 2;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00358}00358\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ node\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00359}00359\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ acyclic\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00360}00360\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (acyclic\ \&\&\ node\ <=\ numRealTasks)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00361}00361\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities}{ExpositoUtilities}}.\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a219fe3e64266d6eeb8bd2137e8c81c3b}{thereIsPath}}(distanceMatrix,\ node))\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00362}00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00363}00363\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00364}00364\ \ \ \ \ \ \ \ \ \ \ \ \ node++;}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00365}00365\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00366}00366\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00367}00367\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00368}00368\ }
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00375}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a219fe3e64266d6eeb8bd2137e8c81c3b}{00375}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_a219fe3e64266d6eeb8bd2137e8c81c3b}{thereIsPath}}(\textcolor{keywordtype}{int}[][]\ distanceMatrix,\ \textcolor{keywordtype}{int}\ node)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00376}00376\ \ \ \ \ \ \ \ \ HashSet<Integer>\ visits\ =\ \textcolor{keyword}{new}\ HashSet<>();}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00377}00377\ \ \ \ \ \ \ \ \ HashSet<Integer>\ noVisits\ =\ \textcolor{keyword}{new}\ HashSet<>();}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00378}00378\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ distanceMatrix.length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ !=\ node)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00380}00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ noVisits.add(i);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00381}00381\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00382}00382\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00383}00383\ \ \ \ \ \ \ \ \ visits.add(node);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00384}00384\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!visits.isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00385}00385\ \ \ \ \ \ \ \ \ \ \ \ \ Iterator<Integer>\ it\ =\ visits.iterator();}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00386}00386\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ toCheck\ =\ it.next();}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00387}00387\ \ \ \ \ \ \ \ \ \ \ \ \ visits.remove(toCheck);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00388}00388\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ distanceMatrix.length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00389}00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (toCheck\ !=\ i\ \&\&\ distanceMatrix[toCheck][i]\ !=\ Integer.MAX\_VALUE)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00390}00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ node)\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00392}00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00393}00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (noVisits.contains(i))\ \{}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00394}00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ noVisits.remove(i);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00395}00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ visits.add(i);}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00396}00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00399}00399\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00400}00400\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00401}00401\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_exposito_utilities_8java_source_l00402}00402\ \}}
+
+\end{DoxyCode}

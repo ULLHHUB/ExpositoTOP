@@ -1,0 +1,827 @@
+\doxysection{Referencia de la clase top.\+TOPTWGRASP}
+\hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p}{}\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p}\index{top.TOPTWGRASP@{top.TOPTWGRASP}}
+
+
+Implementa la metaheurística GRASP (Greedy Randomized Adaptive Search Procedure) para resolver el \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW}.  
+
+
+
+
+Diagrama de colaboración de top.\+TOPTWGRASP\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_af0ff5000bf59464aaf630ba7d1753b29}{TOPTWGRASP}} (\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution}{TOPTWSolution}} sol)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{classtop_1_1_t_o_p_t_w_g_r_a_s_p}{TOPTWGRASP}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a11242fc809f6a16ff81136c4785fdc3e}{GRASP}} (int max\+Iterations, int max\+Size\+RCL)
+\begin{DoxyCompactList}\small\item\em Ejecuta el algoritmo GRASP durante un número determinado de iteraciones. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a2c07bc597fa781b81a53ad1017e24a4f}{aleatory\+Selection\+RCL}} (int max\+TRCL)
+\begin{DoxyCompactList}\small\item\em Selecciona un elemento aleatorio de la Lista Restringida de Candidatos (RCL). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_aa921b046fab55b437ea10e5cc286c014}{fuzzy\+Selection\+Best\+FDRCL}} (Array\+List$<$ double\mbox{[}$\,$\mbox{]} $>$ rcl)
+\begin{DoxyCompactList}\small\item\em Selecciona un candidato de la RCL utilizando una función de pertenencia difusa. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a717d4390dfb843bed804afb598e27a87}{fuzzy\+Selection\+Alpha\+Cut\+RCL}} (Array\+List$<$ double\mbox{[}$\,$\mbox{]} $>$ rcl, double alpha)
+\begin{DoxyCompactList}\small\item\em Selecciona un candidato de la RCL utilizando un corte alfa sobre la función de pertenencia difusa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ade97c51a7d20660d7d306b756b4a6302}{compute\+Greedy\+Solution}} (int max\+Size\+RCL)
+\begin{DoxyCompactList}\small\item\em Construye una solución greedy aleatorizada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_adaccdd26e4ad89ffb3e86c780dcd90d7}{update\+Solution}} (double\mbox{[}$\,$\mbox{]} candidate\+Selected, Array\+List$<$ Array\+List$<$ Double $>$ $>$ departure\+Times)
+\begin{DoxyCompactList}\small\item\em Actualiza la solución insertando un candidato seleccionado. \end{DoxyCompactList}\item 
+Array\+List$<$ double\mbox{[}$\,$\mbox{]} $>$ \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ae706fe2d8478acf0a026bb40e8fc9df7}{comprehensive\+Evaluation}} (Array\+List$<$ Integer $>$ customers, Array\+List$<$ Array\+List$<$ Double $>$ $>$ departure\+Times)
+\begin{DoxyCompactList}\small\item\em Evalúa de forma exhaustiva todos los posibles movimientos de inserción para los clientes disponibles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution}{TOPTWSolution}} \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a4c37722144024730a440f34343530d2c}{get\+Solution}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la solución actual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a01595711790fbdceebe112f930ff7f02}{set\+Solution}} (\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution}{TOPTWSolution}} \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a566fd32b5d09e65b60415ab4bd9f14e0}{solution}})
+\begin{DoxyCompactList}\small\item\em Establece la solución a utilizar. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a52f508173fa05609d4bf7db92111a3b8}{get\+Solution\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el tiempo de ejecución de la solución (actualmente no implementado). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a88f5adcd791131b1d8da3dc848d80701}{set\+Solution\+Time}} (int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_adceff925217f25676e14d261b873ea90}{solution\+Time}})
+\begin{DoxyCompactList}\small\item\em Establece el tiempo de ejecución de la solución. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ae0fad47956718e9e96ee5fb6022d9f5b}{get\+Max\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la máxima puntuación posible entre todos los nodos del problema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a4319fa91e2578bb9b5570dc1af7b6f3b}{NO\+\_\+\+EVALUATED}} = -\/1.\+0
+\begin{DoxyCompactList}\small\item\em Constante para indicar que una solución no ha sido evaluada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution}{TOPTWSolution}} \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a566fd32b5d09e65b60415ab4bd9f14e0}{solution}}
+\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_adceff925217f25676e14d261b873ea90}{solution\+Time}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos estáticos privados}
+\begin{DoxyCompactItemize}
+\item 
+static final Random \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_g_r_a_s_p_acc4761dfe2aeaf4ff1b549879a471a1f}{RANDOM}} = new Secure\+Random()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementa la metaheurística GRASP (Greedy Randomized Adaptive Search Procedure) para resolver el \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW}. 
+
+Esta clase contiene los métodos para ejecutar el algoritmo GRASP, incluyendo la construcción de soluciones aleatorizadas y la gestión de la Lista Restringida de Candidatos (RCL). 
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_af0ff5000bf59464aaf630ba7d1753b29}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!TOPTWGRASP@{TOPTWGRASP}}
+\index{TOPTWGRASP@{TOPTWGRASP}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{TOPTWGRASP()}{TOPTWGRASP()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_af0ff5000bf59464aaf630ba7d1753b29} 
+top.\+TOPTWGRASP.\+TOPTWGRASP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution}{TOPTWSolution}}}]{sol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{classtop_1_1_t_o_p_t_w_g_r_a_s_p}{TOPTWGRASP}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sol} & La solución inicial sobre la que operará el algoritmo. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ this.solution\ =\ sol;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ this.solutionTime\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a2c07bc597fa781b81a53ad1017e24a4f}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!aleatorySelectionRCL@{aleatorySelectionRCL}}
+\index{aleatorySelectionRCL@{aleatorySelectionRCL}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{aleatorySelectionRCL()}{aleatorySelectionRCL()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a2c07bc597fa781b81a53ad1017e24a4f} 
+int top.\+TOPTWGRASP.\+aleatory\+Selection\+RCL (\begin{DoxyParamCaption}\item[{int}]{max\+TRCL}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Selecciona un elemento aleatorio de la Lista Restringida de Candidatos (RCL). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em max\+TRCL} & El tamaño de la RCL sobre la que se hará la selección. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La posición del elemento seleccionado en la RCL. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00101}{101}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RANDOM.nextInt(maxTRCL);}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a2c07bc597fa781b81a53ad1017e24a4f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ae706fe2d8478acf0a026bb40e8fc9df7}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!comprehensiveEvaluation@{comprehensiveEvaluation}}
+\index{comprehensiveEvaluation@{comprehensiveEvaluation}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{comprehensiveEvaluation()}{comprehensiveEvaluation()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ae706fe2d8478acf0a026bb40e8fc9df7} 
+Array\+List$<$ double\mbox{[}$\,$\mbox{]} $>$ top.\+TOPTWGRASP.\+comprehensive\+Evaluation (\begin{DoxyParamCaption}\item[{Array\+List$<$ Integer $>$}]{customers}{, }\item[{Array\+List$<$ Array\+List$<$ Double $>$ $>$}]{departure\+Times}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Evalúa de forma exhaustiva todos los posibles movimientos de inserción para los clientes disponibles. 
+
+Para cada cliente no asignado, prueba a insertarlo en cada posición posible de cada ruta existente, verificando la factibilidad de la inserción (ventanas de tiempo). 
+\begin{DoxyParams}{Parámetros}
+{\em customers} & La lista de clientes aún no asignados a ninguna ruta. \\
+\hline
+{\em departure\+Times} & Los tiempos de salida actuales para cada nodo en la solución. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Una lista de candidatos factibles, donde cada candidato es un array con la información \mbox{[}cliente, ruta, predecesor, coste, score\mbox{]}. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00280}{280}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ ArrayList<\ double[]\ >\ candidatesList\ =\ \textcolor{keyword}{new}\ ArrayList<\ double[]\ >();}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}[]\ infoCandidate\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[5];}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ validFinalInsertion\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ infoCandidate[0]\ =\ -\/1;}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ infoCandidate[1]\ =\ -\/1;}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ infoCandidate[2]\ =\ -\/1;}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ infoCandidate[3]\ =\ Double.MAX\_VALUE;}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ infoCandidate[4]\ =\ -\/1;}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ c\ =\ 0;\ c\ <\ customers.size();\ c++)\ \{\ \textcolor{comment}{//\ clientes\ disponibles}}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ this.solution.getCreatedRoutes();\ k++)\ \{\ \textcolor{comment}{//\ rutas\ creadas}}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ validFinalInsertion\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ depot\ =\ this.solution.getIndexRoute(k);}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pre=-\/1,\ suc=-\/1;}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ costInsertion\ =\ 0;}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pre\ =\ depot;}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ candidate\ =\ customers.get(c);}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ recorremos\ la\ ruta}}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ validFinalInsertion\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ suc\ =\ this.solution.getSuccessor(pre);}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ timesUntilPre\ =\ departureTimes.get(k).get(pre)\ +\ this.solution.getDistance(pre,\ candidate);}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(timesUntilPre\ <\ (this.solution.getProblem().getDueTime(candidate)))\ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ costCand\ =\ 0;}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(timesUntilPre\ <\ this.solution.getProblem().getReadyTime(candidate))\ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ costCand\ =\ this.solution.getProblem().getReadyTime(candidate);}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ costCand\ =\ timesUntilPre;\ \}}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ costCand\ +=\ \ this.solution.getProblem().getServiceTime(candidate);}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(costCand\ >\ this.solution.getProblem().getMaxTimePerRoute())\ \{\ validFinalInsertion\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comprobar\ TW\ desde\ candidate\ hasta\ sucesor}}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ timesUntilSuc\ =\ costCand\ +\ this.solution.getDistance(candidate,\ suc);}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(timesUntilSuc\ <\ (this.solution.getProblem().getDueTime(suc)))\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ costSuc\ =\ 0;}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(timesUntilSuc\ <\ this.solution.getProblem().getReadyTime(suc))\ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ costSuc\ =\ this.solution.getProblem().getReadyTime(suc);}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ costSuc\ =\ timesUntilSuc;\ \}}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ costSuc\ +=\ \ this.solution.getProblem().getServiceTime(suc);}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ costInsertion\ =\ costSuc;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(costSuc\ >\ this.solution.getProblem().getMaxTimePerRoute())\ \{\ validFinalInsertion\ =\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pre2=suc,\ suc2\ =\ -\/1;}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(suc\ !=\ depot)}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ suc2\ =\ this.solution.getSuccessor(pre2);}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ timesUntilSuc2\ =\ costInsertion\ +\ this.solution.getDistance(pre2,\ suc2);}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(timesUntilSuc2\ <\ (this.solution.getProblem().getDueTime(suc2)))\ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(timesUntilSuc2\ <\ this.solution.getProblem().getReadyTime(suc2))\ \{}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ costInsertion\ =\ this.solution.getProblem().getReadyTime(suc2);}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ costInsertion\ =\ timesUntilSuc2;\ \}}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ costInsertion\ +=\ this.solution.getProblem().getServiceTime(suc2);}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(costInsertion\ >\ this.solution.getProblem().getMaxTimePerRoute())\ \{\ validFinalInsertion\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ validFinalInsertion\ =\ \textcolor{keyword}{false};\ \}\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pre2\ =\ suc2;}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}((suc2\ !=\ depot)\ \&\&\ validFinalInsertion);}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ validFinalInsertion\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ validFinalInsertion\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(validFinalInsertion==\textcolor{keyword}{true})\ \{\ \textcolor{comment}{//\ cliente,\ ruta,\ predecesor,\ coste}}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(costInsertion\ <\ infoCandidate[3])\ \{}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ infoCandidate[0]\ =\ candidate;\ infoCandidate[1]\ =\ k;\ infoCandidate[2]\ =\ pre;\ infoCandidate[3]\ =\ costInsertion;\ infoCandidate[4]\ =\ this.solution.getProblem().getScore(candidate);\ \textcolor{comment}{//\ cliente,\ ruta,\ predecesor,\ coste,\ score}}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pre\ =\ suc;}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}(suc\ !=\ depot);}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//rutas\ creadas}}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ almacenamos\ en\ la\ lista\ de\ candidatos\ la\ mejor\ posición\ de\ inserción\ para\ el\ cliente}}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(infoCandidate[0]!=-\/1\ \&\&\ infoCandidate[1]!=-\/1\ \&\&\ infoCandidate[2]!=-\/1\ \&\&\ infoCandidate[3]\ !=\ Double.MAX\_VALUE\ \&\&\ infoCandidate[4]!=-\/1)\ \{}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}[]\ infoCandidate2\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[5];}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ infoCandidate2[0]\ =\ infoCandidate[0];\ \ infoCandidate2[1]\ =\ infoCandidate[1];\ \ }
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ infoCandidate2[2]\ =\ infoCandidate[2];\ \ infoCandidate2[3]\ =\ infoCandidate[3];}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ infoCandidate2[4]\ =\ infoCandidate[4];}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ candidatesList.add(infoCandidate2);}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ validFinalInsertion\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ infoCandidate[0]\ =\ -\/1;\ \ infoCandidate[1]\ =\ -\/1;}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ infoCandidate[2]\ =\ -\/1;\ \ infoCandidate[3]\ =\ Double.MAX\_VALUE;}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ infoCandidate[4]\ =\ -\/1;}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ cliente}}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ candidatesList;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00363\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ae706fe2d8478acf0a026bb40e8fc9df7_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ae706fe2d8478acf0a026bb40e8fc9df7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ade97c51a7d20660d7d306b756b4a6302}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!computeGreedySolution@{computeGreedySolution}}
+\index{computeGreedySolution@{computeGreedySolution}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{computeGreedySolution()}{computeGreedySolution()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ade97c51a7d20660d7d306b756b4a6302} 
+void top.\+TOPTWGRASP.\+compute\+Greedy\+Solution (\begin{DoxyParamCaption}\item[{int}]{max\+Size\+RCL}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construye una solución greedy aleatorizada. 
+
+Itera mientras haya clientes sin asignar, evaluando los candidatos, construyendo la RCL, seleccionando un candidato y actualizando la solución. 
+\begin{DoxyParams}{Parámetros}
+{\em max\+Size\+RCL} & El tamaño máximo de la RCL. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00153}{153}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ inicialización}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ this.solution.initSolution();}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tiempo\ de\ salida\ y\ score\ por\ ruta\ y\ cliente}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ ArrayList<ArrayList<Double>>\ departureTimesPerClient\ =\ \textcolor{keyword}{new}\ ArrayList<ArrayList<Double>>();}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ ArrayList<Double>\ init\ =\ \textcolor{keyword}{new}\ ArrayList<Double>();}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ z\ =\ 0;\ z\ <\ this.solution.getProblem().getPOIs()+this.solution.getProblem().getVehicles();\ z++)\ \{init.add(0.0);\}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ departureTimesPerClient.add(0,\ init);}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ clientes}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ ArrayList<Integer>\ customers\ =\ \textcolor{keyword}{new}\ ArrayList<Integer>();}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 1;\ j\ <=\ this.solution.getProblem().getPOIs();\ j++)\ \{\ customers.add(j);\ \}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Evaluar\ coste\ incremental\ de\ los\ elementos\ candidatos}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ ArrayList<\ double[]\ >\ candidates\ =\ this.comprehensiveEvaluation(customers,\ departureTimesPerClient);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ Collections.sort(candidates,\ \textcolor{keyword}{new}\ Comparator<\textcolor{keywordtype}{double}[]>()\ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ compare(\textcolor{keywordtype}{double}[]\ a,\ \textcolor{keywordtype}{double}[]\ b)\ \{\ \ \ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Double.compare(a[a.length-\/2],\ b[b.length-\/2]);}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ maxTRCL\ =\ maxSizeRCL;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ existCandidates\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!customers.isEmpty()\ \&\&\ existCandidates)\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!candidates.isEmpty())\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Construir\ lista\ restringida\ de\ candidatos}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ArrayList<\ double[]\ >\ rcl\ =\ \textcolor{keyword}{new}\ ArrayList<\ double[]\ >();}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxTRCL\ =\ maxSizeRCL;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(maxTRCL\ >\ candidates.size())\ \{\ maxTRCL\ =\ candidates.size();\ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j=0;\ j\ <\ maxTRCL;\ j++)\ \{\ rcl.add(candidates.get(j));\ \}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Selección\ aleatoria\ o\ fuzzy\ de\ candidato\ de\ la\ lista\ restringida}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ posSelected\ =\ -\/1;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ selection\ =\ 3;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ alpha\ =\ 0.8;}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (selection)\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \ posSelected\ =\ this.aleatorySelectionRCL(maxTRCL);\ \ \textcolor{comment}{//\ Selección\ aleatoria}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \ posSelected\ =\ this.fuzzySelectionBestFDRCL(rcl);\ \ \ \textcolor{comment}{//\ Selección\ fuzzy\ con\ mejor\ valor\ de\ alpha}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \ posSelected\ =\ this.fuzzySelectionAlphaCutRCL(rcl,\ alpha);\ \textcolor{comment}{//\ Selección\ fuzzy\ con\ alpha\ corte\ aleatoria}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ posSelected\ =\ this.aleatorySelectionRCL(maxTRCL);\ \ \textcolor{comment}{//\ Selección\ aleatoria\ por\ defecto}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}[]\ candidateSelected\ =\ rcl.get(posSelected);}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j=0;\ j\ <\ customers.size();\ j++)\ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(customers.get(j)==candidateSelected[0])\ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ customers.remove(j);}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ updateSolution(candidateSelected,\ departureTimesPerClient);}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \textcolor{comment}{//\ No\ hay\ candidatos\ a\ insertar\ en\ la\ solución,\ crear\ otra\ ruta}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.solution.getCreatedRoutes()\ <\ \textcolor{keyword}{this}.solution.getProblem().getVehicles())\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ newDepot\ =\ this.solution.addRoute();}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ArrayList<Double>\ initNew\ =\ \textcolor{keyword}{new}\ ArrayList<Double>();}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ z\ =\ 0;\ z\ <\ this.solution.getProblem().getPOIs()+this.solution.getProblem().getVehicles();\ z++)\ \{initNew.add(0.0);\}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ departureTimesPerClient.add(initNew);}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ existCandidates\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Reevaluar\ coste\ incremental\ de\ los\ elementos\ candidatos}}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ candidates.clear();}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ candidates\ =\ this.comprehensiveEvaluation(customers,\ departureTimesPerClient);}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ Collections.sort(candidates,\ \textcolor{keyword}{new}\ Comparator<\textcolor{keywordtype}{double}[]>()\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ compare(\textcolor{keywordtype}{double}[]\ a,\ \textcolor{keywordtype}{double}[]\ b)\ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Double.compare(a[a.length-\/2],\ b[b.length-\/2]);}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00232\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ade97c51a7d20660d7d306b756b4a6302_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ade97c51a7d20660d7d306b756b4a6302_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a717d4390dfb843bed804afb598e27a87}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!fuzzySelectionAlphaCutRCL@{fuzzySelectionAlphaCutRCL}}
+\index{fuzzySelectionAlphaCutRCL@{fuzzySelectionAlphaCutRCL}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{fuzzySelectionAlphaCutRCL()}{fuzzySelectionAlphaCutRCL()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a717d4390dfb843bed804afb598e27a87} 
+int top.\+TOPTWGRASP.\+fuzzy\+Selection\+Alpha\+Cut\+RCL (\begin{DoxyParamCaption}\item[{Array\+List$<$ double\mbox{[}$\,$\mbox{]} $>$}]{rcl}{, }\item[{double}]{alpha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Selecciona un candidato de la RCL utilizando un corte alfa sobre la función de pertenencia difusa. 
+
+Filtra los candidatos cuyo valor de membresía es menor o igual a {\ttfamily alpha} y luego elige uno aleatoriamente. Si ningún candidato cumple la condición, se elige uno aleatoriamente de toda la RCL. 
+\begin{DoxyParams}{Parámetros}
+{\em rcl} & La Lista Restringida de Candidatos. \\
+\hline
+{\em alpha} & El umbral para el corte alfa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La posición del candidato seleccionado en la RCL. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00131}{131}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ ArrayList<Integer>\ candidates\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ rcl.size();\ i++)\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rcl.get(i)[2]\ <=\ alpha)\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ candidates.add(i);}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(candidates.isEmpty())\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ aleatorySelectionRCL(rcl.size());}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ aleatory\ =\ RANDOM.nextInt(candidates.size());}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ candidates.get(aleatory);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00145\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a717d4390dfb843bed804afb598e27a87_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a717d4390dfb843bed804afb598e27a87_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_aa921b046fab55b437ea10e5cc286c014}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!fuzzySelectionBestFDRCL@{fuzzySelectionBestFDRCL}}
+\index{fuzzySelectionBestFDRCL@{fuzzySelectionBestFDRCL}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{fuzzySelectionBestFDRCL()}{fuzzySelectionBestFDRCL()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_aa921b046fab55b437ea10e5cc286c014} 
+int top.\+TOPTWGRASP.\+fuzzy\+Selection\+Best\+FDRCL (\begin{DoxyParamCaption}\item[{Array\+List$<$ double\mbox{[}$\,$\mbox{]} $>$}]{rcl}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Selecciona un candidato de la RCL utilizando una función de pertenencia difusa. 
+
+Elige el candidato con el mejor valor de membresía (el más "{}prometedor"{} según la puntuación). 
+\begin{DoxyParams}{Parámetros}
+{\em rcl} & La Lista Restringida de Candidatos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La posición del candidato seleccionado en la RCL. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00111}{111}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bestPosition\ =\ 0;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ bestValue\ =\ -\/1.0;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ rcl.size();\ i++)\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(bestValue\ <\ rcl.get(i)[2])\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bestValue\ =\ rcl.get(i)[2];}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bestPosition\ =\ i;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ bestPosition;}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_aa921b046fab55b437ea10e5cc286c014_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ae0fad47956718e9e96ee5fb6022d9f5b}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!getMaxScore@{getMaxScore}}
+\index{getMaxScore@{getMaxScore}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{getMaxScore()}{getMaxScore()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ae0fad47956718e9e96ee5fb6022d9f5b} 
+double top.\+TOPTWGRASP.\+get\+Max\+Score (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la máxima puntuación posible entre todos los nodos del problema. 
+
+\begin{DoxyReturn}{Devuelve}
+El valor de la máxima puntuación. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00401}{401}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ maxSc\ =\ -\/1.0;}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.solution.getProblem().getScore().length;\ i++)\ \{}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.solution.getProblem().getScore(i)\ >\ maxSc)}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxSc\ =\ this.solution.getProblem().getScore(i);}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ maxSc;}
+\DoxyCodeLine{00408\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ae0fad47956718e9e96ee5fb6022d9f5b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a4c37722144024730a440f34343530d2c}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!getSolution@{getSolution}}
+\index{getSolution@{getSolution}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{getSolution()}{getSolution()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a4c37722144024730a440f34343530d2c} 
+\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution}{TOPTWSolution}} top.\+TOPTWGRASP.\+get\+Solution (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la solución actual. 
+
+\begin{DoxyReturn}{Devuelve}
+La instancia de \doxylink{classtop_1_1_t_o_p_t_w_solution}{TOPTWSolution}. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00369}{369}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ solution;}
+\DoxyCodeLine{00371\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a52f508173fa05609d4bf7db92111a3b8}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!getSolutionTime@{getSolutionTime}}
+\index{getSolutionTime@{getSolutionTime}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{getSolutionTime()}{getSolutionTime()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a52f508173fa05609d4bf7db92111a3b8} 
+int top.\+TOPTWGRASP.\+get\+Solution\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el tiempo de ejecución de la solución (actualmente no implementado). 
+
+\begin{DoxyReturn}{Devuelve}
+El tiempo de solución. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00385}{385}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ solutionTime;}
+\DoxyCodeLine{00387\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a11242fc809f6a16ff81136c4785fdc3e}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!GRASP@{GRASP}}
+\index{GRASP@{GRASP}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{GRASP()}{GRASP()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a11242fc809f6a16ff81136c4785fdc3e} 
+void top.\+TOPTWGRASP.\+GRASP (\begin{DoxyParamCaption}\item[{int}]{max\+Iterations}{, }\item[{int}]{max\+Size\+RCL}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ejecuta el algoritmo GRASP durante un número determinado de iteraciones. 
+
+En cada iteración, construye una solución greedy aleatorizada, (opcionalmente aplica una búsqueda local), y actualiza la mejor solución encontrada. 
+\begin{DoxyParams}{Parámetros}
+{\em max\+Iterations} & El número máximo de iteraciones a ejecutar. \\
+\hline
+{\em max\+Size\+RCL} & El tamaño máximo de la Lista Restringida de Candidatos (RCL). \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00067}{67}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ averageFitness\ =\ 0.0;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ bestSolution\ =\ 0.0;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ maxIterations;\ i++)\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ this.computeGreedySolution(maxSizeRCL);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IMPRIMIR\ SOLUCION}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ fitness\ =\ this.solution.evaluateFitness();}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(this.solution.getInfoSolution());}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//System.out.println("{}Press\ Any\ Key\ To\ Continue..."{});}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//new\ java.util.Scanner(System.in).nextLine();}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ averageFitness\ +=\ fitness;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(bestSolution\ <\ fitness)\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bestSolution\ =\ fitness;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//double\ fitness\ =\ this.solution.printSolution();}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ /******}}
+\DoxyCodeLine{00086\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\  }}
+\DoxyCodeLine{00087\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\ BÚSQUEDA\ LOCAL }}
+\DoxyCodeLine{00088\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\  }}
+\DoxyCodeLine{00089\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ averageFitness\ =\ averageFitness/maxIterations;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ -\/-\/>\ MEDIA:\ "{}}+averageFitness);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ -\/-\/>\ MEJOR\ SOLUCION:\ "{}}+bestSolution);}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a11242fc809f6a16ff81136c4785fdc3e_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a11242fc809f6a16ff81136c4785fdc3e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a01595711790fbdceebe112f930ff7f02}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!setSolution@{setSolution}}
+\index{setSolution@{setSolution}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{setSolution()}{setSolution()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a01595711790fbdceebe112f930ff7f02} 
+void top.\+TOPTWGRASP.\+set\+Solution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution}{TOPTWSolution}}}]{solution}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece la solución a utilizar. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em solution} & La nueva instancia de \doxylink{classtop_1_1_t_o_p_t_w_solution}{TOPTWSolution}. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00377}{377}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ this.solution\ =\ solution;}
+\DoxyCodeLine{00379\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a88f5adcd791131b1d8da3dc848d80701}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!setSolutionTime@{setSolutionTime}}
+\index{setSolutionTime@{setSolutionTime}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{setSolutionTime()}{setSolutionTime()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a88f5adcd791131b1d8da3dc848d80701} 
+void top.\+TOPTWGRASP.\+set\+Solution\+Time (\begin{DoxyParamCaption}\item[{int}]{solution\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece el tiempo de ejecución de la solución. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em solution\+Time} & El nuevo tiempo. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00393}{393}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ this.solutionTime\ =\ solutionTime;}
+\DoxyCodeLine{00395\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_adaccdd26e4ad89ffb3e86c780dcd90d7}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!updateSolution@{updateSolution}}
+\index{updateSolution@{updateSolution}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{updateSolution()}{updateSolution()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_adaccdd26e4ad89ffb3e86c780dcd90d7} 
+void top.\+TOPTWGRASP.\+update\+Solution (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{candidate\+Selected}{, }\item[{Array\+List$<$ Array\+List$<$ Double $>$ $>$}]{departure\+Times}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza la solución insertando un candidato seleccionado. 
+
+Modifica los punteros de predecesor y sucesor para insertar el nuevo nodo en la ruta y recalcula los tiempos de salida de los nodos afectados en esa ruta. 
+\begin{DoxyParams}{Parámetros}
+{\em candidate\+Selected} & El candidato seleccionado, un array con la información \mbox{[}cliente, ruta, predecesor, coste, score\mbox{]}. \\
+\hline
+{\em departure\+Times} & La estructura de datos que almacena los tiempos de salida de cada cliente. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00241}{241}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inserción\ del\ cliente\ en\ la\ ruta\ \ return:\ cliente,\ ruta,\ predecesor,\ coste}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ this.solution.setPredecessor((\textcolor{keywordtype}{int})candidateSelected[0],\ (\textcolor{keywordtype}{int})candidateSelected[2]);}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ this.solution.setSuccessor((\textcolor{keywordtype}{int})candidateSelected[0],\ this.solution.getSuccessor((\textcolor{keywordtype}{int})candidateSelected[2]));}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ this.solution.setSuccessor((\textcolor{keywordtype}{int})candidateSelected[2],\ (\textcolor{keywordtype}{int})candidateSelected[0]);}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ this.solution.setPredecessor(this.solution.getSuccessor((\textcolor{keywordtype}{int})candidateSelected[0]),\ (\textcolor{keywordtype}{int})candidateSelected[0]);}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Actualización\ de\ las\ estructuras\ de\ datos\ y\ conteo\ a\ partir\ de\ la\ posición\ a\ insertar}}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ costInsertionPre\ =\ departureTimes.get((\textcolor{keywordtype}{int})candidateSelected[1]).get((\textcolor{keywordtype}{int})candidateSelected[2]);}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ ArrayList<Double>\ route\ =\ departureTimes.get((\textcolor{keywordtype}{int})candidateSelected[1]);}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pre=(int)candidateSelected[2],\ suc=-\/1;}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ depot\ =\ this.solution.getIndexRoute((\textcolor{keywordtype}{int})candidateSelected[1]);}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ suc\ =\ this.solution.getSuccessor(pre);}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ costInsertionPre\ +=\ this.solution.getDistance(pre,\ suc);}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(costInsertionPre\ <\ this.solution.getProblem().getReadyTime(suc))\ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ costInsertionPre\ =\ this.solution.getProblem().getReadyTime(suc);}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ costInsertionPre\ +=\ this.solution.getProblem().getServiceTime(suc);}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!this.solution.isDepot(suc))}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ route.set(suc,\ costInsertionPre);}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ pre\ =\ suc;}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}((suc\ !=\ depot));}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Actualiza\ tiempos}}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ departureTimes.set((\textcolor{keywordtype}{int})candidateSelected[1],\ route);}
+\DoxyCodeLine{00269\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_adaccdd26e4ad89ffb3e86c780dcd90d7_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_g_r_a_s_p_adaccdd26e4ad89ffb3e86c780dcd90d7_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a4319fa91e2578bb9b5570dc1af7b6f3b}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!NO\_EVALUATED@{NO\_EVALUATED}}
+\index{NO\_EVALUATED@{NO\_EVALUATED}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{NO\_EVALUATED}{NO\_EVALUATED}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a4319fa91e2578bb9b5570dc1af7b6f3b} 
+double top.\+TOPTWGRASP.\+NO\+\_\+\+EVALUATED = -\/1.\+0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constante para indicar que una solución no ha sido evaluada. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_acc4761dfe2aeaf4ff1b549879a471a1f}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!RANDOM@{RANDOM}}
+\index{RANDOM@{RANDOM}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{RANDOM}{RANDOM}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_acc4761dfe2aeaf4ff1b549879a471a1f} 
+final Random top.\+TOPTWGRASP.\+RANDOM = new Secure\+Random()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a566fd32b5d09e65b60415ab4bd9f14e0}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!solution@{solution}}
+\index{solution@{solution}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{solution}{solution}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a566fd32b5d09e65b60415ab4bd9f14e0} 
+\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_solution}{TOPTWSolution}} top.\+TOPTWGRASP.\+solution\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_g_r_a_s_p_adceff925217f25676e14d261b873ea90}\index{top.TOPTWGRASP@{top.TOPTWGRASP}!solutionTime@{solutionTime}}
+\index{solutionTime@{solutionTime}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{\texorpdfstring{solutionTime}{solutionTime}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_adceff925217f25676e14d261b873ea90} 
+int top.\+TOPTWGRASP.\+solution\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java_source}{TOPTWGRASP.\+java}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Kefle/\+Desktop/\+Exposito\+TOP/src/top/\mbox{\hyperlink{_t_o_p_t_w_g_r_a_s_p_8java}{TOPTWGRASP.\+java}}\end{DoxyCompactItemize}

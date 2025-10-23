@@ -1,0 +1,50 @@
+<map id="top.TOPTWSolution.getInfoSolution" name="top.TOPTWSolution.getInfoSolution">
+<area shape="rect" id="Node000001" title="Genera una cadena con información detallada de la solución." alt="" coords="5,432,188,475"/>
+<area shape="rect" id="Node000002" href="$classtop_1_1_t_o_p_t_w_solution.html#a42484d84c9770ebbb8778fc149abbb58" title="Obtiene el número de rutas que han sido creadas en la solución." alt="" coords="244,5,450,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,431,106,362,128,265,145,212,168,160,198,110,234,66,248,54,251,58,238,70,202,113,173,162,150,214,133,267,111,363,102,432"/>
+<area shape="rect" id="Node000004" href="$classtop_1_1_t_o_p_t_w_solution.html#a822040f322ba94a35ed101f6c53f0b33" title="Obtiene la distancia entre dos nodos consultando el problema asociado." alt="" coords="241,80,453,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="97,431,108,368,131,283,148,238,171,193,199,152,234,117,239,113,242,117,237,121,204,156,176,196,153,240,136,285,113,370,103,432"/>
+<area shape="rect" id="Node000006" href="$classtop_1_1_t_o_p_t_w.html#a0d14aca2e33a8fb1eb08013c3d55abfa" title="Obtiene el tiempo de fin de la ventana de tiempo (due time) de un nodo." alt="" coords="264,221,430,248"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="105,430,123,392,151,345,188,298,234,258,248,250,251,255,237,262,192,301,156,348,128,395,109,433"/>
+<area shape="rect" id="Node000008" href="$classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities.html#a1dc633979b918d55db1eb7308f864d6c" title="Formatea una cadena que representa un número." alt="" coords="258,155,436,197"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="102,431,118,384,145,324,183,261,207,232,234,207,243,201,246,205,237,211,211,236,187,264,149,326,123,386,107,432"/>
+<area shape="rect" id="Node000011" href="$classtop_1_1_t_o_p_t_w_solution.html#a0c4692927923549f0e137ea74850a8b6" title="Obtiene el índice del nodo que actúa como depósito para una ruta específica." alt="" coords="251,272,443,315"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="114,430,164,377,198,349,234,324,245,319,247,324,237,329,201,353,168,381,118,434"/>
+<area shape="rect" id="Node000012" href="$classtop_1_1_t_o_p_t_w.html#a2880cd94f79a8eeb732e99af69cdbbde" title="Obtiene el número máximo de rutas (vehículos) permitidas." alt="" coords="257,339,436,365"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="130,429,178,401,235,375,257,367,258,373,237,380,181,406,132,434"/>
+<area shape="rect" id="Node000013" href="$classtop_1_1_t_o_p_t_w.html#a9363c6b94f247ce746510fe1036d143a" title="Obtiene el tiempo máximo permitido por ruta." alt="" coords="236,389,458,416"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="188,432,262,417,263,422,189,437"/>
+<area shape="rect" id="Node000014" href="$classtop_1_1_t_o_p_t_w.html#a98907c6bbeba9aba86727ecad5058261" title="Obtiene el número de Puntos de Interés (POIs), sin contar el depósito." alt="" coords="276,440,418,467"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="188,451,260,451,260,456,188,456"/>
+<area shape="rect" id="Node000015" href="$classtop_1_1_t_o_p_t_w_solution.html#a4ed9a239d683e7770681aba78e8121a3" title="Obtiene la instancia del problema asociada a esta solución." alt="" coords="243,491,451,517"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="189,469,263,484,262,490,188,474"/>
+<area shape="rect" id="Node000016" href="$classtop_1_1_t_o_p_t_w.html#a4e74b10708b232a801a4ad147892b70a" title="Obtiene el tiempo de inicio de la ventana de tiempo (ready time) de un nodo." alt="" coords="257,541,436,568"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="132,473,181,501,237,527,258,534,257,539,235,532,178,506,130,477"/>
+<area shape="rect" id="Node000017" href="$classtop_1_1_t_o_p_t_w.html#ad028d42f72214373efca074483462837" title="Obtiene la puntuación (score) de un nodo." alt="" coords="274,592,420,619"/>
+<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="117,473,167,526,200,554,237,578,260,587,258,592,234,582,197,558,163,530,113,477"/>
+<area shape="rect" id="Node000018" href="$classtop_1_1_t_o_p_t_w.html#a06b2b40d137f16bdda21c734d3ea8ac7" title="Obtiene el tiempo de servicio requerido en un nodo." alt="" coords="254,643,440,669"/>
+<area shape="poly" id="edge21_Node000001_Node000018" title=" " alt="" coords="111,474,130,509,158,551,194,593,237,628,247,634,244,638,234,633,190,597,154,554,126,511,106,477"/>
+<area shape="rect" id="Node000019" href="$classtop_1_1_t_o_p_t_w_solution.html#a559f4d8cc4b93d998243d7479fd6da8d" title="Obtiene el sucesor de un cliente en su ruta." alt="" coords="236,693,458,720"/>
+<area shape="poly" id="edge23_Node000001_Node000019" title=" " alt="" coords="107,474,124,518,150,574,188,631,211,657,237,679,245,684,242,688,234,683,208,661,184,635,146,577,119,520,102,476"/>
+<area shape="rect" id="Node000020" href="$classtop_1_1_t_o_p_t_w.html#ab17563354a34944d14e4ac57f6613da6" title="Obtiene la coordenada X de un nodo." alt="" coords="286,744,408,771"/>
+<area shape="poly" id="edge24_Node000001_Node000020" title=" " alt="" coords="105,474,118,527,143,597,161,633,182,669,208,702,237,730,254,740,272,747,270,752,251,745,234,734,204,705,178,672,156,636,138,599,113,529,99,476"/>
+<area shape="rect" id="Node000021" href="$classtop_1_1_t_o_p_t_w.html#a3a39395dfc3d6360273580f177bede7a" title="Obtiene la coordenada Y de un nodo." alt="" coords="286,795,408,821"/>
+<area shape="poly" id="edge26_Node000001_Node000021" title=" " alt="" coords="103,475,113,536,136,619,154,663,176,706,204,746,237,781,254,791,272,798,270,803,251,796,234,785,200,750,172,709,149,665,131,621,108,537,98,475"/>
+<area shape="rect" id="Node000003" href="$classtop_1_1_t_o_p_t_w.html#abfba541876921de9ec5a63373c056446" title="Obtiene el número de vehículos disponibles." alt="" coords="514,9,675,36"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="450,22,499,22,499,27,450,28"/>
+<area shape="rect" id="Node000005" href="$classtop_1_1_t_o_p_t_w.html#a137f100c5711b4b93cb5ae1711ddaf9a" title="Calcula la distancia total de una ruta representada por un array de enteros." alt="" coords="512,84,677,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="454,92,497,93,497,98,454,98"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="553,85,546,75,551,65,567,59,595,57,625,60,640,67,638,72,623,65,595,63,569,65,554,69,551,75,557,82"/>
+<area shape="rect" id="Node000007" href="$classtop_1_1_t_o_p_t_w.html#a642e958056dc77c10d72831d633e2f49" title="Comprueba si un índice de nodo corresponde a un depósito." alt="" coords="525,617,664,644"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="431,242,460,258,496,297,525,341,547,389,565,439,586,532,594,602,589,602,581,533,560,440,542,392,520,344,491,300,456,262,429,246"/>
+<area shape="poly" id="edge9_Node000008_Node000008" title=" " alt="" coords="300,155,298,145,306,136,322,130,347,128,373,130,389,137,387,142,372,136,347,133,323,135,309,140,303,146,305,154"/>
+<area shape="rect" id="Node000009" href="$classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities.html#aea4db414c92e2fc046f76ef43fcf1214" title="Comprueba si una cadena puede ser parseada como un doble." alt="" coords="506,143,683,185"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="436,169,491,166,491,172,436,174"/>
+<area shape="rect" id="Node000010" href="$classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities.html#a3aa6195e3bb8c5393a84ab3ff7b3f18a" title="Comprueba si una cadena puede ser parseada como un entero." alt="" coords="506,209,683,252"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="437,193,492,205,491,210,435,198"/>
+<area shape="poly" id="edge18_Node000016_Node000007" title=" " alt="" coords="415,566,459,577,547,609,545,614,457,583,414,571"/>
+<area shape="poly" id="edge20_Node000017_Node000007" title=" " alt="" coords="421,610,510,619,509,625,420,615"/>
+<area shape="poly" id="edge22_Node000018_Node000007" title=" " alt="" coords="440,644,509,637,510,642,440,649"/>
+<area shape="poly" id="edge25_Node000020_Node000007" title=" " alt="" coords="407,746,457,730,518,693,566,653,570,657,521,697,459,734,409,751"/>
+<area shape="poly" id="edge27_Node000021_Node000007" title=" " alt="" coords="407,799,433,791,457,780,494,753,527,719,575,656,579,659,531,723,498,757,459,785,434,796,408,804"/>
+</map>

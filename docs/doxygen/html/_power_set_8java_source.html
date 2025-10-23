@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ExpositoTOP: Archivo de código fuente C:/Users/Kefle/Desktop/ExpositoTOP/src/es/ull/esit/utilities/PowerSet.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ExpositoTOP<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_power_set_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PowerSet.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_power_set_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>es.ull.esit.utilities;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.BitSet;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.Iterator;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.NoSuchElementException;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.util.Set;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> java.util.TreeSet;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// Sirve para calcular todos los subconjuntos de un conjunto dado</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html">   20</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#a6b7dcc9f679ec5fd47c9267e00b35750">PowerSet</a>&lt;E&gt; <span class="keyword">implements</span> Iterable&lt;Set&lt;E&gt;&gt; {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#ac75df0554fc4c68c6539c0d36db9df5e">   22</a></span>    <span class="keyword">private</span> E[] <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#ac75df0554fc4c68c6539c0d36db9df5e">arr</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    @SuppressWarnings(<span class="stringliteral">&quot;unchecked&quot;</span>)</div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#a6b7dcc9f679ec5fd47c9267e00b35750">   29</a></span>    public <a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#a6b7dcc9f679ec5fd47c9267e00b35750">PowerSet</a>(Set&lt;E&gt; set) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        this.arr = (E[]) <span class="keyword">set</span>.toArray();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    @Override</div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#a3f26282fcfa1c64e6a3c8caf19f53d3b">   38</a></span>    <span class="keyword">public</span> Iterator&lt;Set&lt;E&gt;&gt; <a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#a3f26282fcfa1c64e6a3c8caf19f53d3b">iterator</a>() {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html">PowerSetIterator</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html">   42</a></span>    <span class="keyword">private</span> <span class="keyword">class </span>PowerSetIterator <span class="keyword">implements</span> Iterator&lt;Set&lt;E&gt;&gt; {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html#adc2dbf62e23885135d3f983e4774aa9c">   43</a></span>        <span class="keyword">private</span> BitSet <a class="code hl_variable" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html#adc2dbf62e23885135d3f983e4774aa9c">bset</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        PowerSetIterator() {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            this.bset = <span class="keyword">new</span> BitSet(<a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#a6b7dcc9f679ec5fd47c9267e00b35750">PowerSet</a>.this.arr.length + 1);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        @Override</div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html#af7cf9371b132e46892db37df30afe626">   54</a></span>        <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html#af7cf9371b132e46892db37df30afe626">hasNext</a>() {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">return</span> !this.bset.get(<a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#a6b7dcc9f679ec5fd47c9267e00b35750">PowerSet</a>.this.arr.length);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        @Override</div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html#af1e54cc3f15736e66953d7c5426365e0">   64</a></span>        <span class="keyword">public</span> Set&lt;E&gt; <a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html#af1e54cc3f15736e66953d7c5426365e0">next</a>() {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html#af7cf9371b132e46892db37df30afe626">hasNext</a>()) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> NoSuchElementException();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            Set&lt;E&gt; returnSet = <span class="keyword">new</span> TreeSet&lt;&gt;();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#a6b7dcc9f679ec5fd47c9267e00b35750">PowerSet</a>.this.arr.length; i++) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="keywordflow">if</span> (this.bset.get(i)) {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    returnSet.add(<a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#a6b7dcc9f679ec5fd47c9267e00b35750">PowerSet</a>.this.arr[i]);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="comment">// Incrementa el bitset para la siguiente combinación</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; this.bset.size(); i++) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                <span class="keywordflow">if</span> (!this.bset.get(i)) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    this.bset.set(i);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                    this.bset.clear(i);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">return</span> returnSet;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
+</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        @Override</div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html#a97c4cf78a3b1c66769b4e8602ae9f7f4">   91</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <span class="keyword">remove</span>() {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> UnsupportedOperationException(<span class="stringliteral">&quot;Not Supported!&quot;</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
+</div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_html"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html">es.ull.esit.utilities.PowerSet.PowerSetIterator</a></div><div class="ttdef"><b>Definition</b> <a href="#l00042">PowerSet.java:42</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_html_adc2dbf62e23885135d3f983e4774aa9c"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html#adc2dbf62e23885135d3f983e4774aa9c">es.ull.esit.utilities.PowerSet.PowerSetIterator.bset</a></div><div class="ttdeci">BitSet bset</div><div class="ttdef"><b>Definition</b> <a href="#l00043">PowerSet.java:43</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_html_af1e54cc3f15736e66953d7c5426365e0"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html#af1e54cc3f15736e66953d7c5426365e0">es.ull.esit.utilities.PowerSet.PowerSetIterator.next</a></div><div class="ttdeci">Set&lt; E &gt; next()</div><div class="ttdoc">Devuelve el siguiente subconjunto en la secuencia.</div><div class="ttdef"><b>Definition</b> <a href="#l00064">PowerSet.java:64</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_html_af7cf9371b132e46892db37df30afe626"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator.html#af7cf9371b132e46892db37df30afe626">es.ull.esit.utilities.PowerSet.PowerSetIterator.hasNext</a></div><div class="ttdeci">boolean hasNext()</div><div class="ttdoc">Comprueba si hay más subconjuntos para generar.</div><div class="ttdef"><b>Definition</b> <a href="#l00054">PowerSet.java:54</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_power_set_html_a3f26282fcfa1c64e6a3c8caf19f53d3b"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#a3f26282fcfa1c64e6a3c8caf19f53d3b">es.ull.esit.utilities.PowerSet.iterator</a></div><div class="ttdeci">Iterator&lt; Set&lt; E &gt; &gt; iterator()</div><div class="ttdoc">Devuelve un iterador sobre los subconjuntos.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">PowerSet.java:38</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_power_set_html_a6b7dcc9f679ec5fd47c9267e00b35750"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#a6b7dcc9f679ec5fd47c9267e00b35750">es.ull.esit.utilities.PowerSet.PowerSet</a></div><div class="ttdeci">PowerSet(Set&lt; E &gt; set)</div><div class="ttdoc">Constructor de la clase PowerSet.</div><div class="ttdef"><b>Definition</b> <a href="#l00029">PowerSet.java:29</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_power_set_html_ac75df0554fc4c68c6539c0d36db9df5e"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_power_set.html#ac75df0554fc4c68c6539c0d36db9df5e">es.ull.esit.utilities.PowerSet.arr</a></div><div class="ttdeci">E[] arr</div><div class="ttdef"><b>Definition</b> <a href="#l00022">PowerSet.java:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a href="dir_e03c2b0d9b02df29811e15e34ccb3b94.html">Kefle</a></li><li class="navelem"><a href="dir_150518a6fcf97c0bd56a37f53e58eb73.html">Desktop</a></li><li class="navelem"><a href="dir_f99b0822b4241d0b719b611599aef1b2.html">ExpositoTOP</a></li><li class="navelem"><a href="dir_9fc0b26832b645d43f8d355a18a798aa.html">src</a></li><li class="navelem"><a href="dir_706925e949022de7344447ad86857558.html">es</a></li><li class="navelem"><a href="dir_2e670d6bc46c71a7a5c727c3bd1ecb4e.html">ull</a></li><li class="navelem"><a href="dir_c31b1c07c57d6ec68cfe21d5f5f039ce.html">esit</a></li><li class="navelem"><a href="dir_54bdec9d7336cc58424fd493e14d066b.html">utilities</a></li><li class="navelem"><a href="_power_set_8java.html">PowerSet.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ExpositoTOP: Archivo de código fuente C:/Users/Kefle/Desktop/ExpositoTOP/src/top/TOPTWReader.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ExpositoTOP<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_t_o_p_t_w_reader_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TOPTWReader.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_o_p_t_w_reader_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>top;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.io.BufferedReader;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.io.File;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.io.FileReader;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.io.IOException;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> es.ull.esit.utilities.ExpositoUtilities;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classtop_1_1_t_o_p_t_w_reader.html">   19</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classtop_1_1_t_o_p_t_w_reader.html">TOPTWReader</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classtop_1_1_t_o_p_t_w_reader.html#abad17029fc8928818483c5053dde0fa2">   31</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="classtop_1_1_t_o_p_t_w.html">TOPTW</a> <a class="code hl_function" href="classtop_1_1_t_o_p_t_w_reader.html#abad17029fc8928818483c5053dde0fa2">readProblem</a>(String filePath) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_class" href="classtop_1_1_t_o_p_t_w.html">TOPTW</a> problem = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        BufferedReader reader = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            File instaceFile = <span class="keyword">new</span> File(filePath);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            reader = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> FileReader(instaceFile));</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            String line = reader.readLine();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            line = <a class="code hl_class" href="classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities.html">ExpositoUtilities</a>.<a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities.html#a7ae7bdc68d2eac0de896cbe56878fd64">simplifyString</a>(line);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            String[] parts =line.split(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            problem = <span class="keyword">new</span> <a class="code hl_class" href="classtop_1_1_t_o_p_t_w.html">TOPTW</a>(Integer.parseInt(parts[2]), Integer.parseInt(parts[1]));</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            line = reader.readLine();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            line = <span class="keyword">null</span>; parts = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; problem.<a class="code hl_function" href="classtop_1_1_t_o_p_t_w.html#a98907c6bbeba9aba86727ecad5058261">getPOIs</a>()+1; i++) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                line = reader.readLine();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                line = <a class="code hl_class" href="classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities.html">ExpositoUtilities</a>.<a class="code hl_function" href="classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities.html#a7ae7bdc68d2eac0de896cbe56878fd64">simplifyString</a>(line);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                parts = line.split(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                problem.<a class="code hl_function" href="classtop_1_1_t_o_p_t_w.html#a14a7fc055b07f3fb564666ad4ff12084">setX</a>(i, Double.parseDouble(parts[1]));</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                problem.<a class="code hl_function" href="classtop_1_1_t_o_p_t_w.html#a8318436161579a8b9050a657ca63c5e0">setY</a>(i, Double.parseDouble(parts[2]));</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                problem.<a class="code hl_function" href="classtop_1_1_t_o_p_t_w.html#adce95dbc2b525cbbde383e0b950f874e">setServiceTime</a>(i, Double.parseDouble(parts[3]));</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                problem.<a class="code hl_function" href="classtop_1_1_t_o_p_t_w.html#af9ea3e6941f3ebf4c4415a563d824d89">setScore</a>(i, Double.parseDouble(parts[4]));</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keywordflow">if</span>(i==0) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                    problem.<a class="code hl_function" href="classtop_1_1_t_o_p_t_w.html#a97c54405c2ffff1b04371ee42acb1dff">setReadyTime</a>(i, Double.parseDouble(parts[7]));</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    problem.<a class="code hl_function" href="classtop_1_1_t_o_p_t_w.html#a0576cf2e4c066aae858a2487ada18785">setDueTime</a>(i, Double.parseDouble(parts[8]));</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    problem.<a class="code hl_function" href="classtop_1_1_t_o_p_t_w.html#a97c54405c2ffff1b04371ee42acb1dff">setReadyTime</a>(i, Double.parseDouble(parts[8]));</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    problem.<a class="code hl_function" href="classtop_1_1_t_o_p_t_w.html#a0576cf2e4c066aae858a2487ada18785">setDueTime</a>(i, Double.parseDouble(parts[9]));                    </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                line = <span class="keyword">null</span>; parts = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            problem.<a class="code hl_function" href="classtop_1_1_t_o_p_t_w.html#ad541e0a7d1aafc2b061e024c066dd662">calculateDistanceMatrix</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            System.err.println(e);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            System.exit(0);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        } <span class="keywordflow">finally</span> {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">if</span> (reader != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    reader.close();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                } <span class="keywordflow">catch</span> (IOException ex) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    System.err.println(ex);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    System.exit(0);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        problem.<a class="code hl_function" href="classtop_1_1_t_o_p_t_w.html#afbe8fd7e4e3b3d702768e01643558ddf">setMaxTimePerRoute</a>(problem.<a class="code hl_function" href="classtop_1_1_t_o_p_t_w.html#a0d14aca2e33a8fb1eb08013c3d55abfa">getDueTime</a>(0));</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> problem;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+</div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_html"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities.html">es.ull.esit.utilities.ExpositoUtilities</a></div><div class="ttdoc">Proporciona un conjunto de herramientas estáticas de propósito general.</div><div class="ttdef"><b>Definition</b> <a href="_exposito_utilities_8java_source.html#l00027">ExpositoUtilities.java:27</a></div></div>
+<div class="ttc" id="aclasses_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities_html_a7ae7bdc68d2eac0de896cbe56878fd64"><div class="ttname"><a href="classes_1_1ull_1_1esit_1_1utilities_1_1_exposito_utilities.html#a7ae7bdc68d2eac0de896cbe56878fd64">es.ull.esit.utilities.ExpositoUtilities.simplifyString</a></div><div class="ttdeci">static String simplifyString(String string)</div><div class="ttdoc">Simplifica una cadena de texto.</div><div class="ttdef"><b>Definition</b> <a href="_exposito_utilities_8java_source.html#l00079">ExpositoUtilities.java:79</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_html"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w.html">top.TOPTW</a></div><div class="ttdoc">Modela una instancia del problema TOPTW (Team Orienteering Problem with Time Windows).</div><div class="ttdef"><b>Definition</b> <a href="_t_o_p_t_w_8java_source.html#l00019">TOPTW.java:19</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_html_a0576cf2e4c066aae858a2487ada18785"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w.html#a0576cf2e4c066aae858a2487ada18785">top.TOPTW.setDueTime</a></div><div class="ttdeci">void setDueTime(int index, double dueTime)</div><div class="ttdoc">Establece el tiempo de fin de la ventana de tiempo (due time) de un nodo.</div><div class="ttdef"><b>Definition</b> <a href="_t_o_p_t_w_8java_source.html#l00312">TOPTW.java:312</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_html_a0d14aca2e33a8fb1eb08013c3d55abfa"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w.html#a0d14aca2e33a8fb1eb08013c3d55abfa">top.TOPTW.getDueTime</a></div><div class="ttdeci">double getDueTime(int index)</div><div class="ttdoc">Obtiene el tiempo de fin de la ventana de tiempo (due time) de un nodo.</div><div class="ttdef"><b>Definition</b> <a href="_t_o_p_t_w_8java_source.html#l00302">TOPTW.java:302</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_html_a14a7fc055b07f3fb564666ad4ff12084"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w.html#a14a7fc055b07f3fb564666ad4ff12084">top.TOPTW.setX</a></div><div class="ttdeci">void setX(int index, double x)</div><div class="ttdoc">Establece la coordenada X de un nodo.</div><div class="ttdef"><b>Definition</b> <a href="_t_o_p_t_w_8java_source.html#l00228">TOPTW.java:228</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_html_a8318436161579a8b9050a657ca63c5e0"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w.html#a8318436161579a8b9050a657ca63c5e0">top.TOPTW.setY</a></div><div class="ttdeci">void setY(int index, double y)</div><div class="ttdoc">Establece la coordenada Y de un nodo.</div><div class="ttdef"><b>Definition</b> <a href="_t_o_p_t_w_8java_source.html#l00247">TOPTW.java:247</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_html_a97c54405c2ffff1b04371ee42acb1dff"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w.html#a97c54405c2ffff1b04371ee42acb1dff">top.TOPTW.setReadyTime</a></div><div class="ttdeci">void setReadyTime(int index, double readyTime)</div><div class="ttdoc">Establece el tiempo de inicio de la ventana de tiempo (ready time) de un nodo.</div><div class="ttdef"><b>Definition</b> <a href="_t_o_p_t_w_8java_source.html#l00293">TOPTW.java:293</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_html_a98907c6bbeba9aba86727ecad5058261"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w.html#a98907c6bbeba9aba86727ecad5058261">top.TOPTW.getPOIs</a></div><div class="ttdeci">int getPOIs()</div><div class="ttdoc">Obtiene el número de Puntos de Interés (POIs), sin contar el depósito.</div><div class="ttdef"><b>Definition</b> <a href="_t_o_p_t_w_8java_source.html#l00168">TOPTW.java:168</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_html_ad541e0a7d1aafc2b061e024c066dd662"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w.html#ad541e0a7d1aafc2b061e024c066dd662">top.TOPTW.calculateDistanceMatrix</a></div><div class="ttdeci">void calculateDistanceMatrix()</div><div class="ttdoc">Calcula y almacena la matriz de distancias euclidianas entre todos los nodos.</div><div class="ttdef"><b>Definition</b> <a href="_t_o_p_t_w_8java_source.html#l00117">TOPTW.java:117</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_html_adce95dbc2b525cbbde383e0b950f874e"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w.html#adce95dbc2b525cbbde383e0b950f874e">top.TOPTW.setServiceTime</a></div><div class="ttdeci">void setServiceTime(int index, double serviceTime)</div><div class="ttdoc">Establece el tiempo de servicio de un nodo.</div><div class="ttdef"><b>Definition</b> <a href="_t_o_p_t_w_8java_source.html#l00331">TOPTW.java:331</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_html_af9ea3e6941f3ebf4c4415a563d824d89"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w.html#af9ea3e6941f3ebf4c4415a563d824d89">top.TOPTW.setScore</a></div><div class="ttdeci">void setScore(int index, double score)</div><div class="ttdoc">Establece la puntuación de un nodo.</div><div class="ttdef"><b>Definition</b> <a href="_t_o_p_t_w_8java_source.html#l00274">TOPTW.java:274</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_html_afbe8fd7e4e3b3d702768e01643558ddf"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w.html#afbe8fd7e4e3b3d702768e01643558ddf">top.TOPTW.setMaxTimePerRoute</a></div><div class="ttdeci">void setMaxTimePerRoute(double maxTimePerRoute)</div><div class="ttdoc">Establece el tiempo máximo permitido por ruta.</div><div class="ttdef"><b>Definition</b> <a href="_t_o_p_t_w_8java_source.html#l00144">TOPTW.java:144</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_reader_html"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w_reader.html">top.TOPTWReader</a></div><div class="ttdoc">Proporciona funcionalidad para leer una instancia del problema TOPTW desde un archivo de texto.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">TOPTWReader.java:19</a></div></div>
+<div class="ttc" id="aclasstop_1_1_t_o_p_t_w_reader_html_abad17029fc8928818483c5053dde0fa2"><div class="ttname"><a href="classtop_1_1_t_o_p_t_w_reader.html#abad17029fc8928818483c5053dde0fa2">top.TOPTWReader.readProblem</a></div><div class="ttdeci">static TOPTW readProblem(String filePath)</div><div class="ttdoc">Lee una instancia del problema TOPTW desde un archivo.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">TOPTWReader.java:31</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a href="dir_e03c2b0d9b02df29811e15e34ccb3b94.html">Kefle</a></li><li class="navelem"><a href="dir_150518a6fcf97c0bd56a37f53e58eb73.html">Desktop</a></li><li class="navelem"><a href="dir_f99b0822b4241d0b719b611599aef1b2.html">ExpositoTOP</a></li><li class="navelem"><a href="dir_9fc0b26832b645d43f8d355a18a798aa.html">src</a></li><li class="navelem"><a href="dir_a28a09495b617f74095156200541fdf4.html">top</a></li><li class="navelem"><a href="_t_o_p_t_w_reader_8java.html">TOPTWReader.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

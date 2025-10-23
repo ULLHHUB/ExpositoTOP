@@ -1,0 +1,38 @@
+# Doxyfile 1.9.1
+# Proyecto: ExpositoTOP - configuración mínima para Java + Graphviz
+PROJECT_NAME           = "ExpositoTOP"
+PROJECT_NUMBER         = "1.0"
+OUTPUT_DIRECTORY       = docs/doxygen
+CREATE_SUBDIRS         = NO
+OUTPUT_LANGUAGE        = Spanishmvn
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+INPUT                  = src
+RECURSIVE              = YES
+FILE_PATTERNS          = *.java
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+# Graphviz
+HAVE_DOT               = YES
+DOT_PATH               = "C:/Program Files/Graphviz/bin"
+DOT_IMAGE_FORMAT       = svg
+DOT_GRAPH_MAX_NODES    = 100
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+CLASS_DIAGRAMS         = YES
+DOT_MULTI_TARGETS      = NO
+# Source browser
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+STRIP_FROM_PATH        = ${PROJECT_SOURCE_DIR}
+# Java specific
+JAVADOC_AUTOBRIEF      = YES
+# Index and search
+GENERATE_TREEVIEW      = YES
+SEARCHENGINE           = YES
+GENERATE_XML           = NO
+
+# Project main page (overridden/extended by docs/mainpage.md)
+

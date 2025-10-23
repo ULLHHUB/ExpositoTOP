@@ -1,0 +1,12 @@
+<map id="top.TOPTWSolution.initSolution" name="top.TOPTWSolution.initSolution">
+<area shape="rect" id="Node000001" title="Inicializa o resetea la solución a un estado básico." alt="" coords="5,52,212,78"/>
+<area shape="rect" id="Node000002" href="$classtop_1_1_t_o_p_t_w.html#a98907c6bbeba9aba86727ecad5058261" title="Obtiene el número de Puntos de Interés (POIs), sin contar el depósito." alt="" coords="554,26,697,53"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,49,195,29,259,13,326,5,378,3,497,13,548,20,548,26,497,18,378,8,326,10,260,18,197,34,143,54"/>
+<area shape="rect" id="Node000003" href="$classtop_1_1_t_o_p_t_w.html#abfba541876921de9ec5a63373c056446" title="Obtiene el número de vehículos disponibles." alt="" coords="545,89,706,116"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,76,260,88,401,97,529,100,529,105,401,102,259,93,180,82"/>
+<area shape="rect" id="Node000004" href="$classtop_1_1_t_o_p_t_w_solution.html#a45192e5d12a12ec58030397041b4a369" title="Constructor de la clase TOPTWSolution." alt="" coords="260,52,497,78"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="212,62,244,62,244,68,212,68"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="497,50,539,46,539,51,498,56"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="472,76,530,85,529,91,471,82"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="337,53,329,43,335,33,351,27,378,25,408,28,424,34,421,39,407,33,378,30,352,32,338,37,335,42,341,50"/>
+</map>

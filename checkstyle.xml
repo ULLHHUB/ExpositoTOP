@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+          "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+          "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+    <module name="TreeWalker">
+
+        <!-- Comprueba el nombre de clases -->
+        <module name="TypeName"/>
+
+        <!-- Comprueba el nombre de métodos -->
+        <module name="MethodName"/>
+
+        <!-- Comprueba nombres de variables -->
+        <module name="LocalVariableName"/>
+
+        <!-- Máximo de longitud de línea -->
+        <module name="LineLength">
+            <property name="max" value="120"/>
+        </module>
+
+        <!-- Prohíbe imports duplicados -->
+        <module name="AvoidStarImport"/>
+
+        <!-- Comprueba que haya javadoc en clases y métodos públicos -->
+        <module name="JavadocMethod"/>
+        <module name="JavadocType"/>
+
+        <!-- Comprueba sangrías -->
+        <module name="Indentation">
+            <property name="basicOffset" value="4"/>
+            <property name="braceAdjustment" value="0"/>
+            <property name="caseIndent" value="4"/>
+        </module>
+
+    </module>
+</module>

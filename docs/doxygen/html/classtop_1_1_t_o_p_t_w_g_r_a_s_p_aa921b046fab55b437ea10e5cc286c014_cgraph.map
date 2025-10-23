@@ -1,0 +1,11 @@
+<map id="top.TOPTWGRASP.fuzzySelectionBestFDRCL" name="top.TOPTWGRASP.fuzzySelectionBestFDRCL">
+<area shape="rect" id="Node000001" title="Selecciona un candidato de la RCL utilizando una función de pertenencia difusa." alt="" coords="5,23,232,65"/>
+<area shape="rect" id="Node000002" href="$classtop_1_1_t_o_p_t_w_g_r_a_s_p.html#ae0fad47956718e9e96ee5fb6022d9f5b" title="Obtiene la máxima puntuación posible entre todos los nodos del problema." alt="" coords="280,31,497,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,41,264,41,264,47,232,47"/>
+<area shape="rect" id="Node000003" href="$classtop_1_1_t_o_p_t_w_solution.html#a4ed9a239d683e7770681aba78e8121a3" title="Obtiene la instancia del problema asociada a esta solución." alt="" coords="545,5,753,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="497,31,529,28,529,33,498,36"/>
+<area shape="rect" id="Node000004" href="$classtop_1_1_t_o_p_t_w.html#ad028d42f72214373efca074483462837" title="Obtiene la puntuación (score) de un nodo." alt="" coords="576,56,722,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="498,52,561,58,560,63,497,57"/>
+<area shape="rect" id="Node000005" href="$classtop_1_1_t_o_p_t_w.html#a642e958056dc77c10d72831d633e2f49" title="Comprueba si un índice de nodo corresponde a un depósito." alt="" coords="801,56,941,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="723,67,786,67,786,72,723,72"/>
+</map>

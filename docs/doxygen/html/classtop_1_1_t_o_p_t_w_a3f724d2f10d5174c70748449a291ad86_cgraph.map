@@ -1,0 +1,5 @@
+<map id="top.TOPTW.getTime" name="top.TOPTW.getTime">
+<area shape="rect" id="Node000001" title="Obtiene el tiempo de viaje entre dos nodos, que es igual a la distancia." alt="" coords="5,5,147,32"/>
+<area shape="rect" id="Node000002" href="$classtop_1_1_t_o_p_t_w.html#a642e958056dc77c10d72831d633e2f49" title="Comprueba si un índice de nodo corresponde a un depósito." alt="" coords="195,5,334,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,16,179,16,179,21,147,21"/>
+</map>

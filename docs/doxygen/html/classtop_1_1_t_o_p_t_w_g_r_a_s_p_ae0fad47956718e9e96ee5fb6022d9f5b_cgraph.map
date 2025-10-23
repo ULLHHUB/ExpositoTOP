@@ -1,0 +1,9 @@
+<map id="top.TOPTWGRASP.getMaxScore" name="top.TOPTWGRASP.getMaxScore">
+<area shape="rect" id="Node000001" title="Obtiene la máxima puntuación posible entre todos los nodos del problema." alt="" coords="5,31,223,57"/>
+<area shape="rect" id="Node000002" href="$classtop_1_1_t_o_p_t_w_solution.html#a4ed9a239d683e7770681aba78e8121a3" title="Obtiene la instancia del problema asociada a esta solución." alt="" coords="271,5,479,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,31,255,28,255,33,224,36"/>
+<area shape="rect" id="Node000003" href="$classtop_1_1_t_o_p_t_w.html#ad028d42f72214373efca074483462837" title="Obtiene la puntuación (score) de un nodo." alt="" coords="302,56,448,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="224,52,286,58,286,63,223,57"/>
+<area shape="rect" id="Node000004" href="$classtop_1_1_t_o_p_t_w.html#a642e958056dc77c10d72831d633e2f49" title="Comprueba si un índice de nodo corresponde a un depósito." alt="" coords="527,56,666,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="449,67,512,67,512,72,449,72"/>
+</map>

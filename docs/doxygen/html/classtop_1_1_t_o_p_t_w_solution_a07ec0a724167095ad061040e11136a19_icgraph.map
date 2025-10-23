@@ -1,0 +1,9 @@
+<map id="top.TOPTWSolution.evaluateFitness" name="top.TOPTWSolution.evaluateFitness">
+<area shape="rect" id="Node000001" title="Evalúa la función objetivo de la solución (puntuación total)." alt="" coords="466,23,657,65"/>
+<area shape="rect" id="Node000002" href="$classtop_1_1_t_o_p_t_w_g_r_a_s_p.html#a11242fc809f6a16ff81136c4785fdc3e" title="Ejecuta el algoritmo GRASP durante un número determinado de iteraciones." alt="" coords="217,5,404,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="450,35,405,31,405,25,451,30"/>
+<area shape="rect" id="Node000004" href="$classtop_1_1_t_o_p_t_w_solution.html#a5df1eb3b6f4bc1265f12ffc201d86b0d" title="Imprime la solución en la consola y devuelve la puntuación." alt="" coords="204,56,418,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="450,58,419,61,418,56,450,53"/>
+<area shape="rect" id="Node000003" href="$classtop_1_1main_t_o_p_t_w.html#a6b155cf80c78f50335adf5a91762e0eb" title="Método principal que ejecuta el solver TOPTW GRASP." alt="" coords="5,5,156,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="202,21,156,21,156,16,202,16"/>
+</map>

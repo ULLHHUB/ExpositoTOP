@@ -1,0 +1,15 @@
+<map id="top.TOPTWSolution.evaluateFitness" name="top.TOPTWSolution.evaluateFitness">
+<area shape="rect" id="Node000001" title="Evalúa la función objetivo de la solución (puntuación total)." alt="" coords="5,101,197,144"/>
+<area shape="rect" id="Node000002" href="$classtop_1_1_t_o_p_t_w_solution.html#a42484d84c9770ebbb8778fc149abbb58" title="Obtiene el número de rutas que han sido creadas en la solución." alt="" coords="253,5,459,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,98,244,58,263,51,265,56,246,62,149,103"/>
+<area shape="rect" id="Node000004" href="$classtop_1_1_t_o_p_t_w_solution.html#a0c4692927923549f0e137ea74850a8b6" title="Obtiene el índice del nodo que actúa como depósito para una ruta específica." alt="" coords="260,72,452,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="197,109,244,104,245,109,198,114"/>
+<area shape="rect" id="Node000005" href="$classtop_1_1_t_o_p_t_w.html#ad028d42f72214373efca074483462837" title="Obtiene la puntuación (score) de un nodo." alt="" coords="283,139,429,165"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="198,131,267,139,267,144,197,136"/>
+<area shape="rect" id="Node000007" href="$classtop_1_1_t_o_p_t_w_solution.html#a559f4d8cc4b93d998243d7479fd6da8d" title="Obtiene el sucesor de un cliente en su ruta." alt="" coords="245,189,467,216"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="155,142,245,175,273,183,272,188,244,180,153,147"/>
+<area shape="rect" id="Node000003" href="$classtop_1_1_t_o_p_t_w.html#abfba541876921de9ec5a63373c056446" title="Obtiene el número de vehículos disponibles." alt="" coords="515,13,676,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="459,24,499,24,499,29,459,29"/>
+<area shape="rect" id="Node000006" href="$classtop_1_1_t_o_p_t_w.html#a642e958056dc77c10d72831d633e2f49" title="Comprueba si un índice de nodo corresponde a un depósito." alt="" coords="526,139,665,165"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="430,149,510,149,510,155,430,155"/>
+</map>

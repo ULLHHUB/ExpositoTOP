@@ -1,0 +1,71 @@
+\doxysection{Power\+Set.\+java}
+\hypertarget{_power_set_8java_source}{}\label{_power_set_8java_source}\index{C:/Users/Kefle/Desktop/ExpositoTOP/src/es/ull/esit/utilities/PowerSet.java@{C:/Users/Kefle/Desktop/ExpositoTOP/src/es/ull/esit/utilities/PowerSet.java}}
+\mbox{\hyperlink{_power_set_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00005}00005\ \textcolor{keyword}{package\ }es.ull.esit.utilities;}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.util.BitSet;}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.util.Iterator;}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.util.NoSuchElementException;}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.util.Set;}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00011}00011\ \textcolor{keyword}{import}\ java.util.TreeSet;}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00019}00019\ \textcolor{comment}{//\ Sirve\ para\ calcular\ todos\ los\ subconjuntos\ de\ un\ conjunto\ dado}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00020}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}{00020}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a6b7dcc9f679ec5fd47c9267e00b35750}{PowerSet}}<E>\ \textcolor{keyword}{implements}\ Iterable<Set<E>>\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00022}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_ac75df0554fc4c68c6539c0d36db9df5e}{00022}}\ \ \ \ \ \textcolor{keyword}{private}\ E[]\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_ac75df0554fc4c68c6539c0d36db9df5e}{arr}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00028}00028\ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}unchecked"{}})}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00029}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a6b7dcc9f679ec5fd47c9267e00b35750}{00029}}\ \ \ \ \ public\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a6b7dcc9f679ec5fd47c9267e00b35750}{PowerSet}}(Set<E>\ set)\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ this.arr\ =\ (E[])\ \textcolor{keyword}{set}.toArray();}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00037}00037\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00038}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a3f26282fcfa1c64e6a3c8caf19f53d3b}{00038}}\ \ \ \ \ \textcolor{keyword}{public}\ Iterator<Set<E>>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a3f26282fcfa1c64e6a3c8caf19f53d3b}{iterator}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator}{PowerSetIterator}}();}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00042}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator}{00042}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{class\ }PowerSetIterator\ \textcolor{keyword}{implements}\ Iterator<Set<E>>\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00043}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_adc2dbf62e23885135d3f983e4774aa9c}{00043}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ BitSet\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_adc2dbf62e23885135d3f983e4774aa9c}{bset}};}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ PowerSetIterator()\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ this.bset\ =\ \textcolor{keyword}{new}\ BitSet(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a6b7dcc9f679ec5fd47c9267e00b35750}{PowerSet}}.this.arr.length\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00054}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af7cf9371b132e46892db37df30afe626}{00054}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af7cf9371b132e46892db37df30afe626}{hasNext}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !this.bset.get(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a6b7dcc9f679ec5fd47c9267e00b35750}{PowerSet}}.this.arr.length);}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00064}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af1e54cc3f15736e66953d7c5426365e0}{00064}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Set<E>\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af1e54cc3f15736e66953d7c5426365e0}{next}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af7cf9371b132e46892db37df30afe626}{hasNext}}())\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ NoSuchElementException();}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ Set<E>\ returnSet\ =\ \textcolor{keyword}{new}\ TreeSet<>();}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a6b7dcc9f679ec5fd47c9267e00b35750}{PowerSet}}.this.arr.length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.bset.get(i))\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ returnSet.add(\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_a6b7dcc9f679ec5fd47c9267e00b35750}{PowerSet}}.this.arr[i]);}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Incrementa\ el\ bitset\ para\ la\ siguiente\ combinación}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.bset.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this.bset.get(i))\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.bset.set(i);}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.bset.clear(i);}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ returnSet;}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00091}\mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_a97c4cf78a3b1c66769b4e8602ae9f7f4}{00091}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \textcolor{keyword}{remove}()\ \{}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ UnsupportedOperationException(\textcolor{stringliteral}{"{}Not\ Supported!"{}});}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_power_set_8java_source_l00095}00095\ \}}
+
+\end{DoxyCode}

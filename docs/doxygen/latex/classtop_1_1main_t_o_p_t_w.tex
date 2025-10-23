@@ -1,0 +1,92 @@
+\doxysection{Referencia de la clase top.\+main\+TOPTW}
+\hypertarget{classtop_1_1main_t_o_p_t_w}{}\label{classtop_1_1main_t_o_p_t_w}\index{top.mainTOPTW@{top.mainTOPTW}}
+
+
+Clase principal que contiene el método {\ttfamily main} para ejecutar el experimento.  
+
+
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classtop_1_1main_t_o_p_t_w_a6b155cf80c78f50335adf5a91762e0eb}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Método principal que ejecuta el solver \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW} GRASP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase principal que contiene el método {\ttfamily main} para ejecutar el experimento. 
+
+Esta clase define un conjunto de instancias de prueba, las lee una por una, y ejecuta el algoritmo GRASP con diferentes tamaños de RCL para cada una. 
+
+Definición en la línea \mbox{\hyperlink{main_t_o_p_t_w_8java_source_l00013}{13}} del archivo \mbox{\hyperlink{main_t_o_p_t_w_8java_source}{main\+TOPTW.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classtop_1_1main_t_o_p_t_w_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classtop_1_1main_t_o_p_t_w_a6b155cf80c78f50335adf5a91762e0eb}\index{top.mainTOPTW@{top.mainTOPTW}!main@{main}}
+\index{main@{main}!top.mainTOPTW@{top.mainTOPTW}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{classtop_1_1main_t_o_p_t_w_a6b155cf80c78f50335adf5a91762e0eb} 
+void top.\+main\+TOPTW.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Método principal que ejecuta el solver \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW} GRASP. 
+
+Itera sobre una lista predefinida de archivos de instancia, carga cada problema, y ejecuta el algoritmo GRASP varias veces con diferentes tamaños de RCL (3, 5, 7) para cada instancia, imprimiendo los resultados en la consola. 
+\begin{DoxyParams}{Parámetros}
+{\em args} & Argumentos de la línea de comandos (no se utilizan). \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{main_t_o_p_t_w_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{main_t_o_p_t_w_8java_source}{main\+TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ String[]\ instances\ =\ \textcolor{keyword}{new}\ String[29];}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ instances[0]\ =\ \textcolor{stringliteral}{"{}c101.txt"{}};\ instances[3]\ =\ \textcolor{stringliteral}{"{}c104.txt"{}};\ instances[6]\ =\ \textcolor{stringliteral}{"{}c107.txt"{}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ instances[1]\ =\ \textcolor{stringliteral}{"{}c102.txt"{}};\ instances[4]\ =\ \textcolor{stringliteral}{"{}c105.txt"{}};\ instances[7]\ =\ \textcolor{stringliteral}{"{}c108.txt"{}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ instances[2]\ =\ \textcolor{stringliteral}{"{}c103.txt"{}};\ instances[5]\ =\ \textcolor{stringliteral}{"{}c106.txt"{}};\ instances[8]\ =\ \textcolor{stringliteral}{"{}c109.txt"{}};\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ instances[9]\ =\ \textcolor{stringliteral}{"{}r101.txt"{}};\ \ instances[12]\ =\ \textcolor{stringliteral}{"{}r104.txt"{}};\ instances[15]\ =\ \textcolor{stringliteral}{"{}r107.txt"{}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ instances[10]\ =\ \textcolor{stringliteral}{"{}r102.txt"{}};\ instances[13]\ =\ \textcolor{stringliteral}{"{}r105.txt"{}};\ instances[16]\ =\ \textcolor{stringliteral}{"{}r108.txt"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ instances[11]\ =\ \textcolor{stringliteral}{"{}r103.txt"{}};\ instances[14]\ =\ \textcolor{stringliteral}{"{}r106.txt"{}};\ instances[17]\ =\ \textcolor{stringliteral}{"{}r109.txt"{}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ instances[18]\ =\ \textcolor{stringliteral}{"{}r110.txt"{}};\ instances[19]\ =\ \textcolor{stringliteral}{"{}r111.txt"{}};\ instances[20]\ =\ \textcolor{stringliteral}{"{}r112.txt"{}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ instances[21]\ =\ \textcolor{stringliteral}{"{}rc101.txt"{}};\ instances[24]\ =\ \textcolor{stringliteral}{"{}rc104.txt"{}};\ instances[27]\ =\ \textcolor{stringliteral}{"{}rc107.txt"{}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ instances[22]\ =\ \textcolor{stringliteral}{"{}rc102.txt"{}};\ instances[25]\ =\ \textcolor{stringliteral}{"{}rc105.txt"{}};\ instances[28]\ =\ \textcolor{stringliteral}{"{}rc108.txt"{}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ instances[23]\ =\ \textcolor{stringliteral}{"{}rc103.txt"{}};\ instances[26]\ =\ \textcolor{stringliteral}{"{}rc106.txt"{}};\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ instances.length;\ i++)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ String\ INSTANCE\ =\ \textcolor{stringliteral}{"{}Instances/TOPTW/"{}}+instances[i];}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ TOPTW\ problem\ =\ TOPTWReader.readProblem(INSTANCE);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ TOPTWSolution\ solution\ =\ \textcolor{keyword}{new}\ TOPTWSolution(problem);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ TOPTWGRASP\ grasp\ =\ \textcolor{keyword}{new}\ TOPTWGRASP(solution);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ -\/-\/>\ Instance:\ "{}}+instances[i]);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ grasp.GRASP(10000,\ 3);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ grasp.GRASP(10000,\ 5);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ grasp.GRASP(10000,\ 7);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1main_t_o_p_t_w_a6b155cf80c78f50335adf5a91762e0eb_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Kefle/\+Desktop/\+Exposito\+TOP/src/top/\mbox{\hyperlink{main_t_o_p_t_w_8java}{main\+TOPTW.\+java}}\end{DoxyCompactItemize}

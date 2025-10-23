@@ -1,0 +1,1463 @@
+\doxysection{Referencia de la clase top.\+TOPTW}
+\hypertarget{classtop_1_1_t_o_p_t_w}{}\label{classtop_1_1_t_o_p_t_w}\index{top.TOPTW@{top.TOPTW}}
+
+
+Modela una instancia del problema \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW} (Team Orienteering Problem with Time Windows).  
+
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a7eb342fe9e9856e9a8dad7ae0f888777}{TOPTW}} (int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a830897c55f7561b1cc36d28d2f926dbb}{nodes}}, int routes)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW}. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a642e958056dc77c10d72831d633e2f49}{is\+Depot}} (int a)
+\begin{DoxyCompactList}\small\item\em Comprueba si un índice de nodo corresponde a un depósito. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a137f100c5711b4b93cb5ae1711ddaf9a}{get\+Distance}} (int\mbox{[}$\,$\mbox{]} route)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia total de una ruta representada por un array de enteros. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a8e1710d766a0093f967bd89068649be7}{get\+Distance}} (Array\+List$<$ Integer $>$ route)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia total de una ruta representada por un Array\+List de enteros. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a2a0ad21770084fd267f05607d122a59a}{get\+Distance}} (Array\+List$<$ Integer $>$\mbox{[}$\,$\mbox{]} routes)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia total sumando las distancias de múltiples rutas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_ad541e0a7d1aafc2b061e024c066dd662}{calculate\+Distance\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Calcula y almacena la matriz de distancias euclidianas entre todos los nodos. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a9363c6b94f247ce746510fe1036d143a}{get\+Max\+Time\+Per\+Route}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el tiempo máximo permitido por ruta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_afbe8fd7e4e3b3d702768e01643558ddf}{set\+Max\+Time\+Per\+Route}} (double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a327e4f47de0fc63c64bba743463ba78b}{max\+Time\+Per\+Route}})
+\begin{DoxyCompactList}\small\item\em Establece el tiempo máximo permitido por ruta. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a2880cd94f79a8eeb732e99af69cdbbde}{get\+Max\+Routes}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el número máximo de rutas (vehículos) permitidas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_ab8d4f9301cc2e3df582b94a5c0659011}{set\+Max\+Routes}} (double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_afbe1dad24fede815dd5186524f81bf53}{max\+Routes}})
+\begin{DoxyCompactList}\small\item\em Establece el número máximo de rutas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261}{get\+POIs}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el número de Puntos de Interés (POIs), sin contar el depósito. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_aa48886efb5544475f15787bf2bee9242}{get\+Distance}} (int i, int j)
+\begin{DoxyCompactList}\small\item\em Obtiene la distancia entre dos nodos. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a3f724d2f10d5174c70748449a291ad86}{get\+Time}} (int i, int j)
+\begin{DoxyCompactList}\small\item\em Obtiene el tiempo de viaje entre dos nodos, que es igual a la distancia. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a81c3893424cfce15442b001571a18283}{get\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el número total de nodos (clientes). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a862dd83897ca658bef8e413a24e3daef}{set\+Nodes}} (int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a830897c55f7561b1cc36d28d2f926dbb}{nodes}})
+\begin{DoxyCompactList}\small\item\em Establece el número de nodos. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_ab17563354a34944d14e4ac57f6613da6}{getX}} (int index)
+\begin{DoxyCompactList}\small\item\em Obtiene la coordenada X de un nodo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a14a7fc055b07f3fb564666ad4ff12084}{setX}} (int index, double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_afc68dbc977b5be32e50da1b79603a801}{x}})
+\begin{DoxyCompactList}\small\item\em Establece la coordenada X de un nodo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a3a39395dfc3d6360273580f177bede7a}{getY}} (int index)
+\begin{DoxyCompactList}\small\item\em Obtiene la coordenada Y de un nodo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a8318436161579a8b9050a657ca63c5e0}{setY}} (int index, double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a119ed4d2fbd35d0efc1eebb019ea836a}{y}})
+\begin{DoxyCompactList}\small\item\em Establece la coordenada Y de un nodo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_ad028d42f72214373efca074483462837}{get\+Score}} (int index)
+\begin{DoxyCompactList}\small\item\em Obtiene la puntuación (score) de un nodo. \end{DoxyCompactList}\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a19a357f4266e806d76516dfa4b7f7688}{get\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el array completo de puntuaciones de todos los nodos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_af9ea3e6941f3ebf4c4415a563d824d89}{set\+Score}} (int index, double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a795dd6999dd7b89e2cccfa5154a9533e}{score}})
+\begin{DoxyCompactList}\small\item\em Establece la puntuación de un nodo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a4e74b10708b232a801a4ad147892b70a}{get\+Ready\+Time}} (int index)
+\begin{DoxyCompactList}\small\item\em Obtiene el tiempo de inicio de la ventana de tiempo (ready time) de un nodo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a97c54405c2ffff1b04371ee42acb1dff}{set\+Ready\+Time}} (int index, double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_ad47382aea3914eab1ed6738a88f7e697}{ready\+Time}})
+\begin{DoxyCompactList}\small\item\em Establece el tiempo de inicio de la ventana de tiempo (ready time) de un nodo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a0d14aca2e33a8fb1eb08013c3d55abfa}{get\+Due\+Time}} (int index)
+\begin{DoxyCompactList}\small\item\em Obtiene el tiempo de fin de la ventana de tiempo (due time) de un nodo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a0576cf2e4c066aae858a2487ada18785}{set\+Due\+Time}} (int index, double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a2d35b288a67307f0c49fdd4e9a8e256c}{due\+Time}})
+\begin{DoxyCompactList}\small\item\em Establece el tiempo de fin de la ventana de tiempo (due time) de un nodo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a06b2b40d137f16bdda21c734d3ea8ac7}{get\+Service\+Time}} (int index)
+\begin{DoxyCompactList}\small\item\em Obtiene el tiempo de servicio requerido en un nodo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_adce95dbc2b525cbbde383e0b950f874e}{set\+Service\+Time}} (int index, double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a8472444783eee697e621e28d62d09c4c}{service\+Time}})
+\begin{DoxyCompactList}\small\item\em Establece el tiempo de servicio de un nodo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446}{get\+Vehicles}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el número de vehículos disponibles. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a339572ea7e09f0b54ee9221710a41e3d}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Genera una representación en formato de cadena de la instancia del problema. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a89fe6a60b12960241afe3381b558853b}{add\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Incrementa el contador de nodos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_abc8ba9eecbd30ef1941a21418259045f}{add\+Node\+Depot}} ()
+\begin{DoxyCompactList}\small\item\em Incrementa el contador de depósitos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a830897c55f7561b1cc36d28d2f926dbb}{nodes}}
+\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_afc68dbc977b5be32e50da1b79603a801}{x}}
+\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a119ed4d2fbd35d0efc1eebb019ea836a}{y}}
+\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a795dd6999dd7b89e2cccfa5154a9533e}{score}}
+\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_ad47382aea3914eab1ed6738a88f7e697}{ready\+Time}}
+\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a2d35b288a67307f0c49fdd4e9a8e256c}{due\+Time}}
+\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a8472444783eee697e621e28d62d09c4c}{service\+Time}}
+\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a44244bdc83238ff13228a12043a8961e}{vehicles}}
+\item 
+int \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a727ff22149966bb368b24920544d95d8}{depots}}
+\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a327e4f47de0fc63c64bba743463ba78b}{max\+Time\+Per\+Route}}
+\item 
+double \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_afbe1dad24fede815dd5186524f81bf53}{max\+Routes}}
+\item 
+double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classtop_1_1_t_o_p_t_w_a5cac6cec090fbd12130b09af021157bc}{distance\+Matrix}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Modela una instancia del problema \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW} (Team Orienteering Problem with Time Windows). 
+
+Esta clase almacena todos los datos de una instancia del problema, incluyendo la información de los nodos (coordenadas, puntuaciones, ventanas de tiempo), el número de vehículos, y las restricciones generales como el tiempo máximo por ruta. También proporciona métodos para calcular distancias y acceder a los datos. 
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classtop_1_1_t_o_p_t_w_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a7eb342fe9e9856e9a8dad7ae0f888777}\index{top.TOPTW@{top.TOPTW}!TOPTW@{TOPTW}}
+\index{TOPTW@{TOPTW}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{TOPTW()}{TOPTW()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a7eb342fe9e9856e9a8dad7ae0f888777} 
+top.\+TOPTW.\+TOPTW (\begin{DoxyParamCaption}\item[{int}]{nodes}{, }\item[{int}]{routes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{classtop_1_1_t_o_p_t_w}{TOPTW}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nodes} & El número de nodos (clientes/\+POIs) en el problema, sin contar el depósito. \\
+\hline
+{\em routes} & El número de rutas (vehículos) disponibles. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00038}{38}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ this.nodes\ =\ nodes;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ this.depots\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ this.x\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[this.nodes\ +\ 1];}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ this.y\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[this.nodes\ +\ 1];}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ this.score\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[this.nodes\ +\ 1];}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ this.readyTime\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[this.nodes\ +\ 1];}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ this.dueTime\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[this.nodes\ +\ 1];}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ this.serviceTime\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[this.nodes\ +\ 1];}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ this.distanceMatrix\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[this.nodes\ +\ 1][this.nodes\ +\ 1];}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.nodes\ +\ 1;\ i++)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ this.nodes\ +\ 1;\ j++)\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.distanceMatrix[i][j]\ =\ 0.0;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ this.maxRoutes\ =\ routes;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ this.vehicles\ =\ routes;}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{classtop_1_1_t_o_p_t_w_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a89fe6a60b12960241afe3381b558853b}\index{top.TOPTW@{top.TOPTW}!addNode@{addNode}}
+\index{addNode@{addNode}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a89fe6a60b12960241afe3381b558853b} 
+int top.\+TOPTW.\+add\+Node (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Incrementa el contador de nodos. 
+
+\begin{DoxyRefDesc}{Obsoleto}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Obsoleto}}]Este método parece no ser utilizado de forma segura, ya que no redimensiona los arrays. \end{DoxyRefDesc}
+\begin{DoxyReturn}{Devuelve}
+El nuevo número de nodos. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00382}{382}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ this.nodes++;}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.nodes;}
+\DoxyCodeLine{00385\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtop_1_1_t_o_p_t_w_abc8ba9eecbd30ef1941a21418259045f}\index{top.TOPTW@{top.TOPTW}!addNodeDepot@{addNodeDepot}}
+\index{addNodeDepot@{addNodeDepot}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{addNodeDepot()}{addNodeDepot()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_abc8ba9eecbd30ef1941a21418259045f} 
+int top.\+TOPTW.\+add\+Node\+Depot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Incrementa el contador de depósitos. 
+
+\begin{DoxyRefDesc}{Obsoleto}
+\item[\mbox{\hyperlink{deprecated__deprecated000002}{Obsoleto}}]Este método parece no ser utilizado de forma segura. \end{DoxyRefDesc}
+\begin{DoxyReturn}{Devuelve}
+El nuevo número de depósitos. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00392}{392}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ this.depots++;}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.depots;}
+\DoxyCodeLine{00395\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_abc8ba9eecbd30ef1941a21418259045f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_ad541e0a7d1aafc2b061e024c066dd662}\index{top.TOPTW@{top.TOPTW}!calculateDistanceMatrix@{calculateDistanceMatrix}}
+\index{calculateDistanceMatrix@{calculateDistanceMatrix}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{calculateDistanceMatrix()}{calculateDistanceMatrix()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_ad541e0a7d1aafc2b061e024c066dd662} 
+void top.\+TOPTW.\+calculate\+Distance\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcula y almacena la matriz de distancias euclidianas entre todos los nodos. 
+
+Utiliza las coordenadas X e Y de los nodos para calcular la distancia. La matriz es simétrica. 
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00117}{117}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.nodes\ +\ 1;\ i++)\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ this.nodes\ +\ 1;\ j++)\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ !=\ j)\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ diffXs\ =\ this.x[i]\ -\/\ this.x[j];}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ diffYs\ =\ this.y[i]\ -\/\ this.y[j];}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.distanceMatrix[i][j]\ =\ Math.sqrt(diffXs\ *\ diffXs\ +\ diffYs\ *\ diffYs);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.distanceMatrix[j][i]\ =\ this.distanceMatrix[i][j];}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.distanceMatrix[i][j]\ =\ 0.0;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_ad541e0a7d1aafc2b061e024c066dd662_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a8e1710d766a0093f967bd89068649be7}\index{top.TOPTW@{top.TOPTW}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a8e1710d766a0093f967bd89068649be7} 
+double top.\+TOPTW.\+get\+Distance (\begin{DoxyParamCaption}\item[{Array\+List$<$ Integer $>$}]{route}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcula la distancia total de una ruta representada por un Array\+List de enteros. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em route} & La ruta como un Array\+List de índices de nodos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La distancia total de la ruta. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00089}{89}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ distance\ =\ 0.0;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ route.size()\ -\/\ 1;\ i++)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ node1\ =\ route.get(i);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ node2\ =\ route.get(i\ +\ 1);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ distance\ +=\ this.getDistance(node1,\ node2);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ distance;}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a8e1710d766a0093f967bd89068649be7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a2a0ad21770084fd267f05607d122a59a}\index{top.TOPTW@{top.TOPTW}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a2a0ad21770084fd267f05607d122a59a} 
+double top.\+TOPTW.\+get\+Distance (\begin{DoxyParamCaption}\item[{Array\+List$<$ Integer $>$\mbox{[}$\,$\mbox{]}}]{routes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcula la distancia total sumando las distancias de múltiples rutas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em routes} & Un array de Array\+Lists, donde cada Array\+List es una ruta. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La distancia total acumulada de todas las rutas. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00104}{104}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ distance\ =\ 0.0;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (ArrayList<Integer>\ route\ :\ routes)\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ distance\ +=\ this.getDistance(route);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ distance;}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a2a0ad21770084fd267f05607d122a59a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_aa48886efb5544475f15787bf2bee9242}\index{top.TOPTW@{top.TOPTW}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_aa48886efb5544475f15787bf2bee9242} 
+double top.\+TOPTW.\+get\+Distance (\begin{DoxyParamCaption}\item[{int}]{i}{, }\item[{int}]{j}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la distancia entre dos nodos. 
+
+Si alguno de los nodos es un depósito, se mapea al índice 0. 
+\begin{DoxyParams}{Parámetros}
+{\em i} & Índice del primer nodo. \\
+\hline
+{\em j} & Índice del segundo nodo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La distancia entre los nodos i y j. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00179}{179}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.isDepot(i))\ \{\ i=0;\ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.isDepot(j))\ \{\ j=0;\ \}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.distanceMatrix[i][j];}
+\DoxyCodeLine{00183\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classtop_1_1_t_o_p_t_w_aa48886efb5544475f15787bf2bee9242_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a137f100c5711b4b93cb5ae1711ddaf9a}\index{top.TOPTW@{top.TOPTW}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a137f100c5711b4b93cb5ae1711ddaf9a} 
+double top.\+TOPTW.\+get\+Distance (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{route}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcula la distancia total de una ruta representada por un array de enteros. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em route} & La ruta como un array de índices de nodos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La distancia total de la ruta. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00074}{74}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ distance\ =\ 0.0;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ route.length\ -\/\ 1;\ i++)\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ node1\ =\ route[i];}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ node2\ =\ route[i\ +\ 1];}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ distance\ +=\ this.getDistance(node1,\ node2);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ distance;}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classtop_1_1_t_o_p_t_w_a137f100c5711b4b93cb5ae1711ddaf9a_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a137f100c5711b4b93cb5ae1711ddaf9a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a0d14aca2e33a8fb1eb08013c3d55abfa}\index{top.TOPTW@{top.TOPTW}!getDueTime@{getDueTime}}
+\index{getDueTime@{getDueTime}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getDueTime()}{getDueTime()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a0d14aca2e33a8fb1eb08013c3d55abfa} 
+double top.\+TOPTW.\+get\+Due\+Time (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el tiempo de fin de la ventana de tiempo (due time) de un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & Índice del nodo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El due time del nodo. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00302}{302}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.isDepot(index))\ \{\ index=0;\ \}}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.dueTime[index];}
+\DoxyCodeLine{00305\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classtop_1_1_t_o_p_t_w_a0d14aca2e33a8fb1eb08013c3d55abfa_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a0d14aca2e33a8fb1eb08013c3d55abfa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a2880cd94f79a8eeb732e99af69cdbbde}\index{top.TOPTW@{top.TOPTW}!getMaxRoutes@{getMaxRoutes}}
+\index{getMaxRoutes@{getMaxRoutes}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getMaxRoutes()}{getMaxRoutes()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a2880cd94f79a8eeb732e99af69cdbbde} 
+double top.\+TOPTW.\+get\+Max\+Routes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el número máximo de rutas (vehículos) permitidas. 
+
+\begin{DoxyReturn}{Devuelve}
+El número máximo de rutas. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00152}{152}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ maxRoutes;}
+\DoxyCodeLine{00154\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a2880cd94f79a8eeb732e99af69cdbbde_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a9363c6b94f247ce746510fe1036d143a}\index{top.TOPTW@{top.TOPTW}!getMaxTimePerRoute@{getMaxTimePerRoute}}
+\index{getMaxTimePerRoute@{getMaxTimePerRoute}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getMaxTimePerRoute()}{getMaxTimePerRoute()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a9363c6b94f247ce746510fe1036d143a} 
+double top.\+TOPTW.\+get\+Max\+Time\+Per\+Route (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el tiempo máximo permitido por ruta. 
+
+\begin{DoxyReturn}{Devuelve}
+El tiempo máximo por ruta. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00136}{136}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ maxTimePerRoute;}
+\DoxyCodeLine{00138\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a9363c6b94f247ce746510fe1036d143a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a81c3893424cfce15442b001571a18283}\index{top.TOPTW@{top.TOPTW}!getNodes@{getNodes}}
+\index{getNodes@{getNodes}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getNodes()}{getNodes()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a81c3893424cfce15442b001571a18283} 
+int top.\+TOPTW.\+get\+Nodes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el número total de nodos (clientes). 
+
+\begin{DoxyReturn}{Devuelve}
+El número de nodos. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00201}{201}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.nodes;}
+\DoxyCodeLine{00203\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261}\index{top.TOPTW@{top.TOPTW}!getPOIs@{getPOIs}}
+\index{getPOIs@{getPOIs}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getPOIs()}{getPOIs()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261} 
+int top.\+TOPTW.\+get\+POIs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el número de Puntos de Interés (POIs), sin contar el depósito. 
+
+\begin{DoxyReturn}{Devuelve}
+El número de nodos cliente. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00168}{168}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.nodes;}
+\DoxyCodeLine{00170\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a98907c6bbeba9aba86727ecad5058261_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a4e74b10708b232a801a4ad147892b70a}\index{top.TOPTW@{top.TOPTW}!getReadyTime@{getReadyTime}}
+\index{getReadyTime@{getReadyTime}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getReadyTime()}{getReadyTime()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a4e74b10708b232a801a4ad147892b70a} 
+double top.\+TOPTW.\+get\+Ready\+Time (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el tiempo de inicio de la ventana de tiempo (ready time) de un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & Índice del nodo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El ready time del nodo. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00283}{283}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.isDepot(index))\ \{\ index=0;\ \}}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.readyTime[index];}
+\DoxyCodeLine{00286\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a4e74b10708b232a801a4ad147892b70a_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a4e74b10708b232a801a4ad147892b70a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a19a357f4266e806d76516dfa4b7f7688}\index{top.TOPTW@{top.TOPTW}!getScore@{getScore}}
+\index{getScore@{getScore}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a19a357f4266e806d76516dfa4b7f7688} 
+double\mbox{[}$\,$\mbox{]} top.\+TOPTW.\+get\+Score (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el array completo de puntuaciones de todos los nodos. 
+
+\begin{DoxyReturn}{Devuelve}
+Un array de doubles con las puntuaciones. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00265}{265}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.score;}
+\DoxyCodeLine{00267\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtop_1_1_t_o_p_t_w_ad028d42f72214373efca074483462837}\index{top.TOPTW@{top.TOPTW}!getScore@{getScore}}
+\index{getScore@{getScore}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_ad028d42f72214373efca074483462837} 
+double top.\+TOPTW.\+get\+Score (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la puntuación (score) de un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & Índice del nodo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La puntuación del nodo. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00256}{256}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.isDepot(index))\ \{\ index=0;\ \}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.score[index];}
+\DoxyCodeLine{00259\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classtop_1_1_t_o_p_t_w_ad028d42f72214373efca074483462837_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_ad028d42f72214373efca074483462837_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a06b2b40d137f16bdda21c734d3ea8ac7}\index{top.TOPTW@{top.TOPTW}!getServiceTime@{getServiceTime}}
+\index{getServiceTime@{getServiceTime}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getServiceTime()}{getServiceTime()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a06b2b40d137f16bdda21c734d3ea8ac7} 
+double top.\+TOPTW.\+get\+Service\+Time (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el tiempo de servicio requerido en un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & Índice del nodo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El tiempo de servicio. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00321}{321}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.isDepot(index))\ \{\ index=0;\ \}}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.serviceTime[index];}
+\DoxyCodeLine{00324\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a06b2b40d137f16bdda21c734d3ea8ac7_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a06b2b40d137f16bdda21c734d3ea8ac7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a3f724d2f10d5174c70748449a291ad86}\index{top.TOPTW@{top.TOPTW}!getTime@{getTime}}
+\index{getTime@{getTime}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a3f724d2f10d5174c70748449a291ad86} 
+double top.\+TOPTW.\+get\+Time (\begin{DoxyParamCaption}\item[{int}]{i}{, }\item[{int}]{j}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el tiempo de viaje entre dos nodos, que es igual a la distancia. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & Índice del primer nodo. \\
+\hline
+{\em j} & Índice del segundo nodo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El tiempo de viaje entre i y j. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00191}{191}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.isDepot(i))\ \{\ i=0;\ \}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.isDepot(j))\ \{\ j=0;\ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.distanceMatrix[i][j];}
+\DoxyCodeLine{00195\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classtop_1_1_t_o_p_t_w_a3f724d2f10d5174c70748449a291ad86_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446}\index{top.TOPTW@{top.TOPTW}!getVehicles@{getVehicles}}
+\index{getVehicles@{getVehicles}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getVehicles()}{getVehicles()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446} 
+int top.\+TOPTW.\+get\+Vehicles (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el número de vehículos disponibles. 
+
+\begin{DoxyReturn}{Devuelve}
+El número de vehículos. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00339}{339}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.vehicles;}
+\DoxyCodeLine{00341\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_abfba541876921de9ec5a63373c056446_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_ab17563354a34944d14e4ac57f6613da6}\index{top.TOPTW@{top.TOPTW}!getX@{getX}}
+\index{getX@{getX}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_ab17563354a34944d14e4ac57f6613da6} 
+double top.\+TOPTW.\+getX (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la coordenada X de un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & Índice del nodo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La coordenada X. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00218}{218}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.isDepot(index))\ \{\ index=0;\ \}}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.x[index];}
+\DoxyCodeLine{00221\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classtop_1_1_t_o_p_t_w_ab17563354a34944d14e4ac57f6613da6_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_ab17563354a34944d14e4ac57f6613da6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a3a39395dfc3d6360273580f177bede7a}\index{top.TOPTW@{top.TOPTW}!getY@{getY}}
+\index{getY@{getY}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a3a39395dfc3d6360273580f177bede7a} 
+double top.\+TOPTW.\+getY (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la coordenada Y de un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & Índice del nodo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La coordenada Y. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00237}{237}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.isDepot(index))\ \{\ index=0;\ \}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.y[index];}
+\DoxyCodeLine{00240\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classtop_1_1_t_o_p_t_w_a3a39395dfc3d6360273580f177bede7a_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a3a39395dfc3d6360273580f177bede7a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a642e958056dc77c10d72831d633e2f49}\index{top.TOPTW@{top.TOPTW}!isDepot@{isDepot}}
+\index{isDepot@{isDepot}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{isDepot()}{isDepot()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a642e958056dc77c10d72831d633e2f49} 
+boolean top.\+TOPTW.\+is\+Depot (\begin{DoxyParamCaption}\item[{int}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Comprueba si un índice de nodo corresponde a un depósito. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a} & El índice del nodo a comprobar. Los depósitos tienen índices mayores que el número de nodos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily true} si el nodo es un depósito, {\ttfamily false} en caso contrario. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00062}{62}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(a\ >\ this.nodes)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a642e958056dc77c10d72831d633e2f49_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a0576cf2e4c066aae858a2487ada18785}\index{top.TOPTW@{top.TOPTW}!setDueTime@{setDueTime}}
+\index{setDueTime@{setDueTime}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{setDueTime()}{setDueTime()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a0576cf2e4c066aae858a2487ada18785} 
+void top.\+TOPTW.\+set\+Due\+Time (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{double}]{due\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece el tiempo de fin de la ventana de tiempo (due time) de un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & Índice del nodo. \\
+\hline
+{\em due\+Time} & El valor del due time. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00312}{312}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ this.dueTime[index]\ =\ dueTime;}
+\DoxyCodeLine{00314\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a0576cf2e4c066aae858a2487ada18785_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_ab8d4f9301cc2e3df582b94a5c0659011}\index{top.TOPTW@{top.TOPTW}!setMaxRoutes@{setMaxRoutes}}
+\index{setMaxRoutes@{setMaxRoutes}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{setMaxRoutes()}{setMaxRoutes()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_ab8d4f9301cc2e3df582b94a5c0659011} 
+void top.\+TOPTW.\+set\+Max\+Routes (\begin{DoxyParamCaption}\item[{double}]{max\+Routes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece el número máximo de rutas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em max\+Routes} & El nuevo número máximo de rutas. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00160}{160}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ this.maxRoutes\ =\ maxRoutes;}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtop_1_1_t_o_p_t_w_afbe8fd7e4e3b3d702768e01643558ddf}\index{top.TOPTW@{top.TOPTW}!setMaxTimePerRoute@{setMaxTimePerRoute}}
+\index{setMaxTimePerRoute@{setMaxTimePerRoute}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{setMaxTimePerRoute()}{setMaxTimePerRoute()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_afbe8fd7e4e3b3d702768e01643558ddf} 
+void top.\+TOPTW.\+set\+Max\+Time\+Per\+Route (\begin{DoxyParamCaption}\item[{double}]{max\+Time\+Per\+Route}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece el tiempo máximo permitido por ruta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em max\+Time\+Per\+Route} & El nuevo tiempo máximo por ruta. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00144}{144}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ this.maxTimePerRoute\ =\ maxTimePerRoute;}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_afbe8fd7e4e3b3d702768e01643558ddf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a862dd83897ca658bef8e413a24e3daef}\index{top.TOPTW@{top.TOPTW}!setNodes@{setNodes}}
+\index{setNodes@{setNodes}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{setNodes()}{setNodes()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a862dd83897ca658bef8e413a24e3daef} 
+void top.\+TOPTW.\+set\+Nodes (\begin{DoxyParamCaption}\item[{int}]{nodes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece el número de nodos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nodes} & El nuevo número de nodos. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00209}{209}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ this.nodes\ =\ nodes;}
+\DoxyCodeLine{00211\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a97c54405c2ffff1b04371ee42acb1dff}\index{top.TOPTW@{top.TOPTW}!setReadyTime@{setReadyTime}}
+\index{setReadyTime@{setReadyTime}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{setReadyTime()}{setReadyTime()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a97c54405c2ffff1b04371ee42acb1dff} 
+void top.\+TOPTW.\+set\+Ready\+Time (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{double}]{ready\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece el tiempo de inicio de la ventana de tiempo (ready time) de un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & Índice del nodo. \\
+\hline
+{\em ready\+Time} & El valor del ready time. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00293}{293}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ this.readyTime[index]\ =\ readyTime;}
+\DoxyCodeLine{00295\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a97c54405c2ffff1b04371ee42acb1dff_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_af9ea3e6941f3ebf4c4415a563d824d89}\index{top.TOPTW@{top.TOPTW}!setScore@{setScore}}
+\index{setScore@{setScore}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{setScore()}{setScore()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_af9ea3e6941f3ebf4c4415a563d824d89} 
+void top.\+TOPTW.\+set\+Score (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{double}]{score}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece la puntuación de un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & Índice del nodo. \\
+\hline
+{\em score} & El valor de la puntuación. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00274}{274}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ this.score[index]\ =\ score;}
+\DoxyCodeLine{00276\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_af9ea3e6941f3ebf4c4415a563d824d89_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_adce95dbc2b525cbbde383e0b950f874e}\index{top.TOPTW@{top.TOPTW}!setServiceTime@{setServiceTime}}
+\index{setServiceTime@{setServiceTime}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{setServiceTime()}{setServiceTime()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_adce95dbc2b525cbbde383e0b950f874e} 
+void top.\+TOPTW.\+set\+Service\+Time (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{double}]{service\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece el tiempo de servicio de un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & Índice del nodo. \\
+\hline
+{\em service\+Time} & El valor del tiempo de servicio. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00331}{331}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ this.serviceTime[index]\ =\ serviceTime;}
+\DoxyCodeLine{00333\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_adce95dbc2b525cbbde383e0b950f874e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a14a7fc055b07f3fb564666ad4ff12084}\index{top.TOPTW@{top.TOPTW}!setX@{setX}}
+\index{setX@{setX}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a14a7fc055b07f3fb564666ad4ff12084} 
+void top.\+TOPTW.\+setX (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{double}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece la coordenada X de un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & Índice del nodo. \\
+\hline
+{\em x} & El valor de la coordenada X. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00228}{228}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ this.x[index]\ =\ x;}
+\DoxyCodeLine{00230\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a14a7fc055b07f3fb564666ad4ff12084_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a8318436161579a8b9050a657ca63c5e0}\index{top.TOPTW@{top.TOPTW}!setY@{setY}}
+\index{setY@{setY}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a8318436161579a8b9050a657ca63c5e0} 
+void top.\+TOPTW.\+setY (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{double}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establece la coordenada Y de un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index} & Índice del nodo. \\
+\hline
+{\em y} & El valor de la coordenada Y. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00247}{247}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ this.y[index]\ =\ y;}
+\DoxyCodeLine{00249\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a8318436161579a8b9050a657ca63c5e0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a339572ea7e09f0b54ee9221710a41e3d}\index{top.TOPTW@{top.TOPTW}!toString@{toString}}
+\index{toString@{toString}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a339572ea7e09f0b54ee9221710a41e3d} 
+String top.\+TOPTW.\+to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Genera una representación en formato de cadena de la instancia del problema. 
+
+\begin{DoxyReturn}{Devuelve}
+Una cadena formateada con los detalles de los nodos y vehículos. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00348}{348}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ COLUMN\_WIDTH\ =\ 15;}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ String\ text\ =\ \textcolor{stringliteral}{"{}Nodes:\ "{}}\ +\ this.nodes\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ String[]\ strings\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{stringliteral}{"{}CUST\ NO."{}},\ \textcolor{stringliteral}{"{}XCOORD."{}},\ \textcolor{stringliteral}{"{}YCOORD."{}},\ \textcolor{stringliteral}{"{}SCORE"{}},\ \textcolor{stringliteral}{"{}READY\ TIME"{}},\ \textcolor{stringliteral}{"{}DUE\ DATE"{}},\ \textcolor{stringliteral}{"{}SERVICE\ TIME"{}}\};}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ width\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[strings.length];}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ Arrays.fill(width,\ COLUMN\_WIDTH);}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ text\ +=\ ExpositoUtilities.getFormat(strings,\ width)\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.nodes;\ i++)\ \{}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ strings\ =\ \textcolor{keyword}{new}\ String[strings.length];}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ 0;}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//strings[index++]\ =\ Integer.toString("{}"{}\ +\ i);}}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ Integer.toString(i);}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.x[i];}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.y[i];}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.score[i];}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.readyTime[i];}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.dueTime[i];}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ strings[index++]\ =\ \textcolor{stringliteral}{"{}"{}}\ +\ this.serviceTime[i];}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ text\ +=\ ExpositoUtilities.getFormat(strings,\ width);}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ text\ +=\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ text\ +=\ \textcolor{stringliteral}{"{}Vehicles:\ "{}}\ +\ this.vehicles\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ strings\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{stringliteral}{"{}VEHICLE"{}},\ \textcolor{stringliteral}{"{}CAPACITY"{}}\};}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ width\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[strings.length];}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ Arrays.fill(width,\ COLUMN\_WIDTH);}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ text\ +=\ ExpositoUtilities.getFormat(strings,\ width)\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ text;}
+\DoxyCodeLine{00375\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtop_1_1_t_o_p_t_w_a339572ea7e09f0b54ee9221710a41e3d_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classtop_1_1_t_o_p_t_w_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classtop_1_1_t_o_p_t_w_a727ff22149966bb368b24920544d95d8}\index{top.TOPTW@{top.TOPTW}!depots@{depots}}
+\index{depots@{depots}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{depots}{depots}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a727ff22149966bb368b24920544d95d8} 
+int top.\+TOPTW.\+depots\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00028}{28}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_a5cac6cec090fbd12130b09af021157bc}\index{top.TOPTW@{top.TOPTW}!distanceMatrix@{distanceMatrix}}
+\index{distanceMatrix@{distanceMatrix}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{distanceMatrix}{distanceMatrix}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a5cac6cec090fbd12130b09af021157bc} 
+double \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} top.\+TOPTW.\+distance\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00031}{31}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_a2d35b288a67307f0c49fdd4e9a8e256c}\index{top.TOPTW@{top.TOPTW}!dueTime@{dueTime}}
+\index{dueTime@{dueTime}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{dueTime}{dueTime}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a2d35b288a67307f0c49fdd4e9a8e256c} 
+double \mbox{[}$\,$\mbox{]} top.\+TOPTW.\+due\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_afbe1dad24fede815dd5186524f81bf53}\index{top.TOPTW@{top.TOPTW}!maxRoutes@{maxRoutes}}
+\index{maxRoutes@{maxRoutes}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{maxRoutes}{maxRoutes}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_afbe1dad24fede815dd5186524f81bf53} 
+double top.\+TOPTW.\+max\+Routes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_a327e4f47de0fc63c64bba743463ba78b}\index{top.TOPTW@{top.TOPTW}!maxTimePerRoute@{maxTimePerRoute}}
+\index{maxTimePerRoute@{maxTimePerRoute}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{maxTimePerRoute}{maxTimePerRoute}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a327e4f47de0fc63c64bba743463ba78b} 
+double top.\+TOPTW.\+max\+Time\+Per\+Route\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_a830897c55f7561b1cc36d28d2f926dbb}\index{top.TOPTW@{top.TOPTW}!nodes@{nodes}}
+\index{nodes@{nodes}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a830897c55f7561b1cc36d28d2f926dbb} 
+int top.\+TOPTW.\+nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_ad47382aea3914eab1ed6738a88f7e697}\index{top.TOPTW@{top.TOPTW}!readyTime@{readyTime}}
+\index{readyTime@{readyTime}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{readyTime}{readyTime}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_ad47382aea3914eab1ed6738a88f7e697} 
+double \mbox{[}$\,$\mbox{]} top.\+TOPTW.\+ready\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_a795dd6999dd7b89e2cccfa5154a9533e}\index{top.TOPTW@{top.TOPTW}!score@{score}}
+\index{score@{score}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a795dd6999dd7b89e2cccfa5154a9533e} 
+double \mbox{[}$\,$\mbox{]} top.\+TOPTW.\+score\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_a8472444783eee697e621e28d62d09c4c}\index{top.TOPTW@{top.TOPTW}!serviceTime@{serviceTime}}
+\index{serviceTime@{serviceTime}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{serviceTime}{serviceTime}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a8472444783eee697e621e28d62d09c4c} 
+double \mbox{[}$\,$\mbox{]} top.\+TOPTW.\+service\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_a44244bdc83238ff13228a12043a8961e}\index{top.TOPTW@{top.TOPTW}!vehicles@{vehicles}}
+\index{vehicles@{vehicles}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{vehicles}{vehicles}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a44244bdc83238ff13228a12043a8961e} 
+int top.\+TOPTW.\+vehicles\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_afc68dbc977b5be32e50da1b79603a801}\index{top.TOPTW@{top.TOPTW}!x@{x}}
+\index{x@{x}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_afc68dbc977b5be32e50da1b79603a801} 
+double \mbox{[}$\,$\mbox{]} top.\+TOPTW.\+x\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00021}{21}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+\Hypertarget{classtop_1_1_t_o_p_t_w_a119ed4d2fbd35d0efc1eebb019ea836a}\index{top.TOPTW@{top.TOPTW}!y@{y}}
+\index{y@{y}!top.TOPTW@{top.TOPTW}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{classtop_1_1_t_o_p_t_w_a119ed4d2fbd35d0efc1eebb019ea836a} 
+double \mbox{[}$\,$\mbox{]} top.\+TOPTW.\+y\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_t_o_p_t_w_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{_t_o_p_t_w_8java_source}{TOPTW.\+java}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Kefle/\+Desktop/\+Exposito\+TOP/src/top/\mbox{\hyperlink{_t_o_p_t_w_8java}{TOPTW.\+java}}\end{DoxyCompactItemize}

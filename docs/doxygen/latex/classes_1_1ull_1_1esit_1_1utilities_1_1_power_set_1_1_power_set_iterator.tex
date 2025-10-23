@@ -1,0 +1,189 @@
+\doxysection{Referencia de la clase es.\+ull.\+esit.\+utilities.\+Power\+Set\texorpdfstring{$<$}{<} E \texorpdfstring{$>$}{>}.Power\+Set\+Iterator}
+\hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator}{}\label{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator}\index{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator@{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator}}
+
+
+Diagrama de herencia de es.\+ull.\+esit.\+utilities.\+Power\+Set\texorpdfstring{$<$}{<} E \texorpdfstring{$>$}{>}.Power\+Set\+Iterator
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de es.\+ull.\+esit.\+utilities.\+Power\+Set\texorpdfstring{$<$}{<} E \texorpdfstring{$>$}{>}.Power\+Set\+Iterator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+boolean \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af7cf9371b132e46892db37df30afe626}{has\+Next}} ()
+\begin{DoxyCompactList}\small\item\em Comprueba si hay más subconjuntos para generar. \end{DoxyCompactList}\item 
+Set$<$ E $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af1e54cc3f15736e66953d7c5426365e0}{next}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el siguiente subconjunto en la secuencia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_a97c4cf78a3b1c66769b4e8602ae9f7f4}{remove}} ()
+\begin{DoxyCompactList}\small\item\em Operación no soportada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Bit\+Set \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_adc2dbf62e23885135d3f983e4774aa9c}{bset}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_power_set_8java_source_l00042}{42}} del archivo \mbox{\hyperlink{_power_set_8java_source}{Power\+Set.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af7cf9371b132e46892db37df30afe626}\index{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator@{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator}!hasNext@{hasNext}}
+\index{hasNext@{hasNext}!es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator@{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator}}
+\doxysubsubsection{\texorpdfstring{hasNext()}{hasNext()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af7cf9371b132e46892db37df30afe626} 
+boolean \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}{es.\+ull.\+esit.\+utilities.\+Power\+Set}}$<$ E $>$.Power\+Set\+Iterator.\+has\+Next (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Comprueba si hay más subconjuntos para generar. 
+
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily true} si hay más subconjuntos, {\ttfamily false} en caso contrario. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_power_set_8java_source_l00054}{54}} del archivo \mbox{\hyperlink{_power_set_8java_source}{Power\+Set.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !this.bset.get(PowerSet.this.arr.length);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af7cf9371b132e46892db37df30afe626_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af7cf9371b132e46892db37df30afe626_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af1e54cc3f15736e66953d7c5426365e0}\index{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator@{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator}!next@{next}}
+\index{next@{next}!es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator@{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af1e54cc3f15736e66953d7c5426365e0} 
+Set$<$ E $>$ \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}{es.\+ull.\+esit.\+utilities.\+Power\+Set}}$<$ E $>$.Power\+Set\+Iterator.\+next (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Devuelve el siguiente subconjunto en la secuencia. 
+
+\begin{DoxyReturn}{Devuelve}
+Un {\ttfamily Set\texorpdfstring{$<$}{<}E\texorpdfstring{$>$}{>}} que representa el siguiente subconjunto. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em No\+Such\+Element\+Exception} & si no hay más elementos. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea \mbox{\hyperlink{_power_set_8java_source_l00064}{64}} del archivo \mbox{\hyperlink{_power_set_8java_source}{Power\+Set.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!hasNext())\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ NoSuchElementException();}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ Set<E>\ returnSet\ =\ \textcolor{keyword}{new}\ TreeSet<>();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ PowerSet.this.arr.length;\ i++)\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.bset.get(i))\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ returnSet.add(PowerSet.this.arr[i]);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Incrementa\ el\ bitset\ para\ la\ siguiente\ combinación}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.bset.size();\ i++)\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this.bset.get(i))\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.bset.set(i);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.bset.clear(i);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ returnSet;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_af1e54cc3f15736e66953d7c5426365e0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_a97c4cf78a3b1c66769b4e8602ae9f7f4}\index{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator@{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator}!remove@{remove}}
+\index{remove@{remove}!es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator@{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_a97c4cf78a3b1c66769b4e8602ae9f7f4} 
+void \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}{es.\+ull.\+esit.\+utilities.\+Power\+Set}}$<$ E $>$.Power\+Set\+Iterator.\+remove (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operación no soportada. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Unsupported\+Operation\+Exception} & Siempre. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea \mbox{\hyperlink{_power_set_8java_source_l00091}{91}} del archivo \mbox{\hyperlink{_power_set_8java_source}{Power\+Set.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ UnsupportedOperationException(\textcolor{stringliteral}{"{}Not\ Supported!"{}});}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_adc2dbf62e23885135d3f983e4774aa9c}\index{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator@{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator}!bset@{bset}}
+\index{bset@{bset}!es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator@{es.ull.esit.utilities.PowerSet$<$ E $>$.PowerSetIterator}}
+\doxysubsubsection{\texorpdfstring{bset}{bset}}
+{\footnotesize\ttfamily \label{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set_1_1_power_set_iterator_adc2dbf62e23885135d3f983e4774aa9c} 
+Bit\+Set \mbox{\hyperlink{classes_1_1ull_1_1esit_1_1utilities_1_1_power_set}{es.\+ull.\+esit.\+utilities.\+Power\+Set}}$<$ E $>$.Power\+Set\+Iterator.\+bset\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_power_set_8java_source_l00043}{43}} del archivo \mbox{\hyperlink{_power_set_8java_source}{Power\+Set.\+java}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Kefle/\+Desktop/\+Exposito\+TOP/src/es/ull/esit/utilities/\mbox{\hyperlink{_power_set_8java}{Power\+Set.\+java}}\end{DoxyCompactItemize}
