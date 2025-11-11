@@ -326,12 +326,15 @@ public class ExpositoUtilities {
      * @return `true` si es un entero, `false` en caso contrario.
      */
     public static boolean isInteger(String str) {
+        if (str == null) {
+            return false;
+        }
         try {
             Integer.parseInt(str);
             return true;
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
+            return false;
         }
-        return false;
     }
 
     /**
