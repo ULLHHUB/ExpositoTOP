@@ -343,9 +343,18 @@ public class ExpositoUtilities {
         try {
             Double.parseDouble(str);
             return true;
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
         }
         return false;
+    }
+
+    /**
+     * @brief Comprueba si una cadena es nula o está vacía.
+     * @param str La cadena a comprobar.
+     * @return `true` si es nula o vacía, `false` en caso contrario.
+     */
+    public static boolean isNullOrEmpty(String str) {
+        return str == null || str.isEmpty();
     }
 
     /**
